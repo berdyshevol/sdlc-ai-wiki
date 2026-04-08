@@ -76,3 +76,25 @@ Pages created/updated:
 - `wiki/sources/agent-control-plane.md` (new)
 - `wiki/entities/humanlayer.md` (updated — added ACP to product stack)
 - `wiki/index.md` (updated — added source)
+
+## [2026-04-08] ingest | Dex — "From RPI to CRISPY"
+
+Ingested: "Everything We Got Wrong About RPI" — Dex's Coding Agents Conference 2026 talk (transcript + slides). Candid retrospective on RPI methodology failures and evolution to CRISPY (7-stage workflow). Major reversal on code legibility: now says "please read the code." Introduces instruction budget concept (~150-200 instructions max). Key claim: shoot for 2-3x, not 10x.
+
+Pages created/updated:
+- `wiki/sources/dex-rpi-to-crispy.md` (new)
+- `wiki/concepts/code-legibility-debate.md` (major update — Dex's reversal, new evidence for School 2)
+- `wiki/concepts/instruction-budget.md` (new)
+- `wiki/concepts/context-engineering.md` (new)
+- `wiki/entities/humanlayer.md` (updated — added CRISPY to product stack, updated key claims)
+
+## [2026-04-08] ingest | Coding Agents Conference 2026 (Multi-Speaker)
+
+Ingested: Slide deck from Coding Agents Conference 2026 (March 3, Computer History Museum). 15+ speakers covering trust, evals, memory, benchmarks, security, enterprise governance. Key talks: Scott Breitenother (Kilo Code, 25T tokens trust ladder), Jessica Wang (Braintrust, agentic vs vector search), Faye Zhang (Pinterest, agent memory), Yanis He (Scale AI, SWE Atlas), Erin Ahmed (Cleric, agent learning), Mihail Eric (RePPIT methodology), Ankit Mathur (Databricks, coding gateway), Harrison Chase + Sam Partee (general purpose agents).
+
+Pages created/updated:
+- `wiki/sources/coding-agents-conf-2026.md` (new)
+- `wiki/concepts/agent-memory.md` (new)
+- `wiki/concepts/automation-levels.md` (updated — added Kilo Code trust ladder)
+- `wiki/overview.md` (updated — new thesis points 6-8, updated sources table, new open questions)
+- `wiki/index.md` (updated — added sources, concepts, to-create items)

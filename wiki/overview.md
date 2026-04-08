@@ -3,7 +3,7 @@ title: "SDLC AI Automation: Research Overview"
 type: overview
 created: 2026-04-08
 updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026]
 tags: [overview, synthesis]
 ---
 
@@ -50,9 +50,15 @@ Across the sources ingested so far, a coherent picture is forming:
 
 3. **Agent architecture matters.** Monolithic AI assistants won't scale. The future is multi-agent pipelines with specialized agents for planning, implementation, review, and testing ([[12-factor-agents]], [[superpowers-5]]).
 
-4. **The code legibility question is unresolved.** This may be the most consequential open debate — it affects trust, security, compliance, and the definition of the developer's role.
+4. **The code legibility question is tilting toward "must read."** Dex's reversal ([[dex-rpi-to-crispy]]) — from "don't read the code" to "please read the code" after 6 months of production pain — is the strongest data point yet. Scale AI's finding that leading models score ~30% on codebase understanding reinforces this: agents aren't reliable enough to go unsupervised.
 
-5. **There's a tension between control and autonomy.** The 12-factor agents emphasize explicit control; the software factory vision demands full autonomy. Resolving this tension is the central challenge.
+5. **There's a tension between control and autonomy.** The 12-factor agents emphasize explicit control; the software factory vision demands full autonomy. The emerging consensus from the [[coding-agents-conf-2026]] is that **2-3x quality-constrained speedup beats 10x slop**.
+
+6. **Trust is the real bottleneck, not capability.** Kilo Code's 25T token dataset shows developers climb a trust ladder (autocomplete → chat → agents → orchestration). If autocomplete fails, agents never get a chance. Building for trust, not capability, is the new mandate.
+
+7. **Agent memory is the next frontier.** Multiple speakers at the Coding Agents Conference 2026 (Cleric, Pinterest) argue that stateless agents are becoming commoditized. The differentiation frontier is learning — agents that accumulate knowledge about environment, past outcomes, and team preferences.
+
+8. **Structured methodologies are converging.** CRISPY (Dex), RePPIT (Mihail Eric), and Kilo Code's adoption data all point to the same pattern: research before planning, plan before implementing, review at high-leverage points, and test throughout.
 
 ## Sources Ingested
 
@@ -61,6 +67,10 @@ Across the sources ingested so far, a coherent picture is forming:
 | 1 | [[five-levels-shapiro]] | Dan Shapiro | Industry/Factories | Jan 2026 |
 | 2 | [[superpowers-5]] | Jesse Vincent | Coding Agents/Spec-Driven | Mar 2026 |
 | 3 | [[12-factor-agents]] | Dex (HumanLayer) | Coding Agents | 2025 |
+| 4 | [[humanlayer-codelayer]] | Dex (HumanLayer) | Coding Agents | 2025 |
+| 5 | [[agent-control-plane]] | Dex (HumanLayer) | Coding Agents | 2025 |
+| 6 | [[dex-rpi-to-crispy]] | Dex (HumanLayer) | Coding Agents / Code Legibility | Mar 2026 |
+| 7 | [[coding-agents-conf-2026]] | Multiple speakers | Industry (all pillars) | Mar 2026 |
 
 ## Sources To Ingest
 
@@ -71,8 +81,13 @@ Across the sources ingested so far, a coherent picture is forming:
 
 ## Key Open Questions
 
-1. What specific practices enable the Level 2 → Level 3 transition?
+1. What specific practices enable the Level 2 → Level 3 transition? (Kilo Code's trust ladder data may help answer this)
 2. Can spec-driven development work for legacy/brownfield codebases?
-3. Is full autonomy (Level 5) achievable for complex software, or only greenfield?
-4. What's the empirical evidence on AI-generated code quality without human review?
+3. Is full autonomy (Level 5) achievable for complex software, or only greenfield? (Dex's "2-3x not 10x" suggests not yet)
+4. What's the empirical evidence on AI-generated code quality without human review? (Dex: 6 months → "rip out and replace")
 5. How will this transformation affect the software industry's workforce?
+6. **NEW:** How do you implement agent memory that persists, compounds, and stays accurate over time? (Cleric, Pinterest)
+7. **NEW:** Will the [[instruction-budget]] problem diminish as models improve, or is it fundamental?
+8. **NEW:** Is there a convergence happening around CRISPY/RePPIT-style methodologies? Are these independently discovered truths or echo-chamber effects?
+9. **NEW:** Will enterprise coding gateways (Databricks) become a standard category, or will tools provide their own governance?
+10. **NEW:** How do you measure the ROI of structured AI coding methodologies (CRISPY, RePPIT) vs. unstructured approaches?

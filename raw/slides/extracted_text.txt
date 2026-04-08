@@ -1,0 +1,4358 @@
+Opening Keynote Sessions
+
+Lightning Talks
+
+10:00 - 10:25 AM - Anthropic - Sid Bidasaria
+10:30 - 10:55 AM - Kilo Code - Scott Breitenother
+11:00 - 11:25 AM - Braintrust - Jess Wang
+11:30 - 11:55 AM - Union.ai - Niels Bantilan
+
+2:30 - 2:37 PM - Faye Zhang
+2:37 - 2:44 PM - Yanis He
+2:44 - 2:51 PM - Erin Ahmed
+2:51 - 2:58 PM - Milan Williams
+2:58 - 3:05 PM - Ash Lewis
+
+Lunch + Booth - 12:00 - 2:00 PM
+Hot Takes - 1:00 - 1:30 PM
+
+Keynote
+3:05 - 3:30 PM - Databricks - Ankit Mathur
+
+Workshops
+1:00 - 2:00 PM - Shrivu Shankar
+2:00 - 3:00 PM - Mihail Eric
+3:00 - 4:00 PM - Drew Breunig
+
+Closing Keynotes
+3:30 - 4:00 PM - Dexter Horthy
+4:00 - 4:30 PM - Harrison Chase + Sam Partee
+
+KEYNOTE
+2:00 - 2:30 PM - WARP - Zach Lloyd
+
+BOOTH CRAWL 4:30 - 5:30 PM
+
+The Neo
+Moment
+
+How we used to do it…
+
+This is our
+protagonist John.
+
+Problem → Frustration →
+Skill Acquisition
+
+Sid Bidasaria - Member of Technical Sta,
+Anthropic
+
+● AI agents for real-world development: Works on Claude Code, building
+tools that integrate AI agents directly into everyday engineering workﬂows.
+● Production-ready AI systems: Focused on reliability, scalability, and
+practical implementation for teams using Claude in coding and automation.
+● Strong backend & product foundation: Brings experience from Robinhood
+and Rubrik, combining deep infrastructure knowledge with modern AI
+product development.
+
+What 20 Trillion Tokens Taught Us About
+How Developers Actually Adopt AI Agents
+Scott Breitenother - Co-founder & CEO, Kilo
+Code
+●
+●
+●
+
+Founder building developer-ﬁrst AI tools: Leads Kilo Code with a focus on
+practical systems that help engineering teams ship faster.
+Product & execution driven: Combines technical depth with operator
+experience to turn complex ideas into usable platforms.
+Focused on scalable impact: Building tools designed for real workﬂows,
+not demos — enabling teams to integrate AI directly into production.
+
+What 25 Trillion Tokens
+Taught Us About How Developers
+Actually Adopt AI Agents
+Scott Breitenother
+CEO, Kilo Code
+Coding Agents: AI-Driven Dev Conference
+
+//
+
+March 3, 2026
+
+//
+
+Computer History Museum
+
+The Transformation
+How a typical dev team is evolving
+MARCH 2025
+
+TODAY
+
+1 feature
+
+1-2 features
+
+every 2-3 weeks
+
+per week
+
+Same team size. Same deadlines.
+
+They stopped working like it’s 2023
+and started working like it’s 2027
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+The Future of Work for Developers
+How we operate at Kilo Speed
+
+THE OLD PARADIGM
+
+THE NEW PARADIGM
+
+What’s Dying
+
+What’s Emerging
+
+Developer as code monkey
+
+Developer as orchestrator
+
+●
+●
+
+You write every line
+Manual boilerplate
+
+●
+●
+
+Collaboration as exception
+
+Collaboration as default
+●
+●
+
+Endless meetings
+PR review bottlenecks
+
+●
+●
+
+Waiting on others
+Context switching
+
+KILO CODE
+
+Scott Breitenother
+
+Only when it adds value
+End-to-end ownership
+
+Velocity multipliers
+
+Velocity killers
+●
+●
+
+You manage AI Agents
+You guide the vision
+
+●
+●
+
+|
+
+Coding Agents Conference 2026
+
+No waiting
+Deep focus
+
+kilo.ai
+
+Half of Developers Still Don’t Use
+AI Daily
+
+49%
+
+76%
+
+16%
+
+of pro devs don't
+use AI daily
+
+won't use AI for
+deployment & monitoring
+
+don't plan to
+use AI at all
+
+Source: Stack Overflow
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+We Have One Of The Clearest
+Real-World Views Into AI Adoption
+
+KILO CODE
+
+25T+
+
+1.5M+
+
+tokens processed
+
+developers
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+Developers Don't Jump To Agents.
+They Climb.
+Orchestration
+
+Multi-agent workflows, minimal supervision
+
+Single Agents
+
+Delegate multi-file tasks, review output
+
+Chat
+
+Ask questions, generate snippets,
+stay in control
+
+Autocomplete
+
+Tab to accept, zero cognitive load
+
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+↑
+Increasing
+trust
+required
+
+kilo.ai
+
+If Autocomplete Fails, Agents
+Never Get A Chance
+3 slow suggestions -> Feature disabled
+Wrong file paths -> Agents never trusted
+High review load -> Orchestration
+abandoned
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+AI Adoption Consistently Breaks At
+The Same 3 Points
+
+Context
+Construction
+
+Model
+Routing
+
+Feedback
+Loops
+
+What does it actually
+know?
+
+Is the right model doing
+the job?
+
+Does it learn from me?
+
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+You Can’t Earn Trust Without
+Expanding Context
+Autocomplete
+
+Current file + imports.
+
+Current file + related files + docs.
+
+Chat
+
+Full repo + config + dependencies + build
+system
+
+Agents
+
+Multiple repos +
+production code +
+meeting transcripts +
+data lineage
+
+Orchestration
+
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+There Is No Single Best Model —
+Only The Best Model For The Task
+Minimax M2.5
+Architect
+
+SOTA
+
+Build
+
+Claude Opus 4.6
+
+Debug
+
+GPT 5.3 Codex
+
+Ask
+
+Fast,
+efficient
+
+Review
+
+KILO CODE
+
+Kimi-K2
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+GLM-5
+Claude Sonnet 4.6
+
+kilo.ai
+
+Trust Is A Measurable Signal
+Rung
+
+Signal
+
+Latency
+
+Signal Quality
+
+Autocomplete
+
+Tab / dismiss
+
+200ms
+
+Clean, high-volume
+
+Chat
+
+Copy / ignore / follow-up
+
+Seconds
+
+Moderate, noisier
+
+Agents
+
+Accept diff / revert /
+edit
+
+Minutes
+
+Sparse, high-stakes
+
+Orchestration
+
+Workflow outcome
+
+Hours
+
+Delayed, complex
+
+The higher the rung, the lower the signal.
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+AI Shifts The Work. It Doesn’t Remove It.
+
+The cognitive load shifts from doing the work
+to orchestrating the work.
+
+HBR 2026: "AI Doesn't Reduce Work — It Intensifies It"
+
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+This Is What The Shift Looks Like
+DEVELOPER
+
+AGENTS HANDLE
+
+- Sets direction
+
+- Boilerplate
+
+- High-level requirements
+
+- Implementation details
+
+- Creative decisions
+
+- Error recovery
+
+- Architecture choices
+
+- Documentation lookup
+
+- Quality gates
+
+- Syntax debugging
+
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+RESULT
+
+10x
+
+Productivity increase on
+implementation work
+
+kilo.ai
+
+The New Coworkers: The Agent Team
+Each developer manages 3-5Model
+specialized agents simultaneously
+Orchestrator Agent
+Breaks down complex projects into manageable subtasks, assigns
+them to other agent modes, and coordinates between them.
+
+Architect Agent
+Research your codebase
+design systems and
+written implementation
+plans.
+
+KILO CODE
+
+Code Agent
+
+Ask Agent
+
+Debug Agent
+
+The default mode that
+transforms your
+requests and written
+plans into
+production-ready
+implementations.
+
+A knowledge technical
+assistant focused on
+answering questions
+without changing your
+codebase.
+
+An expert problem
+solver specializing in
+systematic
+troubleshooting and
+diagnostics.
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+What This Means For What You’re
+Building
+Meet users where they are on their
+
+01 AI adoption journey.
+
+02 Solve infrastructure problems early.
+03 Build developer trust.
+KILO CODE
+
+Scott Breitenother
+
+|
+
+Coding Agents Conference 2026
+
+kilo.ai
+
+Benchmarks tell you what models
+
+can do.
+
+25 trillion tokens tell you
+what developers actually do.
+Build for trust , not capability.
+Scott Breitenother
+
+//
+
+s_breitenother
+
+//
+
+kilo.ai
+
+Agentic Search vs RAG: Using Evals to
+Compare
+Jessica Wang- Developer Advocate, Braintrust
+●
+
+Developer education & AI tooling: Creates technical content and
+resources focused on AI evaluations and developer workﬂows.
+
+●
+
+Industry experience across leading tech companies: Background
+spanning Microsoft, DoorDash, and Warp across developer platforms and
+product engineering.
+
+●
+
+Technical communicator & community voice: Hosts a tech podcast and
+shares educational content to support the developer ecosystem.
+
+CONFIDENTIAL
+
+BRAINTRUST.DEV
+
+Intro
+Jessica Wang
+DevRel Engineer
+
+Donʼt be this kitty!
+Evals ensure that youʼre not playing
+whack-a-mole when developing your AI
+products
+
+Why evals? Evals help answer questions
+Model selection
+
+"Which LLM is the
+best choice for our
+needs?"
+
+Brand consistency
+
+"Does the AI reliably
+reflect our company's
+voice and standards?"
+
+User experience
+
+"How does the AI
+perform across
+diverse real-world
+scenarios?"
+
+Feedback integration
+
+"Are we learning from
+users and improving
+iteratively?"
+
+Cost efficiency
+
+"Can we achieve high
+performance without
+excessive costs?"
+
+Debugging & regression
+detection
+
+"How do we know
+when something
+breaks or gets
+worse?"
+
+Real-World Scenario
+OpenAI had to revert an entire model update
+because the changes that were supposed to
+improve one aspect (making the model more
+helpful) ended up breaking another (making it
+too agreeable and less truthful).
+
+Evals
+1) Upload a dataset
+It should cover the scenarios that matter to your product, like golden standard, edge cases, and
+failure modes you've seen in production
+
+Evals
+1) Upload a dataset
+It should cover the scenarios that matter to your product, like golden standard, edge cases, and
+failure modes you've seen in production
+
+2) Write the task
+The system that takes an input and produces an output.
+
+Evals
+1) Upload a dataset
+It should cover the scenarios that matter to your product, like golden standard, edge cases, and
+failure modes you've seen in production
+
+2) Write the task
+The system that takes an input and produces an output.
+
+3) Scoring
+The criteria you use to measure quality. Break "good" into speciﬁc facets—correctness, tone, policy
+compliance—and score each one. This prevents you from accidentally optimizing the wrong thing.
+
+Evals
+1) Upload a dataset
+It should cover the scenarios that matter to your product, like golden standard, edge cases, and
+failure modes you've seen in production
+
+2) Write the task
+The system that takes an input and produces an output.
+
+3) Scoring
+The criteria you use to measure quality. Break "good" into speciﬁc facets—correctness, tone, policy
+compliance—and score each one. This prevents you from accidentally optimizing the wrong thing.
+
+4) Experiment
+One test run with a speciﬁc conﬁguration. Every time you change something (prompt, model,
+temperature), you run a new experiment. Compare experiments side-by-side to see what actually
+improved.
+
+Compare
+experiments
+1) Pick any two experiments to
+compare (here: Vector Search
+vs Agent Search)
+2) Green/red indicators showing
+what improved or regressed
+3) Drill into individual rows to see
+exactly which test cases
+changed
+
+Use Loop
+
+Log
+Incorporate real-world
+data into your
+evaluation feedback
+loop.
+
+Feedback Loop
+
+Evals are a team sport
+
+Get real world data into your eval platform
+
+Label sample data
+
+AI engineer
+
+Product manager
+
+Develop hypotheses
+
+Decide on success criteria
+
+Tweak simpler tasks such as prompt
+
+Subject matter experts
+Tweak advanced tasks such as tool call
+
+Data analysts
+
+Develop scorers
+
+Analyze results
+
+Agentic Search vs Vector Search?
+
+We reached $10M ARR!
+
+Qtrly NDR:
+
+100%
+
+100%
+
+100%
+
+What is vector search?
+1.
+2.
+3.
+
+Embed code chunks into vectors (numbers)
+Given a query, find chunks with similar embeddings
+Returns top N "semantically similar" chunks
+
+What is agentic
+search?
+1.
+
+LLM uses traditional
+dev tools: grep, find,
+ls, cat
+
+2.
+
+Iteratively explores
+like a human
+developer
+
+3.
+
+Reads code, follows
+references, builds
+understanding
+
+4.
+
+Claude Code's
+approach
+
+Which one works better?
+
+Experiment Design Overview
+
+Implementing Vector & Agentic Search
+
+1.
+
+Claude calls:
+run_vector_search.sh search
+--repo "..." "query"
+
+2.
+
+To prevent Claude from using
+grep & find, we did:
+a. --disallowed-tools
+Grep,Glob CLI flag
+b. Explicit prompt
+instructions
+
+Tracing Setup
+Problem: Claude Code runs as
+subprocess, traces are orphaned
+Solution: Pass parent span IDs via
+environment variables
+Result: Full visibility into every tool
+call, nested in our experiment
+
+Tracing Setup
+Problem: Claude Code runs as
+subprocess, traces are orphaned
+Solution: Pass parent span IDs via
+environment variables
+Result: Full visibility into every tool
+call, nested in our experiment
+
+Scoring
+Scores
+● test_passed: Did the test pass?
+Metrics
+● Duration, total tokens, cost
+
+Results
+SweBench 25 rows)
+Accuracy
+Vector
+
+60%
+
+Agentic
+
+68%
+
+Ts-go 10 rows)
+Accuracy
+
+Avg tokens
+
+Avg cost
+
+Vector
+
+70%
+
+2.9M
+
+$4.40
+
+Agentic
+
+70%
+
+946k
+
+$1.58
+
+Takeaways
+• Vector search returns chunks, not files.
+The agent gets fragments without surrounding context. In django-11910, the vector agent made
+26 searches and still couldn't piece together how three functions interact across files — the
+agentic agent just read them.
+• Agentic search enables chain-of-thought exploration.
+In pr-2532 (ts-go), the agentic agent worked like a developer: grepped for the function name,
+read the full function, spotted a flaw in the cycle detection logic, then followed callers to confirm
+its theory before applying a targeted fix. The vector agent couldn't do this — it just kept querying
+the database with different keywords, never building on what it already found.
+• More searches ≠ better results.
+Across ts-go tasks, vector used 2.8x more LLM calls, 3.1x more tokens, and cost 2.8x more per
+task — while performing the same or worse.
+
+How to improve eval
+●
+
+Run multiple trials per task
+
+●
+
+Improve vector search implementation
+
+●
+
+Try a hybrid approach
+
+●
+
+Expand the dataset
+
+Questions?
+
+Join our crew
+And become a
+co-chapter lead
+in our South Bay
+Chapter!
+
+Decomposing the Agent orchestration
+ecosystem: Lessons learned from
+Niels Bantilan - Chief ML Engineer, Union AI
+●
+
+Chief ML Engineer & OSS maintainer: Flyte core maintainer;
+creator of Pandera.
+
+●
+
+Interdisciplinary background: Public health informatics,
+developmental biology, immunology.
+
+●
+
+Advanced & responsible ML: RL, AutoML, and trustworthy AI.
+
+Join us -
+
+In-person Community
+
+Slack
+
+Listen or read with us!
+
+MLOps Podcast
+
+Blog
+
+HOT TAKES
+Time to hear what the room thinks…
+Jump into Slido and tell us what you
+think!
+
+Join Slido to
+share your take!
+
+Agentic
+Shrivu Shankar - VP, AI Strategy, Abnormal
+●
+
+AI leadership at security scale: Leads AI strategy and machine learning
+architecture for Abnormal’s platform, designing systems that detect
+anomalies and protect organizations from sophisticated cyber threats.
+
+●
+
+Built AI-native systems from the ground up: Joined Abnormal early and
+helped shape how AI is integrated into both product and engineering
+workﬂows, emphasizing real-world performance and scalability.
+
+●
+
+Technical innovator & practical thinker: Deeply involved in solving
+large-scale AI infrastructure challenges, bridging advanced model research
+with robust, production-ready systems.
+
+5 Prompts to Ship Production Code 2x
+Faster with AI
+Mihail Eric - Head of AI, Monaco
+●
+
+●
+●
+
+AI platforms for go-to-market teams: Leads AI strategy and development
+at Monaco, building next-generation AI-powered tools for revenue and
+GTM organizations.
+Repeat founder in applied AI: Co-founded Storia AI and previously
+founded Confei AI, which was successfully acquired.
+Educator & AI product builder: Teaches AI in software development at
+Stanford University, combining deep expertise in LLMs, conversational AI,
+and production-grade AI systems to drive real-world impact.
+
+5 Prompts to Ship Production
+Code 2x Faster with AI
+Mihail Eric
+
+themodernsoftware.dev
+
+A bit about me
+●
+●
+●
+●
+●
+
+Head of AI at Monaco a startup in the sales space
+Built ﬁrst LLMs at Amazon Alexa
+Founded and sold an ML education startup
+Founded a YC-backed AI coding company
+Creator of Stanford’s ﬁrst AI software engineering course
+
+themodernsoftware.dev
+
+How would you build a Medium
+clone?
+
+themodernsoftware.dev
+
+Vibe coding confuses expectations
+
+themodernsoftware.dev
+
+Writing production AI code requires
+being methodical
+
+themodernsoftware.dev
+
+Principles of Production AI Code
+●
+●
+●
+●
+●
+
+Understand an unfamiliar codebase
+Propose some solutions
+Plan out the most promising solution
+Implement it
+Test it
+
+themodernsoftware.dev
+
+Use RePPIT
+
+themodernsoftware.dev
+
+R esearch
+P ropose
+P lan
+I mplement
+T est
+themodernsoftware.dev
+
+Demo
+Feature: Article Search with Filters.
+Full-text search across title/body with
+filters (by tag, author, date range)
+
+themodernsoftware.dev
+
+Outcomes
+●
+●
+●
+
+Ability to take on new tasks in any repository
+2-4x productivity gains across engineering tasks
+Same principles apply to greenﬁeld and brownﬁeld codebases
+
+themodernsoftware.dev
+
+Questions?
+
+themodernsoftware.dev
+
+CODE:
+ai-coding-conf-2026
+
+themodernsoftware.dev
+
+2026 The Year of Agent Orchestration
+Zach Lloyd- Founder / CEO, Warp
+●
+
+Reinventing the developer experience: Leads the creation of Warp, a
+modern developer terminal and AI-powered platform that reimagines the
+command line for today’s engineering teams.
+
+●
+
+Deep engineering & product leadership: Previously served as Principal
+Engineer at Google LLC leading work on Google Sheets and held roles
+such as interim CTO at TIME and co-founder/CTO of SelfMade.
+
+●
+
+Backed by top investors with strong traction: Warp has raised
+signiﬁcant funding from prominent ﬁrms and individuals, and is widely
+adopted by developers and engineering teams globally modernizing
+tooling that hasn’t meaningfully evolved in decades.
+
+Production Sub-Agents for LLM Post
+Training
+Faye Zhang - Sta AI Engineer, Tech Lead
+Pinterest
+●
+
+Multimodal AI & search innovation: Leads multimodal AI initiatives that
+enhance search capabilities and drive user growth across Pinterest’s core
+platform.
+
+●
+
+Large-scale systems & applied ML: Combines deep expertise in distributed
+systems with cuing-edge AI/ML research to deliver practical, high-impact
+consumer experiences.
+
+●
+
+Community-focused technical leader: Actively shares insights and
+learnings to advance real-world AI engineering practices across the broader
+AI community.
+
+Faye Zhang
+
+Production Sub-agents
+for LLM Post Training
+
+via Claude Code
+
+BC (Before Claude Code)
+
+Linear Process
+
+4-6 week cycle
+
+AC (After Claude Code)
+
+Concurrent Process
+
+1 week cycle
+
+Open weights model option?
+MiniMax-M2.5 ($0.27/M input tokens)
+
+Why do agents fail?
+01
+Spect Drift Across
+Multi-step Chains
+
+02
+Data Distrubution
+Inbalance
+
+03
+Memory Collapse
+
+04
+Tool Misuse
+
+Fix 1: Reinforce Agent Orchestration via Agent SDK
+Tip: Structured skills.md, Tool Calling 2.0
+
+Fix 2: Customized Agent Memory
+
+Claude Code Agent SDK
+• “Procedural” memory → CLAUDE.md
+• “Episodic” memory →
+./.claude/memories/episodes/*.json (your convention)
+• Hook: after Bash / tests, append a summarized
+failure→ﬁx entry
+• MCP: memory_search(query) tool for retrieval + ranking
+Claude API Memory Tool
+• Put the same schema behind the oﬃcial memory tool
+• Add pruning/compression server-side
+• Reward-weight which memories get written
+
+How about long horizon development memory?
+
+Treat memory as a learned policy problem:
+Memory Manager (structured operations via
+PPO)
+Answer Agent (preselects and reasons via
+GRPO)
+
+3-tier infra: hot memory, domain task, cold storage via
+MCP
+
+Beyond SWE-Bench Pro — Where Do
+Coding Agents Go From Here?
+Yanis He
+●
+
+Product leadership in AI tooling: Leads product strategy and execution,
+shaping how teams build and adopt AI-powered developer tools.
+
+●
+
+Developer education & practical workﬂows: Creates technical content
+and resources focused on AI evaluations and real-world developer
+workﬂows.
+
+●
+
+Bridging product & engineering: Works closely with technical teams to
+turn complex AI capabilities into intuitive, usable products.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+Beyond SWE-Bench Pro
+Where do coding agents go from here?
+
+Speaker: Yannis He
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+210
+
+Wild evolutions of coding domain
+~2001
+
+2023
+
+2025+
+
+2024
+
+~20 years
+
+IDE
+
+Eclipse
+Intellij
+
+IDE
++AI
+Cursor
+
+Labs
+GPT
+Claude
+Gemini
+
+Scaf
+fold
+SWE-Agent
+Devin
+
+Trn
+w/
+Scaf
+fold
+gpt-5-codex
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+211
+
+Measurement-wise …
+
+Jimenez, C. E. et al.
+Princeton NLP Group
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+212
+
+Measurement-wise …
+SWE-Bench Lite (Princeton)
+SWE-Bench Java (CAS)
+Multi-SWE-Bench (Byte Dance)
+SWE-Bench+ (York)
+SWE-Bench++ (Turing)
+Jimenez, C. E. et al.
+Princeton NLP Group
+
+SWE-Bench Verified (OpenAI)
+…
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+213
+
+Measurement-wise …
+SWE-Bench Lite (Princeton)
+SWE-Bench Java (CAS)
+Multi-SWE-Bench (Byte Dance)
+SWE-Bench+ (York)
+SWE-Bench++ (Turing)
+Jimenez, C. E. et al.
+Princeton NLP Group
+
+SWE-Bench Verified (OpenAI)
+…
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+214
+
+… but w/ data contamination
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+215
+
+SWE-Bench Pro becomes the industry standard
+
+●
+
+●
+●
+
+1: Copyleft licenses require any derivative work to also be open-sourced.
+
+Minimal contamination
+○ Selected codebase w/ copyleft licenses1
+○ Acquired companies for proprietary
+codebases
+Human augmented & veriﬁed tasks
+Enterprise-level difﬁculty
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+216
+
+SWE-Bench Pro becomes the industry standard
+
+●
+
+●
+●
+
+1: Copyleft licenses require any derivative work to also be open-sourced.
+
+Minimal contamination
+○ Selected codebase w/ copyleft licenses1
+○ Acquired companies for proprietary
+codebases
+Human augmented & veriﬁed tasks
+Enterprise-level difﬁculty
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+217
+
+Beyond SWE-Bench Pro, what’s next?
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+218
+
+Beyond SWE-Bench Pro, what’s next?
+
+assert coding == resolving_github_issues
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+219
+
+Beyond SWE-Bench Pro, what’s next?
+
+assert coding == resolving_github_issues
+>>> AssertionError # I typed this myself, no AI additive
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+220
+
+Coding is more than issue resolution
+
+Measured by
+SWE-Bench Pro
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+New benchmark
+
+SWE Atlas
+a benchmark that assess how
+agents understand, validate,
+and improve software systems
+inside real repositories.
+
+Codebase QnA
+Understand complex codebases
+through runtime analysis and
+multi-ﬁle reasoning
+Leading models
+score ~30%1
+
+Test Writing
+Write meaningful tests that exercise
+real functionality to increase code
+coverage
+
+Refactoring
+Restructure code to improve
+readability & maintainability while
+preserving behavior
+
+QnA Leaderboard & Data Release: March 4th, 2026
+1: Resolve rate for pass@1
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+222
+
+Setting the targets we all build toward
+
+Measured by
+SWE-Bench Pro
+
+Measured by
+SWE Atlas
+
+Measured by
+SWE-fﬁciency
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+223
+
+Our vision in coding domain:
+01
+
+If we give agents enough
+freedom to explore the
+environment,
+
+Coding may become
+the new scaffolding,
+where it self
+develops tools that
+are more intuitive
+and effective to
+itself
+
+What we’ve seen
+●
+
+●
+
+Agent expanding their
+capabilities via CLI, measured
+by Terminal Bench v2
+
+OpenClaw acting as an early
+sign of coding-as-scaffolding
+
+02
+
+Our roadmap
+Diverse RL Environment Coverage
+Build complex playgrounds for agents to grow —
+cybersecurity system, cloud infra, enterprise
+software, and beyond
+
+Agent Human Interaction
+Strengthen agents' ability to escalate — call
+humans when context is contradicting,
+ambiguous, or missing
+
+Terminal Bench v3 Collab
+Partner with the original Terminal Bench team to
+expand into professional domains
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+Closing remarks:
+
+“I never expect what we are building to be the last
+word in coding agent, but I'm excited to see what kind
+of splash we can make.
+We hope what we do can serves as a stepping stone
+for this community to build the next era of coding
+agents.”
+Stay tune for SWE Atlas launch! You can ﬁnd me on
+: @yannis__he
+: linkedin.com/in/yannis-he/
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+Appendix
+
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+226
+
+SWE-Bench Pro vs SWE Atlas
+SWE-Bench Pro
+
+SWE-Atlas
+
+Core question
+
+Can an agent resolve an
+issue with a correct
+patch?
+
+Can an agent understand, investigate,
+and maintain a complex system?
+
+Type of work
+
+Bug ﬁxes and feature
+implementation
+
+Codebase understanding, testing, and
+behavior-preserving improvement
+
+Prompt type
+
+Detailed, speciﬁc and
+fully scoped out
+problems
+
+Natural-language engineering tasks
+inside real repositories
+
+Evaluation signal
+
+Behavioral tests
+
+Tests + runtime interaction +
+rubric-based grading
+
+Role
+
+Measures change
+correctness
+
+Measures engineering workﬂows
+around those changes
+Coding Agents Conference 2026 | Scale AI, Inc.
+
+Beyond SWE-Bench Pro – Where Do Coding Agents Go From Here? | Speaker: Yannis He
+
+227
+
+Codebase QnA breakdown
+1. Architecture & system design (35%): Questions about how a system's components are structured and how they interact.
+Example: "When maddy is configured with a small max_tries and pointed at a non-responsive SMTP destination that times out, what
+exact sequence of connection attempts occurs? How long does each timeout take, and what log entries mark each retry attempt
+versus the final bounce decision?"
+2. Root-cause analysis (30%): Questions that present confusing or seemingly broken behavior and ask the agent to determine why.
+Example: "I'm sending probes to different gateways with Scapy's sr1, but responses from one gateway get matched to probes sent to
+another. I've verified with tcpdump that the packets on the wire are correct - so why is Scapy pairing them wrong?”
+3. Code Onboarding (23%): Questions a new engineer would ask when getting oriented in an unfamiliar codebase.
+Example: "I am joining a team that relies heavily on Scapy for custom packet manipulation and I need to understand what the runtime
+environment actually looks like. When you construct a basic ICMP ping packet, what's the actual structure of that packet object? I'm
+trying to understand whether Scapy creates a single composite object or something else - what layer types are involved, and how are
+they related?”
+4. Security (9%): Questions about security properties, attack surfaces, or vulnerability patterns. Example: "If someone submits a
+TruffleHog detector configuration pointing to an internal address or a cloud metadata endpoint, what security boundaries actually
+exist?"
+5. API & library integration (3%): Questions about how to use a library's interfaces and understand their runtime behavior.
+Coding Agents Conference 2026 | Scale AI, Inc.
+Example: "If I create an IP/TCP packet without setting checksums and call bytes(), then tweak a payload
+byte and call bytes() again -
+
+How to Fix your Agent's Amnesia: Lessons
+from Building a Self-Learning Agent
+Erin Ahmed - Head of Product, Cleric
+●
+
+Product leadership in AI tooling: Leads product strategy and execution,
+shaping how teams build and adopt AI-powered developer tools.
+
+●
+
+Developer education & practical workﬂows: Creates technical content
+and resources focused on AI evaluations and real-world developer
+workﬂows.
+
+●
+
+Bridging product & engineering: Works closely with technical teams to
+turn complex AI capabilities into intuitive, usable products.
+
+February 25, 2026
+
+How to Fix your Agent's Amnesia:
+What We’ve Learned Building a
+Self-Learning Agent
+Erin Ahmed
+
+Cleric, Head of Product
+
+March 3, 2026
+February 25, 2026
+
+Stateless agents
+
+Learning agents
+
+Start fresh every session,
+with no memory or context of
+past sessions
+
+Learn from experience,
+adapting to improve
+performance
+
+March25,
+3, 2026
+2026
+February
+
+Agent capabilities are commoditized.
+The next horizon of differentiation is learning.
+
+March25,
+3, 2026
+2026
+February
+
+Agents that earn their place
+will be the ones that accumulate knowledge
+
+Environment
+
+Past outcomes
+
+Your team
+
+Maps infrastructure and
+dependencies before
+incidents happen
+
+Each investigation produces
+durable knowledge for
+the next
+
+Absorbs tribal knowledge
+and preferences over time
+
+March25,
+3, 2026
+2026
+February
+
+LESSON 1
+
+Make it easy for users to teach via correction
+Wrong answers are inevitable. Agents that activate fastest aren't
+the ones that fail least, they're the ones that make it easy to
+correct mistakes and visibly never repeat them.
+
+March25,
+3, 2026
+2026
+February
+
+LESSON 1
+
+Make it easy for users to teach via correction
+Harvest skills
+to encode procedures
+
+Capture ratings
+as explicit quality signals
+
+Propose memories
+to persist lessons
+
+March25,
+3, 2026
+2026
+February
+
+LESSON 2
+
+Reward corrections with better performance
+Users lose trust when they correct the agent and it's not retained.
+A correction should persist, compound, and be visible.
+
+Persist
+Apply the knowledge
+in the same context
+
+Compound
+Generalize the knowledge
+to a different context
+
+Be visible
+Display use of knowledge
+in actions and reasoning
+
+March25,
+3, 2026
+2026
+February
+
+LESSON 2
+
+Reward corrections with better performance
+Persist
+
+Compound
+
+Be visible
+Memory lookup: production customers
+
+Used skill: assessing-customer-impact
+
+Check which production customers have AWS toolkit enabled
+
+March25,
+3, 2026
+2026
+February
+
+LESSON 3
+
+Absorb context continuously
+The richer the model of the user's world, the higher the utility.
+Identify opportunities to route work to the agent automatically,
+and absorb every source of environment-speciﬁc context
+available so that learning happens ambiently.
+
+March25,
+3, 2026
+2026
+February
+
+Current State of Stateless Agents
+Act
+
+Improve
+
+Correct
+
+March25,
+3, 2026
+2026
+February
+
+The Missing Piece: Memory
+Act
+
+Improve
+
+Correct
+
+March25,
+3, 2026
+2026
+February
+
+February 25, 2026
+
+Practical Security for AI-Generated
+Code
+Milan Williams- Senior Product Manager,
+Semgrep
+●
+
+Product strategy for secure development: Leads initiatives that help
+engineering teams integrate security seamlessly into their development
+workﬂows.
+
+●
+
+Developer education & AI tooling: Creates technical content and
+resources focused on AI evaluations and practical developer workﬂows.
+
+●
+
+Bridging security and product: Translates complex security challenges
+into intuitive, developer-ﬁrst solutions that scale across teams.
+
+247
+
+Milan Williams
+Product Manager @ Semgrep
+Semgrep: Code security for builders
+●
+●
+●
+●
+
+Catch, flag, and fix real issues before they ship
+Learns your context to cut false positives
+SAST, SCA, and secrets detection
+Millions of scans every month
+
+248
+
+From Autocomplete → Agents
+Agents go beyond suggesting changes
+● Write code + run shell commands
+● Inherit your credentials + access
+● Hard to tell why something goes wrong
+3 tips that take <afternoon to set up
+
+249
+
+Minimally Scoped Permissions
+If you wouldn’t give it to an intern, why’d you give it to your agent?
+Scoped Tokens
+● Limit damage: If the agent gets confused (or hijacked!), smaller blast radius
+How to downscope Github Access Tokens:
+●
+●
+
+Settings → Developer Settings → Personal Access Tokens → Fine-grained tokens → New token
+Under "Repository access," choose Only select repositories → pick the repos your agent needs
+
+250
+
+Setup Logging Before You Need It
+First question in a postmortem is
+what happened?
+Claude Code
+● ~/.claude/projects/
+● Pay to get structured logs →
+pipe into your existing security
+tooling
+General Case
+● Use hooks to create audit logs
+of what happened after each
+agent action
+
+example script
+
+251
+
+Scan Code Before It Ships
+●
+●
+
+Free options: security scanners + linters
+Semgrep integrates with all major coding agents
+○ Complete security coverage regardless of which agent your developers
+use
+○ Runs every time the agent edits a file
+○ Try it today → semgrep.dev/docs/mcp
+
+252
+
+Takeaways
+The goal isn't to slow down the agent. It's
+to make sure you're still in control when it
+moves fast.
+1.
+2.
+3.
+
+Downscope your credentials
+Wire up a basic audit trail with Hooks
+Scan the final product for vulnerabilities ideally with Semgrep! :)
+
+Choosing the Right Model Is Hard.
+Maintaining Accuracy is Harder.
+Ash Lewis - CEO & Co-Founder, Fastino
+●
+
+Founder building AI-driven products: Leads Fastino with a focus on
+creating practical, high-impact AI solutions for modern teams.
+
+●
+
+Developer education & AI tooling: Creates technical content and
+resources focused on AI evaluations and real-world developer workﬂows.
+
+●
+
+Operator with technical depth: Combines product vision and hands-on
+execution to turn AI capabilities into usable, scalable systems.
+
+The Coding Agent Multiverse of
+Madness
+Ankit Mathur - Engineering at Databricks
+●
+
+AI and data platform engineering: Builds and optimizes systems that help
+teams leverage Databricks for analytics, AI, and ML workloads.
+
+●
+
+Developer education & AI tooling: Creates technical content and
+resources focused on AI evaluations and practical developer workﬂows.
+
+●
+
+Bridging research and production: Applies deep engineering expertise to
+deliver scalable, reliable solutions for real-world data and AI challenges.
+
+©2024 Databricks Inc. — All rights reserved
+
+The Coding Agent Multiverse of
+Madness
+
+Ankit Mathur - Software Engineer, Databricks AI
+Aarushi Shah - Software Engineer, Databricks AI
+
+Every week, a new “10x Engineer”
+
+268
+
+Deploying coding tools is an IT nightmare
+Managing coding agents at enterprise scale is complex
+
+Multiple vendor contracts
+per tool
+
+Multiple admin consoles
+to manage
+
+No centralized
+usage visibility
+
+Fragmented billing
+across teams
+
+Difficult to enforce
+security & policies
+
+3
+
+The most privileged user in your company
+
+270
+
+What developers actually do…
+Reality
+
+Company Standard
+Tool A
+
+Tool B for
+refactors
+Tool C for
+tests
+
+Tool D for
+code review
+
+Using just one coding tool is extremely limiting
+271
+
+Coding Agent Gateway
+
+Freedom for developers. Governance for admins.
+
+©2023 Databricks Inc. — All rights reserved
+
+2
+7
+3
+
+What the Coding Gateway provides
+
+Many coding tools, single governance hub
+
+Observability
+
+● View which users hit rate
+limits
+
+● Track your “power users” and
+productivity metrics
+
+● AI/BI Dashboards
+automatically created with
+tracking metrics.
+
+Cost Controls
+
+Privacy
+
+● Set cost limits per user, per
+
+● Model usage is guaranteed
+
+model, per coding tool
+
+● Receive a single bill for all
+coding tool usage
+
+to be private
+
+● Full ownership of data.
+● Admins can log usage to
+governed tables.
+
+274
+
+Happy admins. Happy developers.
+
+Deploying more coding tools shouldn’t be a debate
+
+For Admins
+
+For Developers
+
+• Cost controls
+
+• Access to multiple coding agents
+
+• Governance
+
+• Latest SOTA models
+
+• Observability
+
+• Low switching friction
+
+• Privacy Guarantees
+
+• Faster iteration
+
+275
+
+Demo
+
+©2023 Databricks Inc. — All rights reserved
+
+2
+7
+6
+
+We’re missing something…
+Maybe the elephant in the
+room?
+
+PLAIN TEXT
+LOCALLY STORED
+LOCAL TOKEN STORAGE
+
+NO ROTATION
+
+BEFORE: READ LOCAL TOKENS
+3RD PARTY ENDPOINTS
+
+MCP
+Authentication
+
+DEVELOPER
+
+MCP SERVERS
+
+AFTER: USE UC CONNECTION
+
+UC MANAGED CONNECTIONS
+
+ENCRYPTED
+FULLY MANAGED
+AUTO ROTATED
+
+3RD PARTY APIs
+
+MCP
+Authentication
+
+DEVELOPER
+
+MCP SERVERS
+Shared principal
+auth OR per-user
+OAuth U2M
+
+UC MANAGED CONNECTIONS
+
+ENCRYPTED
+FULLY MANAGED
+AUTO ROTATED
+
+Case Study: How Databricks uses our Gateway
+
+2200+
+
+10+
+
+Engineers
+
+Engineering ofﬁces
+
+25K+
+
+15K+
+
+Monthly Code Commits
+
+Monthly Deployments
+
+25M+
+
+7
+
+Lines of Code
+
+Languages
+
+Paths to success
+
+Measure everything
+
+Everyone needs to be
+leaning in
+
+Move fast
+
+Devs can/should use any coding agent
+
+We wrote a wrapper around the tools
+
+Centralized
+System
+Tables
+Usage data
+
+Metrics
+reporting
+
+MCP
+Login
+Coding Gateway
+
+Isaac
+
+Codex
+
+Foundation
+Capacity Model API
+
+Gemini CLI
+Tool calls
+
+MCP
+Catalog
+
+Everyone needs to be leaning in
+
+Including your CEO
+
+Bottleneck
+s are
+shifting
+
+Code Reviews
+Scaling CI
+Testing
+
+>60%
+
+Fortune 500 as Customers
+
+Inventor of the lakehouse
+&
+Pioneer of generative AI
+
+Creator of
+
+>50%
+
+YoY Growth in Revenue
+
+>$1B
+
+AI Products ARR
+
+Creators of the largest
+open-source project in Data
++ AI
+
+Mosaic MPT
+
+Partner with us!
+If you build coding tools and want to
+supercharge your users’ experience, let’s
+work together!
+
+Collaborate with us to bring
+• Built-in governance,
+observability, and
+privacy for admins
+• Faster iteration for
+developers
+289
+
+From RPI to QRSPI - Lessons Learned Rolling out
+Research/Plan/Implement to thousands of engineers
+Dexter Horthy - Founder and CEO, HumanLayer
+●
+
+Building human-in-the-loop AI: Leads HumanLayer to create AI agents
+that enhance coding and automation workﬂows with safety and reliability.
+
+●
+
+Cloud-native engineering & product execution: Brings extensive
+experience designing scalable systems and delivering impactful products.
+
+●
+
+Thought leader in applied AI: Focused on engineering AI tools that solve
+real developer challenges and scale eectively in production
+environments.
+
+From RPI to
+QRSPI
+Lessons
+Learned
+Rolling out
+RPI to
+thousands
+of
+engineers
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Hi, I’m dex
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+I’ve been talking about coding agents
+for a while
+
+August 2025
+195k views
+Fromto
+rpi
+rpi
+qrspi
+to qrspi
+|
+@dexhorthy
+|
+@dexhorthy
+
+Nov 2025
+350k views
+
+I’ve been talking about coding agents
+for a while
+
+September 2025
+Fromto
+rpi
+rpi
+qrspi
+to qrspi
+|
+@dexhorthy
+|
+@dexhorthy
+
+9.5k stars
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+E
+P
+
+This is a talk about RPI
+
+O
+N
+
+And why it’s great
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+I’m gonna tell you everything we got
+wrong about it
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+We thought we had this AI thing
+figured out
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Some stuff we got wrong
+Its okay to not read the code
+You should read long-af plan files
+Claude can have a little slop, as a
+treat
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+this thing is a journey
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Some stuff we got right
+There is no magic prompt
+Do not outsource the thinking
+Seek leverage
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Research / Plan / Implement
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+/research_codebase
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/research_codebase
+tell me how $SUBSYSTEM works
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/research_codebase
+we need to add a new endpoint for
+$PURPOSE
+/research_codebase
+research ticket ENG-123
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/create_plan
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/create_plan
+we need to add a new endpoint for
+$PURPOSE
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/create_plan
+we need to add a new endpoint for
+$PURPOSE
+work back and forth with me, starting
+with your open questions and outline
+before writing the plan
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Since October 2025 we’ve worked with
+1000s of engineers
+Seed
+Series B+
+
+- 1-6 eng
+- 45-200 eng
+
+Public F500s - 1000s of eng
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+We gave the tools to an expert
+They got great results
+They gave it to their team
+The results were not always good
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+people weren’t getting good results
+so we got in the trenches with our
+users
+to figure out what was going wrong
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+WHAT WASN’T WORKING
+
+BAD RESEARCH
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Keep things Objective
+Discourage opinions
+Avoid implementation planning
+Research == Compression of Truth
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+ticket - add a new endpoint to
+reticulate splines across tenants
+/research_codebase add a new endpoint to
+reticulate splines across tenants
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+Fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+More on why models shouldn’t have
+opinions later
+But it comes back to
+“Do not outsource the thinking”
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+WHAT WASN’T WORKING
+
+BAD PLANS
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+Plans were low quality
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+/create_plan is a single mega-prompt
+
+85+
+
+instructions
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+What was buried in the old command
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+We gave the tools to an expert
+They got great results
+They gave it to their team
+The results were not always good
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+What was the difference?
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+“you have to say the magic words”
+/create_plan we need to add a new
+endpoint for $PURPOSE
+work back and forth with me, starting
+with your open questions and outline
+before writing the plan
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+This was not the team’s fault
+If you built a tool that requires 7+
+hours of training to wield
+Go fix the tool
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Why were steps getting skipped?
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+You have an
+instruction budget
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+https://arxiv.org/pdf/2507.11538
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+85+
+
+instructions
++ claude.md
++ system prompt
++ tools
++ mcps
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+More on how we fixed this…later
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+WHAT WASN’T WORKING
+
+PLAN REVIEWS
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+We advocated for reading the plans
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Some folks even code reviewed them
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+But a ~1000 line plan ~= 1000 lines
+of code
+And plans can have surprises
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Lines of Plan
+
+Lines of Code
+
+~1000
+
+~1000
+
+~2000
+
+~2000
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+That’s not leverage
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+New Advice:
+Don’t read plans
+Read the code
+Find leverage elsewhere
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+wait dex
+In august you said don’t read the
+code
+I was wrong
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Please read the code
+We tried not reading the code for ~6
+months
+It did not end well
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+But other people don’t read the code
+“I’ve never looked at Beads
+either, and it’s 225k lines
+of Go code that tens of
+thousands of people are using
+every day – @Steve_Yegge
+These days I don’t read much code
+anymore. I watch the stream and
+sometimes look at key parts, but I
+gotta be honest - most code I don’t
+read. – @steipete
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+These are OSS
+They don’t charge money
+Nobody gets paged at 3am if its
+broken
+Nobody gets fined $$$$ if its wrong
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+These are OSS
+They are very dope
+I am humbled by the maintainers
+The stakes are still high
+But they are different
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+If you have people who depend on your
+code
+Please I’m begging you to read it
+We have a profession to uphold
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+We are in an
+asymmetric
+war on slop
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+On Agent Swarms
+Bottleneck is your ability to ensure
+quality
+10x speed doesn’t matter if its slop
+Shoot for 2-3x
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+THE GOALS
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+The Goals
+High leverage planning
+Don’t outsource the thinking
+Read + own the code (no slop)
+No magic words
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Better research
+Better Plans
+Better Leverage
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER
+RESEARCH
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Better Research
+Keep things objective
+Hide ticket from the researcher
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Better Research
+Keep things objective
+Hide ticket from the researcher
+“Query Planning”
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER
+PLANS
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+I’ve been hacking on Agents for a
+while
+
+Fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+2 reads of context engineering
+Better Information (RAG, etc)
+Better instructions
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+The name of the game is that you
+only have approximately 170k of
+context window to work with.
+So it's essential to use as little
+of it as possible.
+The more you use the context window,
+the worse the outcomes you'll get.
+https://ghuntley.com/ralph/
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+“the dumb zone”
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+no
+vibes
+allowed
+|
+@dexhorthy
+rpi to
+qrspi
+|
+@dexhorthy
+
+Too many mcps
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+You’re not just giving the model too much
+info
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+https://arxiv.org/pdf/2507.11538
+
+Prompts for control flow
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+/create_plan is a single mega-prompt
+
+85+
+
+instructions
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+So we split this across several
+prompts
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+IMAGE - 3 context
+windows
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+Before: 85+ instructions
+After: 38 instructions
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Don’t use prompts for control flow
+Use control flow for control flow
+Not just for coding agents
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+We told everybody don’t use prompts
+for control flow
+And then we turned around around and
+wrote these monolithic prompts
+And now its time to drink our own
+kool aid
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Mind your instruction budget
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER LEVERAGE
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+So we split things up
+To get better instruction following
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+IMAGE - 3 context
+windows
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+But we also got more leverage
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Lines of
+Design
+
+Lines of
+Outline
+
+Lines of Plan
+
+Lines of Code
+
+~200
+
+~300
+
+~1000
+
+~1000
+
+~400
+
+~500
+
+~2000
+
+~2000
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER LEVERAGE
+
+THE DESIGN
+DISCUSSION
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+The Design Discussion
+Where are we going?
+What does the final solution look
+like?
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+THE
+DESIGN
+CONCEPT
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+~200 line
+markdown artifact
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Mental Alignment
+Human ↔ Agent
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Do not outsource the thinking
+Give the agent every opportunity to
+show you what it’s thinking
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+200 lines instead of 1000+
+So we got more leverage
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER LEVERAGE
+
+THE STRUCTURE
+OUTLINE
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+Design == where we’re going
+Structure Outline == how do we get
+there?
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+If the plan is the full
+implementation
+The outline is C header files
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Models love horizontal plans
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+These are just markdown docs
+you can/should ask for more detail
+but start high level
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER LEVERAGE
+
+THE PLAN
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+The Plan
+Same OG plan from RPI
+Tactical doc for the agent
+You spot check it
+Save the deep review for the actual
+code
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+GETTING BETTER LEVERAGE
+
+THE ENGINEER IN
+THE ROOM
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+Mental Alignment
+Human ↔ Agent
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Testing and verifying
+
+sorry
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+Putting it all
+together
+fromto
+rpi
+to qrspi
+|
+@dexhorthy
+rpi
+qrspi
+|
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+The Process
+
+Questions
+Research
+Design
+Structure Outline
+Plan
+Worktree
+Implement
+Pull Request
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+The Process
+
+Questions
+Research
+Design
+Structure Outline
+Plan
+Worktree
+Implement
+Pull Request
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+The Process
+
+Questions
+Research
+Design
+Structure Outline
+Plan
+Worktree
+Implement
+Pull Request
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+QRSPI
+
+What’s Next
+3 steps was already a lot to learn
+now there are 7
+How to measure impact
+How to eval improvements
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+If you want to help
+If you’re in sf and engineering
+critical systems, lets chat
+We’re Hiring
+founders@humanlayer.dev
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+If you want to hang
+
+https://sf.aitinkerers.org
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+If you want to hang
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+THANK YOU
+rpi to qrspi
+
+|
+
+@dexhorthy
+
+How to Make a Coding Agent
+a General Purpose Agent
+Harrison Chase - Co-Founder and CEO,
+LangChain
+●
+
+Building LLM-powered developer tools: Leads LangChain, a platform
+empowering teams to create AI applications and agent workﬂows at scale.
+
+●
+
+Turning research into production: Drives the transformation of
+cuing-edge AI research into practical, production-ready solutions used
+globally.
+
+●
+
+Shaping modern AI development: Inﬂuences how developers build with
+AI, helping thousands of teams adopt and scale LLM-based tools
+eectively.
+
+How to Make a Coding Agent
+a General Purpose Agent
+
+Sam Partee - Engineer, Co-Founder | Arcade.dev
+●
+
+Building developer-focused AI tools: Designs and engineers systems that
+streamline workﬂows and enhance productivity for software teams.
+
+●
+
+Startup & technical leadership: Co-founded Arcade.dev, bringing both
+product vision and hands-on engineering expertise to the platform.
+
+●
+
+Applied AI & developer workﬂows: Focused on creating practical
+solutions that integrate AI into real-world software development
+processes.
+
+How to Make a Coding Agent
+a General Purpose Agent
+LangChain + Arcade
+
+What is a General Purpose Agent?
+From coding assistant to universal digital worker
+
+⌨ Coding Agent
+
+⚡ General Purpose Agent
+
+Limited to IDE
+
+Acts across any service
+
+• Read & write files
+
+• Everything a coding agent can do
+
+• Run terminal commands
+• Search codebases
+• Edit code
+
+→
+
+• Send emails and messages
+• Manage tasks and projects
+• Query databases and APIs
+• Schedule and coordinate
+• Deploy and monitor
+
+The ‘last mile’ problem: agents can reason but can’t act securely. They need a harness to orchestrate and a runtime to
+act.
+
+2 / 15
+
+⚙ Agent Harness
+
+⚡ Tool Runtime
+
+Orchestration & Control
+
+Execution & Authorization
+
+LangChain
+
++
+
+Arcade
+
+=
+
+The formula for expanding agent capabilities beyond the IDE
+
+🚀 General
+Purpose
+Agent
+Universal capability
+
+Two Key Components
+Every general purpose agent needs both
+
+⚙ The Agent Harness
+
+⚡ The Tool Runtime
+
+The Brain
+
+The Hands
+
+• Agent loop & reasoning
+
+• Tool execution & discovery
+
+• Planning & task decomposition
+
+• OAuth & user authorization
+
+• Memory & context management
+
+• MCP gateway protocol
+
+• Sub-agents & delegation
+
+• Secure credential management
+
+LangChain
+
+Arcade
+
+🚀 General Purpose Agent
+
+4 / 15
+
+PART I
+
+The Agent Harness
+Fundamental building blocks of Orchestration, planning, and control
+
+5 / 15
+
+46
+3
+
+What’s in a harness?
+
+File System: Protocol
+
+ls: list files in the current directory
+read_file: read a files contents
+write_file: write a new file
+edit_file: edit an existing file
+glob: glob search
+grep: grep search
+
+46
+5
+
+File System: Pluggable Backends
+
+46
+6
+
+Planning tool
+
+Sub agents
+
+Skills
+
+Offload large tool results
+
+Compaction
+
+Human in the Loop
+
+Agents can reason, plan, and orchestrate…
+
+…But how do I connect my agent to my data and services securely???
+
+PART II
+
+The Tool Runtime
+Giving agents the ability to act in the real world
+
+9 / 15
+
+Actions + Control + Auth = Tool Runtime
+You can’t just add tools to an agent
+
+When does an agent need user-authorized integrations in tool calls?
+
+Check Calendar
+
+Find Flights
+
+Book Flight
+
+Notify Team
+
+How does the agent access
+
+Searching across multiple
+
+How does the agent get user
+
+How does it access the
+
+user's calendar?
+Auth
+
+services?
+
+credit card and use it?
+
+userʼs Slack?
+
+How does the agent make
+
+How does the agent log in to
+
+Actually process the
+
+Is sending notification as
+
+events after the flight is
+
+the user profile? Frequent
+
+transaction on the website?
+
+user or as the agent?
+
+booked?
+
+flyer?
+Integration
+
+Integration
+
+Auth
+
+Integration
+
+Auth
+Auth
+
+Integration
+
+Two ways Agent Security Fails
+Pattern 1:
+
+Pattern 2:
+
+Agent gets its OWN
+Identity
+
+Agent uses Service
+Accounts
+
+Agent
+
+Agent
+
+“I am AgentBot1”
+
+Uses: svc_agent
+
+What permissions do you give the agent ?
+
+Service account has broad access
+
+Any user of the agent inherits
+agent's permissions.
+
+No way to know which user
+triggered action.
+
+Low-privileged users access
+high-privileged data via the agent.
+
+Shared credential is equal to no
+accountability.
+
+Can't audit which user did what
+
+Access must be pre-provisioned
+with broad scope up front.
+
+Delegated Agent Authorization
+
+User
+
+Agent
+
+“Send Email”
+
+Call Send
+Email Tool
+
+Arcade Runtime
+
+Checks: User has access
+to execute tool ?
+Scopes: Only what this
+action needs
+
+Auth URL
+Authorize
+
+Issues: JIT auth url with
+‘Send Email’ scope
+Executes tool using
+users token
+Token never exposed to
+Agent context or LLMs
+
+Least level of privilege per action
+Your user’s token for that service
+
+Injected, not in context
+
+Arcade MCP
+
+Contextual Tool Access
+Agent Request
+
+Agent Response
+
+Agent Context
+
+Arcade MCP Runtime
+Access Hook
+
+Who can
+use which
+tools?
+
+Documentation
+
+Pre Hook
+
+Tool Run
+
+Validate inputs
+before
+execution
+
+Tool Access
+Policies
+
+Input
+Validation
+
+Prompt
+Injection
+Scan
+
+Post Hook
+
+Scan outputs
+before
+returning to
+LLM
+
+Toxic flow
+detection
+
+PII Redaction
+
+Why Tools Need a Runtime
+Agents
+
+MCP Clients
+
+Agentic Apps & Frameworks
+
+LLM
+Providers
+
+MCP Gateway
+
+Custom
+MCP Servers
+
+Governance
+
+Arcade
+MCP Servers
+
+Tool Search
+
+Third Party
+MCP Servers
+
+Tool Registry
+Contextual Tool Access
+Auth & Token
+Management
+
+Arcade MCP Runtime
+
+Runtime Core
+
+More Info
+Databases
+
+APIs
+
+Business Apps
+
+SaaS
+
+Authorization
+Servers
+(Google,
+Microsoft,
+Github, etc)
+
+Storage
+
+Enterprise Systems / Endpoints
+
+Remote MCP Servers
+(Customer / Vendor hosted)
+
+First Party Auth
+Integrations
+
+MCP Gateway = Exact Group of Tools Across Services
+Agents
+
+MCP Clients
+
+Agentic Apps & Frameworks
+
+LLM
+Providers
+
+MCP Gateway
+
+Custom
+MCP Servers
+
+Governance
+
+Arcade
+MCP Servers
+
+Tool Search
+
+Third Party
+MCP Servers
+
+Tool Registry
+Contextual Tool Access
+Auth & Token
+Management
+
+Arcade MCP Runtime
+
+Runtime Core
+
+More Info
+Databases
+
+APIs
+
+Business Apps
+
+SaaS
+
+Authorization
+Servers
+(Google,
+Microsoft,
+Github, etc)
+
+Storage
+
+Enterprise Systems / Endpoints
+
+Remote MCP Servers
+(Customer / Vendor hosted)
+
+First Party Auth
+Integrations
+
+Better Together
+Agent Harness + Tool Runtime
+
+👤 Agent Interface (CLI • IDE • Web • API)
+
+Agent Harness
+
+Tool Runtime
+
+Loop • Planning • Sub-agents
+Skills • Compaction
+
+OAuth • MCP Gateway
+RBAC • Prebuilt Tools •
+Execution
+
+↓
+
+↓
+
+MCP
+
+↓
+
+↓
+
+↓
+
+↓
+
+LANGCHAIN
+
+ARCADE
+
+↓
+
+↓
+LLMs (Claude, GPT, Gemini)
+
+13 / 15
+
+Agent Builder
+
+Agent Builder – Arcade Integration
+
+Three Takeaways
+1
+
+Tools Matter — Use Arcade
+Enable Agents to make impactful actions safely and securely
+
+2
+
+Harness Matters — Use Langchain DeepAgents
+LangGraph workflows, LangSmith observability, Agent Builder for planning, sub-agents, and HITL
+
+3
+
+Use Them Together – AgentBuilder
+15 lines of code to a production agent. The only open, production-ready alternative to hyperscaler bundling.
+
+arcade.dev
+
+langchain.dev
+Build your first general purpose agent today
+
+15 / 15
+
+Appendex
+
+13 / 15
+
+Join our crew
+And become a
+co-chapter lead
+in our South Bay
+Chapter!
+
+We’ve got more @ MLOps!
+
+Podcast
+
+Blog
+
+Join us -
+
+In-person Community
+
+Slack
+
+We’d love to know
+how you’re using
+AI Agents
+
+

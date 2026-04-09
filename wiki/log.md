@@ -99,6 +99,13 @@ Pages created/updated:
 - `wiki/overview.md` (updated — new thesis points 6-8, updated sources table, new open questions)
 - `wiki/index.md` (updated — added sources, concepts, to-create items)
 
+## [2026-04-08] update | Dex — "From RPI to CRISPY" (additional transcript)
+
+Added second transcript of the same talk from Limbic Systems channel (raw/youtube-transcripts/dex-rpi-to-crispy.md). No new claims — same talk, different recording. Updated source page metadata with additional raw file and video URL.
+
+Pages updated:
+- `wiki/sources/dex-rpi-to-crispy.md` (updated — added second raw source + video URL)
+
 ## [2026-04-08] create | BMAD Method Entity Page
 
 Created entity page for BMAD (Breakthrough Method for Agile AI-Driven Development) — multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Key points: partnership model (AI as collaborator, not replacement), adaptive complexity management, "Party Mode" for multi-perspective collaboration. Runs on top of Claude Code/Cursor/Windsurf. Compared with Spec-Kit, Kiro, and Claude Code. Documented hybrid model (BMAD + Spec-kit) for strategic planning + tactical execution.

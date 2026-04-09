@@ -4,7 +4,7 @@ type: source
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-08
-sources: [dex-rpi-to-crispy-coding-agents.md, extracted_text.txt]
+sources: [dex-rpi-to-crispy-coding-agents.md, dex-rpi-to-crispy.md, extracted_text.txt]
 tags: [rpi, crispy, methodology, code-legibility, context-engineering, instruction-budget, humanlayer, dex]
 ---
 
@@ -15,7 +15,8 @@ tags: [rpi, crispy, methodology, code-legibility, context-engineering, instructi
 - **Author:** Dex (dexhorthy), HumanLayer
 - **Event:** Coding Agents Conference 2026, March 3, Computer History Museum
 - **Format:** Conference talk (transcript + slides)
-- **Raw files:** `raw/youtube-transcripts/dex-rpi-to-crispy-coding-agents.md`, `raw/slides/extracted_text.txt`
+- **Raw files:** `raw/youtube-transcripts/dex-rpi-to-crispy-coding-agents.md`, `raw/youtube-transcripts/dex-rpi-to-crispy.md`, `raw/slides/extracted_text.txt`
+- **Videos:** https://youtu.be/YwZR6tc7qYg, https://www.youtube.com/watch?v=5MWl3eRXVQk (Limbic Systems channel)
 
 ## Summary
 

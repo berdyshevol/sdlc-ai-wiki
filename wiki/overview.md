@@ -3,7 +3,7 @@ title: "SDLC AI Automation: Research Overview"
 type: overview
 created: 2026-04-08
 updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research]
 tags: [overview, synthesis]
 ---
 
@@ -60,6 +60,10 @@ Across the sources ingested so far, a coherent picture is forming:
 
 8. **Structured methodologies are converging.** CRISPY (Dex), RePPIT (Mihail Eric), and Kilo Code's adoption data all point to the same pattern: research before planning, plan before implementing, review at high-leverage points, and test throughout.
 
+9. **Vibe coding vs. SDD is the emerging bifurcation.** [[ai-in-sdlc-research]] frames two distinct modes of AI-assisted development: vibe coding (informal, iterative, fast) and spec-driven development (structured, traceable, governed). Organizations will likely need **dual-track workflows** — one optimized for speed and learning, another for traceability and compliance — rather than a single process for all AI-assisted work.
+
+10. **Practitioner evidence supports SDD claims.** A first-hand observation of SDD adoption (Spec Kit + BMAD) on a 5-person production SaaS team found reduced hallucination-driven rework, improved task scoping, and increased code consistency. While not a controlled study, this aligns with the broader SDD literature and provides the wiki's first practitioner data point.
+
 ## Sources Ingested
 
 | # | Source | Author | Pillar | Date |
@@ -71,11 +75,12 @@ Across the sources ingested so far, a coherent picture is forming:
 | 5 | [[agent-control-plane]] | Dex (HumanLayer) | Coding Agents | 2025 |
 | 6 | [[dex-rpi-to-crispy]] | Dex (HumanLayer) | Coding Agents / Code Legibility | Mar 2026 |
 | 7 | [[coding-agents-conf-2026]] | Multiple speakers | Industry (all pillars) | Mar 2026 |
+| 8 | [[ai-in-sdlc-research]] | Academic paper | Industry/Spec-Driven/Agents | 2026 |
 
 ## Sources To Ingest
 
 - The Software Factory (lukepm.com) — dedicated software factory article
-- Spec-kit, BMAD method, Kiro — spec-driven development tools
+- ~~Spec-kit, BMAD method, Kiro — spec-driven development tools~~ ✅ entity pages created
 - Devin — autonomous coding agent
 - Industry reports on AI in SDLC
 

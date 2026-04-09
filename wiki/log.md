@@ -134,3 +134,16 @@ Pages created/updated:
 - `wiki/entities/bmad-method.md` (new)
 - `wiki/concepts/spec-driven-development.md` (updated — expanded BMAD entry, removed "to be researched")
 - `wiki/index.md` (updated — added entity, removed from "to create" list)
+
+## [2026-04-08] ingest | AI in SDLC Research Paper
+
+Ingested: "AI in SDLC: Artificial Intelligence in the Software Development Life Cycle" — comprehensive academic survey covering AI across all SDLC stages. Key contributions: (1) GitHub Copilot case study, (2) spec-driven development vs. vibe coding bifurcation framework, (3) practitioner observation of SDD (Spec Kit + BMAD) in a 5-person production SaaS team showing reduced hallucination-driven rework, improved task scoping, and increased code consistency. Also covers AI techniques (LLMs, RAG, agents), tool landscape, risks/ethics, and 3-5 year outlook. Proposes dual-track workflows: vibe coding for exploration, SDD for production.
+
+Pages created/updated:
+- `wiki/sources/ai-in-sdlc-research.md` (new)
+- `wiki/entities/github-copilot.md` (new)
+- `wiki/entities/kiro.md` (new)
+- `wiki/entities/spec-kit.md` (new)
+- `wiki/concepts/spec-driven-development.md` (major update — vibe coding contrast, practitioner evidence, updated Spec Kit and Kiro entries, new open questions)
+- `wiki/index.md` (updated — added source, 3 entities, marked Spec-kit/Kiro/Copilot as created)
+- `wiki/overview.md` (updated — new thesis points, updated sources table)

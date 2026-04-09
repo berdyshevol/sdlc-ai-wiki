@@ -22,14 +22,15 @@ updated: 2026-04-08
 | [[agent-control-plane]] | Dex (HumanLayer) | Coding Agents | Kubernetes-native orchestration for long-lived autonomous agents. Async-first, MCP support, agent-to-agent delegation. |
 | [[dex-rpi-to-crispy]] | Dex (HumanLayer) | Coding Agents / Code Legibility | RPI methodology failures and evolution to CRISPY/QRSPI. Major reversal on code legibility. Instruction budget, Smart Zone, Mental Alignment. |
 | [[coding-agents-conf-2026]] | Multiple speakers | Industry (all pillars) | Full-day conference: trust ladder (Kilo Code 25T tokens), agentic search vs RAG, agent memory, SWE Atlas, enterprise governance, security. |
+| [[ai-in-sdlc-research]] | Academic paper | Industry/Spec-Driven/Agents | Full survey: AI across all SDLC stages, Copilot case study, spec-driven vs. vibe coding bifurcation, practitioner SDD observation (5-person team). |
 
 ### Sources To Ingest
 
 - lukepm.com — "The Software Factory"
 - blog.fsck.com — Superpowers series (earlier installments)
-- Spec-kit documentation/articles
+- ~~Spec-kit documentation/articles~~ ✅ entity page created
 - ~~BMAD method documentation~~ ✅ entity page created
-- Kiro (AWS) documentation
+- ~~Kiro (AWS) documentation~~ ✅ entity page created
 - Devin case studies/reviews
 - Industry landscape reports
 
@@ -61,12 +62,16 @@ updated: 2026-04-08
 | [[humanlayer]] | Company | Full-stack AI coding agent company: 12-factor principles → CodeLayer IDE → Agent Control Plane infrastructure. |
 | [[bmad-method]] | Framework | Multi-agent Agile team simulation (12+ roles, 34+ workflows). Spec-driven, anti-vibe-coding. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
 | [[codespeak]] | Tool/Platform | Spec-driven dev platform: markdown specs (`.cs.md`) → full app generation via Claude. GitHub-native, auto-commits. Brownfield conversions of faker, yt-dlp, beautifulsoup4. Alpha v0.0.1. |
+| [[github-copilot]] | Tool | AI coding assistant (GitHub/OpenAI). Most widely adopted AI dev tool. IDE autocomplete, code generation, test writing. Case study in [[ai-in-sdlc-research]]. Level 1-2 in Shapiro's framework. |
+| [[kiro]] | Tool/IDE | AWS agentic development environment. Converts prompts into structured specs and production-ready workflows. SDD framework alongside Spec Kit and BMAD. |
+| [[spec-kit]] | Framework | GitHub's open-source SDD toolkit. `specify → plan → tasks → implement` pipeline. Used in practitioner observation alongside BMAD with positive results. |
 
 ### Entities To Create
 
 - **Devin** — Cognition's autonomous coding agent
-- **Spec-kit** — Spec-driven development framework
-- **Kiro** — AWS spec-driven development tool
+- ~~**Spec-kit** — Spec-driven development framework~~ ✅ entity page created
+- ~~**Kiro** — AWS spec-driven development tool~~ ✅ entity page created
+- ~~**GitHub Copilot** — AI coding assistant~~ ✅ entity page created
 - **Dan Shapiro** — Five levels framework author
 - **Jesse Vincent** — Superpowers series author
 - **Dex (dexhorthy)** — 12-factor agents / HumanLayer creator

@@ -117,6 +117,15 @@ Pages updated:
 - `wiki/concepts/code-legibility-debate.md` (updated — QRSPI naming, Mental Alignment)
 - `wiki/index.md` (updated — summaries refreshed)
 
+## [2026-04-08] create | CodeSpeak Entity Page
+
+Created entity page for CodeSpeak — a spec-driven development platform (alpha v0.0.1) that generates full applications from markdown specs (`.cs.md` files) using Anthropic's Claude. GitHub-native with automatic commits. Notable for brownfield conversions of major OSS projects (faker, markitdown, yt-dlp, beautifulsoup4, django-oscar). Compared with BMAD, Spec-kit, Kiro. Source: web research (codespeak.dev, github.com/codespeak-dev).
+
+Pages created/updated:
+- `wiki/entities/codespeak.md` (new)
+- `wiki/concepts/spec-driven-development.md` (updated — added CodeSpeak to Tools and Frameworks)
+- `wiki/index.md` (updated — added entity)
+
 ## [2026-04-08] create | BMAD Method Entity Page
 
 Created entity page for BMAD (Breakthrough Method for Agile AI-Driven Development) — multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Key points: partnership model (AI as collaborator, not replacement), adaptive complexity management, "Party Mode" for multi-perspective collaboration. Runs on top of Claude Code/Cursor/Windsurf. Compared with Spec-Kit, Kiro, and Claude Code. Documented hybrid model (BMAD + Spec-kit) for strategic planning + tactical execution.

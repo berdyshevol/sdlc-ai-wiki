@@ -60,6 +60,7 @@ updated: 2026-04-08
 |------|------|---------|
 | [[humanlayer]] | Company | Full-stack AI coding agent company: 12-factor principles → CodeLayer IDE → Agent Control Plane infrastructure. |
 | [[bmad-method]] | Framework | Multi-agent Agile team simulation (12+ roles, 34+ workflows). Spec-driven, anti-vibe-coding. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
+| [[codespeak]] | Tool/Platform | Spec-driven dev platform: markdown specs (`.cs.md`) → full app generation via Claude. GitHub-native, auto-commits. Brownfield conversions of faker, yt-dlp, beautifulsoup4. Alpha v0.0.1. |
 
 ### Entities To Create
 

@@ -24,8 +24,9 @@ This inverts the traditional relationship between documentation and code. Instea
 
 ## Tools and Frameworks
 
-- **Spec-kit** — A framework for spec-driven development (to be researched)
+- **[[codespeak]]** — Spec-driven platform that generates full applications from markdown specs (`.cs.md` files) using Claude. GitHub-native with automatic commits. Notable for brownfield conversions of major OSS projects (faker, yt-dlp, beautifulsoup4). Alpha (v0.0.1).
 - **[[bmad-method|BMAD method]]** — Multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Covers the entire SDLC from brainstorming to QA. Runs on top of Claude Code, Cursor, Windsurf.
+- **Spec-kit** — A framework for spec-driven development (to be researched)
 - **[[kiro]]** — AWS's spec-driven development tool (to be researched)
 
 ## Current Understanding

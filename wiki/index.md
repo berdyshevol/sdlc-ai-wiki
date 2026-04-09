@@ -25,6 +25,8 @@ updated: 2026-04-08
 | [[ai-in-sdlc-research]] | Academic paper | Industry/Spec-Driven/Agents | Full survey: AI across all SDLC stages, Copilot case study, spec-driven vs. vibe coding bifurcation, practitioner SDD observation (5-person team). |
 | [[anatomy-agent-harness]] | Akshay Pachaar | Coding Agents | Comprehensive anatomy of the agent harness: 12 components, 7 architectural decisions, 5-framework comparison. "The harness is the product, not the model." |
 | [[long-running-claude]] | Siddharth Mishra-Sharma (Anthropic) | Coding Agents / Factories | Multi-day autonomous Claude Code for scientific computing. Five patterns: CLAUDE.md as living plan, CHANGELOG.md as lab notes, test oracles, git as coordination, Ralph Loop. Months-to-days time compression. |
+| [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Ralph Loop as mindset and orchestrator pattern. Extends automation to "level 9" — evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom. Provocative claim: "software development is dead." |
+| [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Ralph Loop as mindset and orchestrator pattern. Extends automation to "level 9" — evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom. Provocative claim: "software development is dead." |
 
 ### Sources To Ingest
 

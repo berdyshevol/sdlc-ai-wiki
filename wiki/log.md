@@ -4,6 +4,7 @@ type: log
 created: 2026-04-08
 updated: 2026-04-09
 
+
 ---
 
 # Wiki Log
@@ -177,3 +178,17 @@ Pages created/updated:
 - `wiki/concepts/agent-memory.md` (updated — added CHANGELOG.md pattern to Key Sources and taxonomy)
 - `wiki/index.md` (updated — added source)
 - `wiki/overview.md` (updated — new thesis point on long-running agents)
+
+## [2026-04-09] ingest | Geoffrey Huntley — "Everything is a Ralph Loop"
+
+Ingested: "Everything is a Ralph Loop" by Geoffrey Huntley (17 Jan 2026, ghuntley.com/loop/). Manifesto-style article on the Ralph Loop as both orchestrator pattern and development mindset. Key claims: software development is fundamentally changed from "brick by brick" to loop-based orchestration; Ralph is monolithic, one task per loop, one repo; the engineer's role shifts to "programming the loop." Extends automation levels beyond Shapiro's Level 5 to Level 8-9: evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom (github.com/ghuntley/loom) as infrastructure for evolutionary software factories. Provocative: "software development is dead — I killed it." Claims coding agent = ~300 lines of loop code.
+
+Pages created/updated:
+- `raw/everything-is-a-ralph-loop.md` (new — raw article)
+- `raw/links/links.md` (updated — added link)
+- `wiki/sources/everything-is-a-ralph-loop.md` (new)
+- `wiki/concepts/software-factory.md` (updated — added Huntley's level 9 vision, evolutionary auto-heal)
+- `wiki/entities/claude-agent-sdk.md` (updated — added Huntley as Ralph Loop originator)
+- `wiki/concepts/agent-harness.md` (updated — added Ralph as orchestrator pattern philosophy)
+- `wiki/index.md` (updated — added source)
+- `wiki/overview.md` (updated — new thesis point on Ralph Loop maximalism)

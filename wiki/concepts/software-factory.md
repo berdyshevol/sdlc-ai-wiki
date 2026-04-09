@@ -4,7 +4,7 @@ type: concept
 pillar: software-factories
 created: 2026-04-08
 updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5]
+sources: [five-levels-shapiro, superpowers-5, everything-is-a-ralph-loop]
 tags: [automation, autonomous, dark-factory, production-pipeline]
 ---
 
@@ -20,6 +20,7 @@ The term "Dark Factory" (from [[five-levels-shapiro]]) references Fanuc's lights
 
 - [[five-levels-shapiro]] — Level 5 ("Dark Factory") is the software factory vision
 - [[superpowers-5]] — The cascade pattern (spec → implement → review) is a proto-factory pipeline
+- [[everything-is-a-ralph-loop]] — Geoffrey Huntley's "level 9" vision: autonomous loops that evolve products and optimize for revenue. The most extreme articulation of the software factory concept. Introduces The Weaving Loom as infrastructure for evolutionary software.
 - The Software Factory (lukepm.com) — dedicated article on this concept (to be fully ingested)
 
 ## Current Understanding
@@ -37,6 +38,7 @@ The software factory vision sits at the **far end of the automation spectrum**. 
 - Most teams operate at Level 2 — collaborative coding, far from factory automation
 - The [[superpowers-5]] cascade pattern represents a middle ground — structured but still human-supervised
 - Products like [[devin]] aim for autonomous coding but reviews suggest they still need significant oversight
+- Geoffrey Huntley ([[everything-is-a-ralph-loop]]) claims to have achieved "evolutionary software auto-heal" — self-repairing systems under autonomous Ralph loops — and extends the automation levels to 8-9, with level 9 being fully autonomous revenue-optimizing software factories
 
 **The pipeline model:**
 ```

@@ -4,7 +4,7 @@ type: entity
 pillar: coding-agents
 created: 2026-04-09
 updated: 2026-04-09
-sources: [anatomy-agent-harness, long-running-claude]
+sources: [anatomy-agent-harness, long-running-claude, everything-is-a-ralph-loop]
 tags: [framework, anthropic, agent-harness, sdk]
 ---
 
@@ -97,3 +97,4 @@ Also references Anthropic's C compiler project (~2,000 sessions → Linux-kernel
 - [[context-engineering]] — Claude Code's compaction, JIT retrieval, and sub-agent delegation are production context strategies
 - [[agent-memory]] — Claude Code's 3-tier memory hierarchy
 - [[anatomy-agent-harness]] — source article with detailed comparison
+- [[everything-is-a-ralph-loop]] — Geoffrey Huntley's original articulation of the Ralph Loop philosophy; Ralph as orchestrator pattern and mindset for autonomous development

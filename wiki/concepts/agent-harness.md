@@ -4,7 +4,7 @@ type: concept
 pillar: coding-agents
 created: 2026-04-09
 updated: 2026-04-09
-sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026]
+sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop]
 tags: [agent-harness, orchestration, infrastructure, architecture]
 ---
 
@@ -144,3 +144,4 @@ But: **co-evolution creates coupling.** Models are post-trained with specific ha
 - [[agent-memory]] — the persistence layer of the harness
 - [[instruction-budget]] — the constraint that drives tool scoping and context management decisions
 - [[12-factor-agents]] — design principles that inform harness architecture
+- [[everything-is-a-ralph-loop]] — Geoffrey Huntley's Ralph pattern: a monolithic orchestrator loop as harness philosophy. Emphasizes simplicity ("300 lines"), loop-based control, and the engineer as loop programmer

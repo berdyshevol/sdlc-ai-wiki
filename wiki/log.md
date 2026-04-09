@@ -3,8 +3,6 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-09
-
-
 ---
 
 # Wiki Log
@@ -192,3 +190,23 @@ Pages created/updated:
 - `wiki/concepts/agent-harness.md` (updated — added Ralph as orchestrator pattern philosophy)
 - `wiki/index.md` (updated — added source)
 - `wiki/overview.md` (updated — new thesis point on Ralph Loop maximalism)
+
+## [2026-04-09] ingest | BMAD Method — Official Documentation
+
+Ingested: Official BMAD Method documentation (docs.bmad-method.org/llms-full.txt). Comprehensive first-party source revealing internal architecture, agent system, and workflow mechanics. Key new information beyond previous secondary sources:
+
+1. **Four-phase development cycle** (Analysis → Planning → Solutioning → Implementation)
+2. **Three planning tracks** (Quick Flow / BMad Method / Enterprise) — directly addresses the "overkill for small projects" criticism
+3. **6 named agent personas** with dedicated skill IDs: Analyst (Mary), PM (John), Architect (Winston), Developer (Amelia), UX Designer (Sally), Technical Writer (Paige)
+4. **project-context.md** as shared context file — coordination-through-artifacts pattern, similar to Dex's Mental Alignment
+5. **Adversarial review** — "no 'looks good' allowed," most explicit articulation of adversarial review in the wiki
+6. **Fresh chat requirement** — each workflow runs in a new session, a practical solution to the instruction-budget problem
+7. **Advanced elicitation** — second-pass analysis using pre-mortem, inversion, first-principles reasoning
+8. **Quick Dev workflow** — autonomous small-task pipeline paralleling CRISPY's approach
+
+Pages created/updated:
+- `raw/bmad-method-docs.md` (new — raw documentation)
+- `wiki/sources/bmad-method-docs.md` (new)
+- `wiki/entities/bmad-method.md` (major update — replaced secondary-source content with first-party details)
+- `wiki/index.md` (updated — added source, updated entity summary, marked BMAD docs as ingested)
+- `wiki/log.md` (updated)

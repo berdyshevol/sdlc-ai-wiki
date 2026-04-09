@@ -2,7 +2,7 @@
 title: Wiki Index
 type: index
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-09
 ---
 
 # Wiki Index
@@ -27,13 +27,14 @@ updated: 2026-04-08
 | [[long-running-claude]] | Siddharth Mishra-Sharma (Anthropic) | Coding Agents / Factories | Multi-day autonomous Claude Code for scientific computing. Five patterns: CLAUDE.md as living plan, CHANGELOG.md as lab notes, test oracles, git as coordination, Ralph Loop. Months-to-days time compression. |
 | [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Ralph Loop as mindset and orchestrator pattern. Extends automation to "level 9" — evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom. Provocative claim: "software development is dead." |
 | [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Ralph Loop as mindset and orchestrator pattern. Extends automation to "level 9" — evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom. Provocative claim: "software development is dead." |
+| [[bmad-method-docs]] | bmadcode | Spec-Driven | Official BMAD docs: four-phase cycle, three planning tracks (Quick Flow/BMad/Enterprise), 6 named agent personas, adversarial review, fresh-chat requirement, project-context.md as shared context. |
 
 ### Sources To Ingest
 
 - lukepm.com — "The Software Factory"
 - blog.fsck.com — Superpowers series (earlier installments)
 - ~~Spec-kit documentation/articles~~ ✅ entity page created
-- ~~BMAD method documentation~~ ✅ entity page created
+- ~~BMAD method documentation~~ ✅ entity page created, ✅ source page ingested from official docs
 - ~~Kiro (AWS) documentation~~ ✅ entity page created
 - Devin case studies/reviews
 - Industry landscape reports
@@ -65,7 +66,7 @@ updated: 2026-04-08
 | Page | Type | Summary |
 |------|------|---------|
 | [[humanlayer]] | Company | Full-stack AI coding agent company: 12-factor principles → CodeLayer IDE → Agent Control Plane infrastructure. |
-| [[bmad-method]] | Framework | Multi-agent Agile team simulation (12+ roles, 34+ workflows). Spec-driven, anti-vibe-coding. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
+| [[bmad-method]] | Framework | Multi-agent Agile team simulation with 6 named personas, three planning tracks (Quick Flow/BMad/Enterprise), adversarial review, fresh-chat requirement. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
 | [[codespeak]] | Tool/Platform | Spec-driven dev platform: markdown specs (`.cs.md`) → full app generation via Claude. GitHub-native, auto-commits. Brownfield conversions of faker, yt-dlp, beautifulsoup4. Alpha v0.0.1. |
 | [[github-copilot]] | Tool | AI coding assistant (GitHub/OpenAI). Most widely adopted AI dev tool. IDE autocomplete, code generation, test writing. Case study in [[ai-in-sdlc-research]]. Level 1-2 in Shapiro's framework. |
 | [[kiro]] | Tool/IDE | AWS agentic development environment. Converts prompts into structured specs and production-ready workflows. SDD framework alongside Spec Kit and BMAD. |

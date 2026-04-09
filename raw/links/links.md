@@ -10,3 +10,6 @@
 
 3. By Geoffrey Huntley in AI — 17 Jan 2026
    everything is a ralph loop https://ghuntley.com/loop/
+
+4. BMAD Method — Official Documentation
+   https://docs.bmad-method.org/llms-full.txt

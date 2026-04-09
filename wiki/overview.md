@@ -3,7 +3,7 @@ title: "SDLC AI Automation: Research Overview"
 type: overview
 created: 2026-04-08
 updated: 2026-04-09
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness, long-running-claude]
 tags: [overview, synthesis]
 ---
 
@@ -64,7 +64,9 @@ Across the sources ingested so far, a coherent picture is forming:
 
 10. **Practitioner evidence supports SDD claims.** A first-hand observation of SDD adoption (Spec Kit + BMAD) on a 5-person production SaaS team found reduced hallucination-driven rework, improved task scoping, and increased code consistency. While not a controlled study, this aligns with the broader SDD literature and provides the wiki's first practitioner data point.
 
-11. **NEW: The harness is the product, not the model.** [[anatomy-agent-harness]] synthesizes evidence that the non-model infrastructure (the "[[agent-harness]]") is where competitive differentiation lives. LangChain jumped from outside the top 30 to rank 5 on TerminalBench 2.0 by changing only harness infrastructure (same model, same weights). Five major frameworks (Claude Agent SDK, OpenAI Agents SDK, LangGraph, CrewAI, AutoGen) have converged on the same core pattern (orchestration loop + tools + memory + context management) but diverge on a **thin-to-thick spectrum**: Anthropic bets on trusting the model; LangGraph bets on encoding logic in code. The trend is toward thinner harnesses as models improve, but co-evolution (models post-trained with specific harnesses) creates tight coupling that complicates upgrades. The seven architectural decisions identified (agent count, reasoning strategy, context strategy, verification, permissions, tool scoping, harness thickness) provide a practical design framework.
+11. **NEW: Long-running autonomous agents deliver dramatic time compression.** [[long-running-claude]] demonstrates that multi-day Claude Code sessions can compress months or years of scientific research into days — when tasks are well-scoped with clear success criteria and test oracles. Five codified patterns (CLAUDE.md as living plan, CHANGELOG.md as lab notes, test oracles, git as coordination, Ralph Loop) provide a replicable recipe. The opportunity cost framing is powerful: "unused agent-working hours represent abandoned progress opportunities." This extends the Level 4 autonomous workflow from theory ([[automation-levels]]) to a concrete, reproducible case study with quantifiable results (0.1% accuracy target met). The C compiler project (~2,000 sessions) suggests this scales to industrial complexity.
+
+12. **The harness is the product, not the model.** [[anatomy-agent-harness]] synthesizes evidence that the non-model infrastructure (the "[[agent-harness]]") is where competitive differentiation lives. LangChain jumped from outside the top 30 to rank 5 on TerminalBench 2.0 by changing only harness infrastructure (same model, same weights). Five major frameworks (Claude Agent SDK, OpenAI Agents SDK, LangGraph, CrewAI, AutoGen) have converged on the same core pattern (orchestration loop + tools + memory + context management) but diverge on a **thin-to-thick spectrum**: Anthropic bets on trusting the model; LangGraph bets on encoding logic in code. The trend is toward thinner harnesses as models improve, but co-evolution (models post-trained with specific harnesses) creates tight coupling that complicates upgrades. The seven architectural decisions identified (agent count, reasoning strategy, context strategy, verification, permissions, tool scoping, harness thickness) provide a practical design framework.
 
 ## Sources Ingested
 
@@ -79,6 +81,7 @@ Across the sources ingested so far, a coherent picture is forming:
 | 7 | [[coding-agents-conf-2026]] | Multiple speakers | Industry (all pillars) | Mar 2026 |
 | 8 | [[ai-in-sdlc-research]] | Academic paper | Industry/Spec-Driven/Agents | 2026 |
 | 9 | [[anatomy-agent-harness]] | Akshay Pachaar | Coding Agents | Apr 2026 |
+| 10 | [[long-running-claude]] | Siddharth Mishra-Sharma (Anthropic) | Coding Agents / Factories | Mar 2026 |
 
 ## Sources To Ingest
 

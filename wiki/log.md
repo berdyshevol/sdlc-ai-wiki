@@ -3,6 +3,7 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-09
+
 ---
 
 # Wiki Log
@@ -164,3 +165,15 @@ Pages created/updated:
 - `wiki/entities/autogen.md` (new — conversation-driven, 5 orchestration patterns, Microsoft Agent Framework evolution)
 - `wiki/index.md` (updated — added source, concept, 5 entities)
 - `wiki/overview.md` (updated — new thesis point on harness engineering)
+
+## [2026-04-09] ingest | Anthropic — "Long-running Claude for Scientific Computing"
+
+Ingested: "Long-running Claude for scientific computing" by Siddharth Mishra-Sharma (Anthropic Discovery team, March 2026). Practical methodology for multi-day autonomous Claude Code sessions on scientific computing tasks. Codifies five patterns: CLAUDE.md as living plan, CHANGELOG.md as "lab notes" (portable episodic memory), test oracles, git as coordination, and the Ralph Loop for combating agentic laziness. Case study: cosmological Boltzmann solver achieving 0.1% agreement with reference CLASS implementation over several days. Key claim: "months or years of research work compressed into days." Also references Anthropic's C compiler project (~2,000 sessions).
+
+Pages created/updated:
+- `raw/long-running-claude.md` (new — raw article)
+- `wiki/sources/long-running-claude.md` (new)
+- `wiki/entities/claude-agent-sdk.md` (updated — added scientific computing case study section)
+- `wiki/concepts/agent-memory.md` (updated — added CHANGELOG.md pattern to Key Sources and taxonomy)
+- `wiki/index.md` (updated — added source)
+- `wiki/overview.md` (updated — new thesis point on long-running agents)

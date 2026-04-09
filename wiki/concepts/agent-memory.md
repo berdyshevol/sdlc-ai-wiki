@@ -4,7 +4,7 @@ type: concept
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-08
-sources: [coding-agents-conf-2026, dex-rpi-to-crispy]
+sources: [coding-agents-conf-2026, dex-rpi-to-crispy, long-running-claude]
 tags: [memory, learning, state, persistence, trust]
 ---
 
@@ -22,6 +22,7 @@ Multiple speakers at the [[coding-agents-conf-2026]] identified memory as the **
   - **Erin Ahmed (Cleric):** "Agent capabilities are commoditized. The next horizon of differentiation is learning." Three lessons: make correction easy, reward corrections with persistence, absorb context continuously.
   - **Faye Zhang (Pinterest):** Production memory architecture — procedural memory (CLAUDE.md), episodic memory (JSON files), hooks for failure→fix entries, MCP memory_search tool. Long-horizon memory treated as a learned policy problem (PPO/GRPO).
 - **[[dex-rpi-to-crispy]]** — CRISPY's static artifacts (design docs, structure outlines) function as a form of **session memory** — enabling resume from any point without autocompaction.
+- **[[long-running-claude]]** — Anthropic case study of multi-day autonomous scientific computing. Codifies **CHANGELOG.md as "lab notes"** — a lightweight, file-based episodic memory tracking completed tasks, failed approaches with explanations, accuracy checkpoints, and known limitations. Key principle: "document failed experiments to prevent successive sessions from repeating dead ends." Also demonstrates CLAUDE.md as self-modifying procedural memory (the agent edits its own instructions across sessions).
 
 ## Memory Taxonomy (Pinterest)
 
@@ -29,6 +30,7 @@ Multiple speakers at the [[coding-agents-conf-2026]] identified memory as the **
 |------|---------|---------|---------|
 | Procedural | CLAUDE.md | How to do things | Coding conventions, tool usage patterns |
 | Episodic | `.claude/memories/episodes/*.json` | What happened | Failure→fix pairs, past decisions |
+| Episodic (lightweight) | CHANGELOG.md | What happened (file-based) | Failed approaches, accuracy checkpoints, "lab notes" ([[long-running-claude]]) |
 | Long-horizon | MCP cold storage | Accumulated knowledge | Cross-project patterns, team preferences |
 
 ## Three Lessons on Agent Learning (Cleric)

@@ -4,7 +4,7 @@ type: entity
 pillar: coding-agents
 created: 2026-04-09
 updated: 2026-04-09
-sources: [anatomy-agent-harness]
+sources: [anatomy-agent-harness, long-running-claude]
 tags: [framework, anthropic, agent-harness, sdk]
 ---
 
@@ -69,6 +69,20 @@ For tasks spanning multiple context windows:
 1. **Initializer Agent** — sets up environment (init script, progress file, feature list, initial git commit)
 2. **Coding Agent** — reads git logs + progress files to orient, picks highest-priority incomplete feature, works, commits, writes summaries
 - Filesystem provides continuity across context windows
+
+### Case Study: Scientific Computing ([[long-running-claude]])
+
+Anthropic researcher Siddharth Mishra-Sharma applied the Ralph Loop and Claude Code's long-running patterns to **multi-day autonomous scientific computing** — reimplementing a cosmological Boltzmann solver. Five codified patterns:
+
+1. **CLAUDE.md as living plan** — agent reads and self-edits its own instructions across sessions
+2. **CHANGELOG.md as "lab notes"** — portable episodic memory tracking status, completed tasks, failed approaches, and accuracy checkpoints
+3. **Test oracles** — reference implementations providing quantifiable success criteria (0.1% accuracy target)
+4. **Git as coordination** — commits after meaningful work units for recoverable history and hands-off monitoring
+5. **Ralph Loop** — iterative re-prompting (up to 20 iterations) to combat "agentic laziness"
+
+Execution infrastructure: **SLURM + tmux** on HPC compute nodes (48-hour H100 allocations). Result: sub-percent agreement with reference CLASS implementation over several days. Demonstrates **months-to-days time compression** for well-scoped tasks.
+
+Also references Anthropic's C compiler project (~2,000 sessions → Linux-kernel-capable compiler) as industrial-scale precedent.
 
 ## Key Claims
 

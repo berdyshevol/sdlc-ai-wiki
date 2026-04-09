@@ -106,6 +106,17 @@ Added second transcript of the same talk from Limbic Systems channel (raw/youtub
 Pages updated:
 - `wiki/sources/dex-rpi-to-crispy.md` (updated — added second raw source + video URL)
 
+## [2026-04-08] update | Dex — "From RPI to QRSPI" (slide text extraction)
+
+Added slide text extraction (`raw/slides/From RPI to QRSPI - text.md`) — same talk, different format. Key additions: **QRSPI** as alternate acronym for CRISPY, **"Smart Zone"** terminology (upper 40% of context window, complement to "Dumb Zone"), **"Mental Alignment"** concept (artifacts as shared ground between human and agent), per-model accuracy-vs-instructions charts (Gemini 2.5 Pro, GPT-4, Claude 3.7 Sonnet).
+
+Pages updated:
+- `wiki/sources/dex-rpi-to-crispy.md` (updated — added raw file, QRSPI naming, Smart Zone, Mental Alignment)
+- `wiki/concepts/context-engineering.md` (updated — Smart Zone terminology, Mental Alignment via artifacts)
+- `wiki/concepts/instruction-budget.md` (updated — per-model chart detail)
+- `wiki/concepts/code-legibility-debate.md` (updated — QRSPI naming, Mental Alignment)
+- `wiki/index.md` (updated — summaries refreshed)
+
 ## [2026-04-08] create | BMAD Method Entity Page
 
 Created entity page for BMAD (Breakthrough Method for Agile AI-Driven Development) — multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Key points: partnership model (AI as collaborator, not replacement), adaptive complexity management, "Party Mode" for multi-perspective collaboration. Runs on top of Claude Code/Cursor/Windsurf. Compared with Spec-Kit, Kiro, and Claude Code. Documented hybrid model (BMAD + Spec-kit) for strategic planning + tactical execution.

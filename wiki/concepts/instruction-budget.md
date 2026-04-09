@@ -16,7 +16,7 @@ The **instruction budget** is the maximum number of discrete instructions an LLM
 
 ## Key Sources
 
-- **[[dex-rpi-to-crispy]]** — Primary source. Cites arxiv paper 2507.11538 showing frontier LLMs follow **~150-200 instructions** with good consistency. RPI's single `/create_plan` prompt had 85+ instructions, plus CLAUDE.md, system prompt, tools, and MCPs — well over budget.
+- **[[dex-rpi-to-crispy]]** — Primary source. Cites arxiv paper 2507.11538 showing frontier LLMs follow **~150-200 instructions** with good consistency. RPI's single `/create_plan` prompt had 85+ instructions, plus CLAUDE.md, system prompt, tools, and MCPs — well over budget. The slide version of the talk includes per-model accuracy-vs-instructions charts for Gemini 2.5 Pro, GPT-4, and Claude 3.7 Sonnet — all show significant accuracy drops beyond 150-200 instructions.
 - **[[coding-agents-conf-2026]]** — Databricks talk mentions "too many MCPs" filling the context window with tool instructions, degrading code-writing quality. Same root cause.
 
 ## Current Understanding

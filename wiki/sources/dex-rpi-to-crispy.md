@@ -1,21 +1,21 @@
 ---
-title: "Everything We Got Wrong About RPI — From RPI to CRISPY"
+title: "Everything We Got Wrong About RPI — From RPI to CRISPY (QRSPI)"
 type: source
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-08
-sources: [dex-rpi-to-crispy-coding-agents.md, dex-rpi-to-crispy.md, extracted_text.txt]
-tags: [rpi, crispy, methodology, code-legibility, context-engineering, instruction-budget, humanlayer, dex]
+sources: [dex-rpi-to-crispy-coding-agents.md, dex-rpi-to-crispy.md, extracted_text.txt, "slides/From RPI to QRSPI - text.md"]
+tags: [rpi, crispy, qrspi, methodology, code-legibility, context-engineering, instruction-budget, humanlayer, dex]
 ---
 
-# Everything We Got Wrong About RPI — From RPI to CRISPY
+# Everything We Got Wrong About RPI — From RPI to CRISPY (QRSPI)
 
 ## Metadata
 
 - **Author:** Dex (dexhorthy), HumanLayer
 - **Event:** Coding Agents Conference 2026, March 3, Computer History Museum
 - **Format:** Conference talk (transcript + slides)
-- **Raw files:** `raw/youtube-transcripts/dex-rpi-to-crispy-coding-agents.md`, `raw/youtube-transcripts/dex-rpi-to-crispy.md`, `raw/slides/extracted_text.txt`
+- **Raw files:** `raw/youtube-transcripts/dex-rpi-to-crispy-coding-agents.md`, `raw/youtube-transcripts/dex-rpi-to-crispy.md`, `raw/slides/extracted_text.txt`, `raw/slides/From RPI to QRSPI - text.md`
 - **Videos:** https://youtu.be/YwZR6tc7qYg, https://www.youtube.com/watch?v=5MWl3eRXVQk (Limbic Systems channel)
 
 ## Summary
@@ -24,7 +24,9 @@ Dex, creator of [[12-factor-agents]] and co-founder of [[humanlayer]], delivers 
 
 The core problem was that RPI's single monolithic `/create_plan` prompt contained **85+ instructions**, exceeding the ~150-200 instruction budget that frontier LLMs can reliably follow. This meant the workflow required "magic words" — specific phrasing like "work back and forth with me starting with your open questions and outline" — to trigger the interactive planning behavior. Experts discovered these incantations through experience; most engineers didn't.
 
-The fix is **CRISPY** — a decomposition of RPI into seven focused stages: **Questions → Research → Design → Structure → Plan → Worktree → Implement → PR**. Each stage uses its own context window with under 40 instructions, respecting the instruction budget. The key innovation is splitting planning into a **design discussion** (~200 lines, "where are we going?") and a **structure outline** (~300 lines, "how do we get there?"), giving engineers a high-leverage review point before the full plan (~1000 lines) and code (~1000 lines) are generated.
+The fix is **CRISPY** (also referred to as **QRSPI** — Questions, Research, Structure, Plan, Implement — in slide versions of the talk) — a decomposition of RPI into focused stages: **Questions → Research → Design → Structure → Plan → Worktree → Implement → PR**. Each stage uses its own context window with under 40 instructions, respecting the instruction budget. The key innovation is splitting planning into a **design discussion** (~200 lines, "where are we going?") and a **structure outline** (~300 lines, "how do we get there?"), giving engineers a high-leverage review point before the full plan (~1000 lines) and code (~1000 lines) are generated.
+
+The slide version of the talk also names the upper 40% of the context window the **"Smart Zone"** (complementing the "Dumb Zone" concept) and frames the artifact-based workflow as enabling **"Mental Alignment"** — shared ground between the human and the agent through Questions, Research, and Outline artifacts.
 
 Most significantly, Dex **reverses his position on code legibility**: after six months of not reading code, they "had to rip out and replace large parts of that system." His new advice is unequivocal: "Please I'm begging you please read the code. We have a profession to uphold."
 

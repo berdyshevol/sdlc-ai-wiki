@@ -27,9 +27,14 @@ Dex argues the second read is more important and less discussed.
 
 ## Current Understanding
 
-### The Dumb Zone
+### The Smart Zone and The Dumb Zone
 
-Around **40% of context window usage**, output quality begins degrading. The less of the context window you use, the better the results. Experienced users can push to 60% depending on task complexity, but beginners should aim to stay under 40%.
+Dex's slide version of the talk introduces complementary terminology for context window regions:
+
+- **"The Smart Zone"** — the upper ~40% of the context window, where system instructions, CLAUDE.md, built-in tools, and MCP tools reside. The goal is to keep core instructions within this space to maintain reliability.
+- **"The Dumb Zone"** — as user messages, massive files (like 1000-line plans), and conversation history fill the lower portion of the window, the model begins to lose track of instructions and output quality degrades.
+
+The less of the context window you use, the better the results. Experienced users can push to 60% depending on task complexity, but beginners should aim to stay under 40%.
 
 Note: this is a teaching heuristic, not a hard rule. It depends on the ratio of instructions to information and the complexity of the task.
 
@@ -46,9 +51,9 @@ CRISPY decomposes a monolithic workflow into 7 stages, each with its own context
 - **Plan context** — design + structure + implementation details. Focused on tactics.
 - Each context stays under 40 instructions and uses a fraction of the available window.
 
-### Static Artifacts Over Autocompaction
+### Mental Alignment via Static Artifacts
 
-CRISPY produces static markdown artifacts (design docs, structure outlines, plans) at each stage. This means you can resume from any point without depending on autocompaction quality. "Everything that matters is going into static assets."
+CRISPY/QRSPI produces static markdown artifacts (design docs, structure outlines, plans) at each stage. These serve a dual purpose: (1) you can resume from any point without depending on autocompaction quality ("everything that matters is going into static assets"), and (2) they enable **"Mental Alignment"** — the artifacts (Questions, Research, Outlines) act as shared ground between the human and the agent, ensuring both are working from the same understanding before code is written.
 
 ### Context Expansion with Trust (Kilo Code)
 

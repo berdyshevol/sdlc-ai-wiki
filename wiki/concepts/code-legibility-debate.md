@@ -59,7 +59,8 @@ The debate is **tilting toward School 2** based on new production evidence. The 
 **Emerging synthesis:** The answer depends on **stakes, not just risk profile**:
 - **OSS / side projects / demos:** School 1 is viable. Stakes are lower, nobody gets paged at 3am.
 - **Production SaaS / regulated / user-facing:** School 2 is winning. Dex's reversal and Kilo Code's data both point here.
-- **The leverage question:** Dex's CRISPY methodology offers a middle path — don't read the 1000-line *plan*, but DO read the code. Use 200-line *design discussions* as the high-leverage review point.
+- **The leverage question:** Dex's CRISPY/QRSPI methodology offers a middle path — don't read the 1000-line *plan*, but DO read the code. Use 200-line *design discussions* as the high-leverage review point.
+- **Mental Alignment:** The QRSPI slide framing emphasizes that artifacts (Questions, Research, Outlines) create "Mental Alignment" between human and agent — shared understanding that makes code review more effective because the reviewer already knows the intent.
 - **Target 2-3x, not 10x:** Multiple speakers at the Coding Agents Conference 2026 converge on this — quality-constrained speedup is more sustainable than raw throughput.
 
 ## Open Questions

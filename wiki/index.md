@@ -28,7 +28,7 @@ updated: 2026-04-08
 - lukepm.com — "The Software Factory"
 - blog.fsck.com — Superpowers series (earlier installments)
 - Spec-kit documentation/articles
-- BMAD method documentation
+- ~~BMAD method documentation~~ ✅ entity page created
 - Kiro (AWS) documentation
 - Devin case studies/reviews
 - Industry landscape reports
@@ -59,12 +59,12 @@ updated: 2026-04-08
 | Page | Type | Summary |
 |------|------|---------|
 | [[humanlayer]] | Company | Full-stack AI coding agent company: 12-factor principles → CodeLayer IDE → Agent Control Plane infrastructure. |
+| [[bmad-method]] | Framework | Multi-agent Agile team simulation (12+ roles, 34+ workflows). Spec-driven, anti-vibe-coding. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
 
 ### Entities To Create
 
 - **Devin** — Cognition's autonomous coding agent
 - **Spec-kit** — Spec-driven development framework
-- **BMAD method** — Spec-driven AI methodology
 - **Kiro** — AWS spec-driven development tool
 - **Dan Shapiro** — Five levels framework author
 - **Jesse Vincent** — Superpowers series author

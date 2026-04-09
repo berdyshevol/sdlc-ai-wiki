@@ -25,7 +25,7 @@ This inverts the traditional relationship between documentation and code. Instea
 ## Tools and Frameworks
 
 - **Spec-kit** — A framework for spec-driven development (to be researched)
-- **BMAD method** — A methodology for spec-driven AI development (to be researched)
+- **[[bmad-method|BMAD method]]** — Multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Covers the entire SDLC from brainstorming to QA. Runs on top of Claude Code, Cursor, Windsurf.
 - **[[kiro]]** — AWS's spec-driven development tool (to be researched)
 
 ## Current Understanding

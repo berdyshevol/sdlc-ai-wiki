@@ -98,3 +98,12 @@ Pages created/updated:
 - `wiki/concepts/automation-levels.md` (updated — added Kilo Code trust ladder)
 - `wiki/overview.md` (updated — new thesis points 6-8, updated sources table, new open questions)
 - `wiki/index.md` (updated — added sources, concepts, to-create items)
+
+## [2026-04-08] create | BMAD Method Entity Page
+
+Created entity page for BMAD (Breakthrough Method for Agile AI-Driven Development) — multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Key points: partnership model (AI as collaborator, not replacement), adaptive complexity management, "Party Mode" for multi-perspective collaboration. Runs on top of Claude Code/Cursor/Windsurf. Compared with Spec-Kit, Kiro, and Claude Code. Documented hybrid model (BMAD + Spec-kit) for strategic planning + tactical execution.
+
+Pages created/updated:
+- `wiki/entities/bmad-method.md` (new)
+- `wiki/concepts/spec-driven-development.md` (updated — expanded BMAD entry, removed "to be researched")
+- `wiki/index.md` (updated — added entity, removed from "to create" list)

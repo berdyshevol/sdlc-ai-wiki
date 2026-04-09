@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-09
 ---
 
 # Wiki Log
@@ -147,3 +147,20 @@ Pages created/updated:
 - `wiki/concepts/spec-driven-development.md` (major update — vibe coding contrast, practitioner evidence, updated Spec Kit and Kiro entries, new open questions)
 - `wiki/index.md` (updated — added source, 3 entities, marked Spec-kit/Kiro/Copilot as created)
 - `wiki/overview.md` (updated — new thesis points, updated sources table)
+
+## [2026-04-09] ingest | Akshay Pachaar — "The Anatomy of an Agent Harness"
+
+Ingested: "The Anatomy of an Agent Harness" by Akshay Pachaar (April 2026). Comprehensive synthesis of agent harness architecture across Anthropic, OpenAI, LangChain, CrewAI, and AutoGen. Formalizes the agent harness concept with the Von Neumann analogy (LLM = CPU, harness = OS). Identifies 12 components of a production harness, 7 architectural decisions, and compares 5 frameworks on a thin-to-thick spectrum. Key evidence: LangChain jumped from outside top 30 to rank 5 on TerminalBench 2.0 by changing only harness infrastructure (same model). Scaffolding metaphor: harness complexity should decrease as models improve, but co-evolution creates tight coupling.
+
+Pages created/updated:
+- `raw/anatomy-agent-harness.md` (new — raw article)
+- `wiki/sources/anatomy-agent-harness.md` (new)
+- `wiki/concepts/agent-harness.md` (new — 12 components, 7 decisions, Von Neumann analogy, thin vs. thick spectrum)
+- `wiki/concepts/context-engineering.md` (updated — context rot, 5 production strategies, three levels of engineering)
+- `wiki/entities/claude-agent-sdk.md` (new — Anthropic's thin harness, dumb loop, Fork/Teammate/Worktree, Ralph Loop)
+- `wiki/entities/openai-agents-sdk.md` (new — code-first, Runner class, 3 guardrail levels, Codex architecture)
+- `wiki/entities/langgraph.md` (new — graph-based control, typed dicts + checkpoints, TerminalBench evidence)
+- `wiki/entities/crewai.md` (new — role-based Agent-Task-Crew model, Flows layer)
+- `wiki/entities/autogen.md` (new — conversation-driven, 5 orchestration patterns, Microsoft Agent Framework evolution)
+- `wiki/index.md` (updated — added source, concept, 5 entities)
+- `wiki/overview.md` (updated — new thesis point on harness engineering)

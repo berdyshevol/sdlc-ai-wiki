@@ -4,8 +4,8 @@ type: concept
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-08
-sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents]
-tags: [context-window, prompting, architecture, dumb-zone]
+sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness]
+tags: [context-window, prompting, architecture, dumb-zone, context-rot]
 ---
 
 # Context Engineering
@@ -66,15 +66,41 @@ CRISPY/QRSPI produces static markdown artifacts (design docs, structure outlines
 
 This suggests context engineering isn't just about minimizing — it's about **right-sizing context to the trust level** of the interaction.
 
+### Context Rot and Production Strategies (from [[anatomy-agent-harness]])
+
+**Context rot** is the phenomenon where model performance degrades 30%+ when key content falls in mid-window positions (Chroma research, corroborated by Stanford's "Lost in the Middle" finding). Even million-token windows suffer from instruction-following degradation as context grows.
+
+Five production strategies to combat context rot:
+
+1. **Compaction** — summarizing conversation history when approaching limits (Claude Code preserves architectural decisions and unresolved bugs while discarding redundant tool outputs)
+2. **Observation masking** — JetBrains' Junie hides old tool outputs while keeping tool calls visible
+3. **Just-in-time retrieval** — maintaining lightweight identifiers and loading data dynamically (Claude Code uses grep, glob, head, tail rather than loading full files)
+4. **Sub-agent delegation** — each subagent explores extensively but returns only 1,000-2,000 token condensed summaries
+5. **Structured note-taking** — progress files, MEMORY.md, static artifacts (overlaps with CRISPY's approach)
+
+Anthropic's context engineering guide states the goal: *find the smallest possible set of high-signal tokens that maximize likelihood of the desired outcome.*
+
+### Context Engineering as a Level of Engineering
+
+[[anatomy-agent-harness]] positions context engineering as the middle of three concentric levels:
+
+1. **Prompt engineering** — crafting instructions
+2. **Context engineering** — managing what the model sees and when
+3. **Harness engineering** — encompasses both, plus all application infrastructure
+
+This reinforces context engineering's status as a distinct discipline, not just "better prompting."
+
 ## Open Questions
 
 1. Is the "dumb zone" at 40% consistent across models, or model-specific?
 2. How does autocompaction quality compare to CRISPY's static artifact approach?
 3. Can you automatically detect when you've exceeded the effective context budget?
 4. How do you balance the "less is more" principle with agents that need broad codebase context?
+5. **NEW:** How do the five production strategies (compaction, observation masking, JIT retrieval, sub-agent delegation, structured notes) compare in practice? Which combinations work best?
 
 ## Related Concepts
 
 - [[instruction-budget]] — the constraint that context engineering works within
 - [[agent-memory]] — a context engineering strategy for persistence across sessions
+- [[agent-harness]] — context engineering is one of three levels of harness engineering
 - [[12-factor-agents]] — context engineering principles applied to agent architecture

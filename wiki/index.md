@@ -23,6 +23,8 @@ updated: 2026-04-08
 | [[dex-rpi-to-crispy]] | Dex (HumanLayer) | Coding Agents / Code Legibility | RPI methodology failures and evolution to CRISPY/QRSPI. Major reversal on code legibility. Instruction budget, Smart Zone, Mental Alignment. |
 | [[coding-agents-conf-2026]] | Multiple speakers | Industry (all pillars) | Full-day conference: trust ladder (Kilo Code 25T tokens), agentic search vs RAG, agent memory, SWE Atlas, enterprise governance, security. |
 | [[ai-in-sdlc-research]] | Academic paper | Industry/Spec-Driven/Agents | Full survey: AI across all SDLC stages, Copilot case study, spec-driven vs. vibe coding bifurcation, practitioner SDD observation (5-person team). |
+| [[anatomy-agent-harness]] | Akshay Pachaar | Coding Agents | Comprehensive anatomy of the agent harness: 12 components, 7 architectural decisions, 5-framework comparison. "The harness is the product, not the model." |
+| [[anatomy-agent-harness]] | Akshay Pachaar | Coding Agents | Comprehensive anatomy of the agent harness: 12 components, 7 architectural decisions, 5-framework comparison. "The harness is the product, not the model." |
 
 ### Sources To Ingest
 
@@ -45,6 +47,7 @@ updated: 2026-04-08
 | [[instruction-budget]] | Coding Agents | LLMs follow ~150-200 instructions reliably. Monolithic prompts fail; split into <40-instruction focused stages. |
 | [[context-engineering]] | Coding Agents | Managing context window contents for quality. "Smart Zone" / "Dumb Zone" at 40%. Mental Alignment via static artifacts. Two reads: more info vs. better instructions. |
 | [[agent-memory]] | Coding Agents | Mechanisms for cross-session knowledge retention. Next frontier after commoditized capabilities (Cleric, Pinterest). |
+| [[agent-harness]] | Coding Agents | The complete non-model infrastructure wrapping an LLM. 12 components, Von Neumann analogy, thin vs. thick spectrum, scaffolding metaphor. |
 
 ### Concepts To Create
 
@@ -65,6 +68,11 @@ updated: 2026-04-08
 | [[github-copilot]] | Tool | AI coding assistant (GitHub/OpenAI). Most widely adopted AI dev tool. IDE autocomplete, code generation, test writing. Case study in [[ai-in-sdlc-research]]. Level 1-2 in Shapiro's framework. |
 | [[kiro]] | Tool/IDE | AWS agentic development environment. Converts prompts into structured specs and production-ready workflows. SDD framework alongside Spec Kit and BMAD. |
 | [[spec-kit]] | Framework | GitHub's open-source SDD toolkit. `specify → plan → tasks → implement` pipeline. Used in practitioner observation alongside BMAD with positive results. |
+| [[claude-agent-sdk]] | Framework/SDK | Anthropic's agent harness powering Claude Code. "Dumb loop, smart model" philosophy. Fork/Teammate/Worktree subagent models. Thin harness, trust the model. |
+| [[openai-agents-sdk]] | Framework/SDK | OpenAI's code-first agent framework. Runner class, 3 guardrail levels, agents-as-tools + handoffs. Codex extends with 3-layer architecture. |
+| [[langgraph]] | Framework | LangChain's graph-based agent framework. Explicit state graphs, typed dicts + checkpoints, nested graph multi-agent. Thick harness, graph-based control. |
+| [[crewai]] | Framework | Role-based multi-agent framework. Agent-Task-Crew model, Flows layer for deterministic backbone. Medium-thick harness. |
+| [[autogen]] | Framework | Microsoft's conversation-driven orchestration. 3-layer architecture, 5 orchestration patterns including magentic. Evolving into Microsoft Agent Framework. |
 
 ### Entities To Create
 

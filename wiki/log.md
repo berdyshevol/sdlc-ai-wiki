@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-11
 ---
 
 # Wiki Log
@@ -209,4 +209,33 @@ Pages created/updated:
 - `wiki/sources/bmad-method-docs.md` (new)
 - `wiki/entities/bmad-method.md` (major update — replaced secondary-source content with first-party details)
 - `wiki/index.md` (updated — added source, updated entity summary, marked BMAD docs as ingested)
+- `wiki/log.md` (updated)
+
+## [2026-04-11] ingest | Matt Pocock × Dex Horthy — Live Chat (Jan 17, 2026)
+
+Ingested: "LIVE: Chat with AI Coding Wizard Dex Horthy" — ~46-minute live YouTube conversation between Matt Pocock and Dex Horthy ([[humanlayer]]), recorded 2026-01-17. Conversational supplement to [[dex-rpi-to-crispy]] with significant new material.
+
+Transcript was downloaded via `yt-dlp` (auto-generated YouTube captions, cleaned and split on `>>` speaker markers; speaker labels not reliably attributable).
+
+Key new material beyond Dex's RPI talk:
+
+1. **Quadratic attention** — explicit, non-ML-engineer-friendly explanation of why long context degrades quality (compute scales quadratically per layer per head; doubling tokens = ~4× work)
+2. **The "cup" metaphor for task sizing** — "the cup is smaller than you think it is"; iteration must fit edits + verify cycle in the smart zone
+3. **"Ralph is back" cautionary PR** — concrete war story: 6-hour Ralph run, 27-rule React style guide, 20 commits, ~20,000 LOC, never merged due to ~100 merge conflicts. Lesson: "do not send your co-workers a 20k-line PR"
+4. **Cron-Ralph production pattern** — 3 iterations per night against a stable end-state spec on an internal HumanLayer repo; "wake up to a slightly better codebase"
+5. **Pipeline-Ralph** — chained Ralphs (docs → specs → product proposals → code); honest caveat that Dex's first attempt didn't go great
+6. **Issue-triage Ralph** with **untrusted-input safety warning** — never feed public GitHub issues straight to a `--dangerously-skip-permissions` Claude (hidden HTML/markdown comment prompts); HumanLayer's Linear-queue Ralph has a vetting step
+7. **Models cannot plan well** — they default to horizontal phased plans when an experienced engineer would slice one thing end-to-end first to learn unknowns. Strongest defense yet for human-in-the-loop planning at high automation levels
+8. **Tracer bullets** (Pragmatic Programmer) — canonical name for Dex's "vertical plans over horizontal plans" claim from the RPI talk
+9. **Learning tests** (Martin Fowler / Uncle Bob) — unit tests against external libraries (e.g. Claude Agent SDK) to capture and verify your assumptions about contracts; useful for AI dev because docs lie and contracts change
+10. **"We are programming in English now"** — old programming books are more valuable than ever as prompt-writing manuals
+11. **CodeLayer rebuilt from scratch in 6 weeks** (mid-Dec 2025 → late-Jan 2026) around CRISPY's guided multi-step workflows. Stop asking users to wield monolithic prompts — wrap deterministic control flow around the planning steps so the user's role is the highest-leverage parts
+12. **Counterweight to Huntley** — "Ralph is probably not the right final answer for production software. If anything, it's an incredible lesson in how context windows work." Strongest measured response in the wiki to [[everything-is-a-ralph-loop]]'s "software development is dead" maximalism
+
+Pages created/updated:
+- `raw/youtube-transcripts/matt-pocock-dex-horthy-chat.md` (new — cleaned transcript)
+- `wiki/sources/matt-pocock-dex-horthy-chat.md` (new)
+- `wiki/concepts/context-engineering.md` (updated — added quadratic-attention section, cup metaphor, source link)
+- `wiki/entities/humanlayer.md` (updated — CodeLayer rebuild timeline, new key claims, source link)
+- `wiki/index.md` (updated — added source row)
 - `wiki/log.md` (updated)

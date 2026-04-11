@@ -13,3 +13,5 @@
 
 4. BMAD Method — Official Documentation
    https://docs.bmad-method.org/llms-full.txt
+
+5. Chat with AI Coding Wizard Dex Horthy - https://www.youtube.com/live/NKu3T9FUjmU?si=OEDHAapN6VQniY0-

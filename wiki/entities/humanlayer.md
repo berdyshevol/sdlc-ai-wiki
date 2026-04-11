@@ -3,8 +3,8 @@ title: HumanLayer
 type: entity
 pillar: coding-agents
 created: 2026-04-08
-updated: 2026-04-08
-sources: [12-factor-agents, humanlayer-codelayer, agent-control-plane, dex-rpi-to-crispy]
+updated: 2026-04-11
+sources: [12-factor-agents, humanlayer-codelayer, agent-control-plane, dex-rpi-to-crispy, matt-pocock-dex-horthy-chat]
 tags: [company, tools, orchestration, open-source, crispy, rpi]
 ---
 
@@ -36,6 +36,10 @@ HumanLayer's original methodology was **Research/Plan/Implement (RPI)**, which g
 
 Key evolution: single monolithic 85-instruction prompt → seven focused stages with <40 instructions each. Also includes a major reversal on code legibility: HumanLayer now advocates reading the code, not just the plan.
 
+### CodeLayer rebuild (Dec 2025 → Jan 2026)
+
+Per [[matt-pocock-dex-horthy-chat]], HumanLayer **rebuilt CodeLayer from scratch in roughly six weeks** (mid-December 2025 → late January 2026) to wrap deterministic control flow around the [[dex-rpi-to-crispy|CRISPY]] planning workflow. Motivation: the open-source RPI prompts produced a "vast spectrum of quality" when teams adopted them — expert users got incredible results, others got inconsistent ones. The fix is to stop asking users to wield monolithic 50-instruction prompts and instead build the workflow into the product itself, splitting the long `/create-plan` prompt into multiple steps that deterministic code guides the user through. Stated principle: *"the parts of the conversation you're involved in should be the highest-leverage parts"* — not "don't forget to sprinkle these magic words at this stage." This is Factor #8 of [[12-factor-agents]] ("don't use prompts for control flow") applied to the product itself.
+
 ## Relevance
 
 HumanLayer is a key entity in this research because:
@@ -55,11 +59,15 @@ HumanLayer is a key entity in this research because:
 - **Shoot for 2-3x, not 10x** — quality is the bottleneck, not speed
 - **Mind your [[instruction-budget]]** — keep prompts under 40 instructions; use control flow instead of prompts for workflow logic
 - **"No more slop"** is the 2026 mandate
+- **"Do not send your co-workers a 20,000-line PR that refactors the entire codebase"** — concrete corollary of the legibility reversal, demonstrated via the "Ralph is back" cautionary tale (6-hour Ralph run, 20k LOC, never merged due to ~100 merge conflicts two days later). Production pattern instead: **cron-Ralph** — 3 iterations per night against a stable end-state spec, "wake up to a slightly better codebase"
+- **Models cannot plan work the way humans plan work** — they default to horizontal phased plans when an experienced engineer would slice one thing end-to-end first to learn the unknowns. Planning is one of the load-bearing places where humans must remain in the loop
+- **HumanLayer targets brownfield at scale** — staff/principal engineers at companies with millions of lines of code and thousands of engineers, explicitly *not* aimed at vibe coding or greenfield work
 
 ## Links
 
 - [[12-factor-agents]] — design principles
 - [[dex-rpi-to-crispy]] — CRISPY methodology (evolved from RPI)
+- [[matt-pocock-dex-horthy-chat]] — conversational supplement: cron-Ralph, "Ralph is back" PR, CodeLayer rebuild news, learning tests, tracer bullets
 - [[humanlayer-codelayer]] — IDE/orchestration tool
 - [[agent-control-plane]] — infrastructure platform
 - [[spec-driven-development]] — related methodology

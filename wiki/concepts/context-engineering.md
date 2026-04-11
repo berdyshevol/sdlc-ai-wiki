@@ -4,8 +4,8 @@ type: concept
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-08
-sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness]
-tags: [context-window, prompting, architecture, dumb-zone, context-rot]
+sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness, matt-pocock-dex-horthy-chat]
+tags: [context-window, prompting, architecture, dumb-zone, context-rot, quadratic-attention, cup-metaphor]
 ---
 
 # Context Engineering
@@ -24,8 +24,17 @@ Dex argues the second read is more important and less discussed.
 - **[[dex-rpi-to-crispy]]** — Primary source. Introduces the "dumb zone" concept and advocates for smaller context windows. Wrote paper "12 Factor Agents" which was "allegedly the first time anyone was talking a lot about context engineering."
 - **[[coding-agents-conf-2026]]** — Kilo Code: context must expand with trust level (autocomplete needs current file; orchestration needs multiple repos). Pinterest: 3-tier memory architecture (hot/domain/cold) as context management. Databricks: too many MCPs degrade output.
 - **[[12-factor-agents]]** — Principles of owning your context, small focused agents.
+- **[[matt-pocock-dex-horthy-chat]]** — Conversational supplement: explicit quadratic-attention explanation, the "cup" metaphor for task sizing, and the cron-Ralph pattern as a context engineering deployment shape.
 
 ## Current Understanding
+
+### Why context length hurts: quadratic attention
+
+The reason long context degrades quality is mechanical. Per [[matt-pocock-dex-horthy-chat]], Dex frames it for non-ML engineers as: the compute needed to ingest and act on context scales **quadratically** with token count, **per layer and per attention head**. Doubling tokens means roughly 4× the work. With 50–80 layers and many heads, "every single token you add quadratically scales into oblivion and makes it really dumb." This is also why long-context **needle-in-a-haystack** benchmarks are misleading: real coding tasks don't ask the model to find one sentence in 100k tokens, they ask it to act on most of those tokens, which is a much harder problem and is poorly benchmarked.
+
+### The "cup" metaphor for task sizing
+
+From [[matt-pocock-dex-horthy-chat]]: think of the context budget for a Ralph iteration as a cup. You have some volume of work (specs, source reads, edits, test runs, fixes, commit) that needs to fit. **The cup is smaller than you think it is.** The lever is task size: your iteration must be small enough that edits + verification (run tests, fix issues, re-run tests, commit) all fit inside the smart zone. If iterations consistently push past the smart zone, shrink the task. Dex's heuristic for sizing: *"how much code would you write before you pulled up the web app to look at it? How much before you paused to run the tests? That's a good task size for Ralph."*
 
 ### The Smart Zone and The Dumb Zone
 

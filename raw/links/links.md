@@ -15,3 +15,6 @@
    https://docs.bmad-method.org/llms-full.txt
 
 5. Chat with AI Coding Wizard Dex Horthy - https://www.youtube.com/live/NKu3T9FUjmU?si=OEDHAapN6VQniY0-
+
+6. Superpowers framework (GitHub) — Jesse Vincent / Prime Radiant
+   https://github.com/obra/superpowers

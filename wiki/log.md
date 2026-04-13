@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-11
+updated: 2026-04-13
 ---
 
 # Wiki Log
@@ -238,4 +238,15 @@ Pages created/updated:
 - `wiki/concepts/context-engineering.md` (updated — added quadratic-attention section, cup metaphor, source link)
 - `wiki/entities/humanlayer.md` (updated — CodeLayer rebuild timeline, new key claims, source link)
 - `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
+## [2026-04-13] create | Superpowers Entity Page (obra/superpowers)
+
+Created entity page for **Superpowers** — Jesse Vincent's open-source agentic skills framework (github.com/obra/superpowers, MIT, launched October 2025). The concrete, installable companion to the [[superpowers-5]] blog post: ships the cascade patterns (plan → implement → review, adversarial subagent review, subagent-driven development) as composable skills rather than prose. Implements a mandatory 7-stage workflow (brainstorming → git worktrees → planning → execution → TDD → code review → branch completion) with enforced RED-GREEN-REFACTOR. Installable across Claude Code, Cursor, Codex, OpenCode, GitHub Copilot CLI, and Gemini CLI via plugin marketplaces. Positioned as a cross-platform skill-layer bet — distinct from IDE-bound tools (Kiro, CodeLayer) and from Ralph Loop maximalism.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added GitHub link)
+- `wiki/entities/superpowers.md` (new)
+- `wiki/sources/superpowers-5.md` (updated — added link to new entity page)
+- `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
 - `wiki/log.md` (updated)

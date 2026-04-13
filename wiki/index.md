@@ -2,7 +2,7 @@
 title: Wiki Index
 type: index
 created: 2026-04-08
-updated: 2026-04-11
+updated: 2026-04-13
 ---
 
 # Wiki Index
@@ -77,6 +77,7 @@ updated: 2026-04-11
 | [[langgraph]] | Framework | LangChain's graph-based agent framework. Explicit state graphs, typed dicts + checkpoints, nested graph multi-agent. Thick harness, graph-based control. |
 | [[crewai]] | Framework | Role-based multi-agent framework. Agent-Task-Crew model, Flows layer for deterministic backbone. Medium-thick harness. |
 | [[autogen]] | Framework | Microsoft's conversation-driven orchestration. 3-layer architecture, 5 orchestration patterns including magentic. Evolving into Microsoft Agent Framework. |
+| [[superpowers]] | Framework | Jesse Vincent's open-source skills framework (github.com/obra/superpowers). 7-stage workflow (brainstorm → worktree → plan → execute → TDD → review → complete), composable skills, mandatory RED-GREEN-REFACTOR. Installable across Claude Code, Cursor, Codex, Copilot CLI, Gemini CLI. |
 
 ### Entities To Create
 
@@ -85,7 +86,7 @@ updated: 2026-04-11
 - ~~**Kiro** — AWS spec-driven development tool~~ ✅ entity page created
 - ~~**GitHub Copilot** — AI coding assistant~~ ✅ entity page created
 - **Dan Shapiro** — Five levels framework author
-- **Jesse Vincent** — Superpowers series author
+- ~~**Jesse Vincent** — Superpowers series author~~ ✅ entity page created ([[superpowers]])
 - **Dex (dexhorthy)** — 12-factor agents / HumanLayer creator
 
 ## Analyses

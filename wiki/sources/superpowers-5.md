@@ -3,7 +3,7 @@ title: "Superpowers 5: AI Coding Agent Evolution"
 type: source
 pillar: [coding-agents, spec-driven]
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-13
 sources: []
 tags: [agentic-development, subagents, planning, spec-quality, visual-communication]
 author: Jesse Vincent
@@ -36,6 +36,7 @@ The most significant architectural insight is the **subagent-driven development 
 
 ## Connections
 
+- The patterns in this post ship as an installable framework — see [[superpowers|Superpowers (obra/superpowers)]]
 - Operates at approximately [[five-levels-shapiro|Shapiro Level 3-4]] — the developer manages agents rather than writing code
 - The planning-first approach aligns with [[spec-driven-development]] — specs precede and drive all implementation
 - The subagent model relates to [[12-factor-agents]] principle of "Small, Focused Agents"

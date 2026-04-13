@@ -18,3 +18,6 @@
 
 6. Superpowers framework (GitHub) — Jesse Vincent / Prime Radiant
    https://github.com/obra/superpowers
+
+7. Superpowers: How I'm using coding agents in October 2025 — Jesse Vincent
+   https://blog.fsck.com/2025/10/09/superpowers/

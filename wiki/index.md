@@ -16,6 +16,7 @@ updated: 2026-04-13
 | Page | Author | Pillar | Summary |
 |------|--------|--------|---------|
 | [[five-levels-shapiro]] | Dan Shapiro | Industry/Factories | Five-level maturity model from "spicy autocomplete" to autonomous "dark factory." Most devs stuck at Level 2. |
+| [[superpowers-intro]] | Jesse Vincent | Agents/Spec-Driven | Oct 2025 launch post for the Superpowers plugin. Skills as the reusable unit of agent capability, mandatory skill invocation, Cialdini persuasion principles improve LLM compliance, brainstorm→plan→implement with worktrees + TDD. |
 | [[superpowers-5]] | Jesse Vincent | Agents/Spec-Driven | Subagent-driven development, adversarial spec review, cascade pattern (spec → implement → review). |
 | [[12-factor-agents]] | Dex (HumanLayer) | Coding Agents | 12 principles for production AI agents: own your prompts, own your control flow, small focused agents. |
 | [[humanlayer-codelayer]] | Dex (HumanLayer) | Coding Agents | Open-source IDE for orchestrating AI coding agents. "Superhuman for Claude Code." MultiClaude parallel sessions. |
@@ -33,7 +34,7 @@ updated: 2026-04-13
 ### Sources To Ingest
 
 - lukepm.com — "The Software Factory"
-- blog.fsck.com — Superpowers series (earlier installments)
+- ~~blog.fsck.com — Superpowers series (earlier installments)~~ ✅ Oct 2025 launch post ingested as [[superpowers-intro]]
 - ~~Spec-kit documentation/articles~~ ✅ entity page created
 - ~~BMAD method documentation~~ ✅ entity page created, ✅ source page ingested from official docs
 - ~~Kiro (AWS) documentation~~ ✅ entity page created

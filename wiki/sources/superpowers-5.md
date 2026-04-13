@@ -36,6 +36,7 @@ The most significant architectural insight is the **subagent-driven development 
 
 ## Connections
 
+- **Successor to [[superpowers-intro]]** (Oct 2025) — the brainstorm/plan/implement skeleton there matures into the seven-stage cascade here
 - The patterns in this post ship as an installable framework — see [[superpowers|Superpowers (obra/superpowers)]]
 - Operates at approximately [[five-levels-shapiro|Shapiro Level 3-4]] — the developer manages agents rather than writing code
 - The planning-first approach aligns with [[spec-driven-development]] — specs precede and drive all implementation

@@ -4,7 +4,7 @@ type: entity
 pillar: [coding-agents, spec-driven]
 created: 2026-04-13
 updated: 2026-04-13
-sources: [superpowers-5]
+sources: [superpowers-intro, superpowers-5]
 tags: [framework, skills, agent-harness, tdd, spec-driven, open-source, claude-code, jesse-vincent]
 ---
 
@@ -12,7 +12,7 @@ tags: [framework, skills, agent-harness, tdd, spec-driven, open-source, claude-c
 
 ## Overview
 
-**Superpowers** is an open-source agentic skills framework providing "a complete software development workflow for your coding agents, built on top of a set of composable 'skills.'" It is the concrete, installable companion to Jesse Vincent's [[superpowers-5|Superpowers blog series]] — the repo where the patterns described in the posts ship as executable skills.
+**Superpowers** is an open-source agentic skills framework providing "a complete software development workflow for your coding agents, built on top of a set of composable 'skills.'" It is the concrete, installable companion to Jesse Vincent's Superpowers blog series — announced in [[superpowers-intro|October 2025]] and documented as matured through [[superpowers-5]] (March 2026).
 
 **Created by:** Jesse Vincent (obra) with the Prime Radiant team
 **Repository:** [github.com/obra/superpowers](https://github.com/obra/superpowers)
@@ -63,6 +63,9 @@ Superpowers matters to this research because:
 
 ## Key Claims (from sources)
 
+- **Skills are the interesting part of agentic development** — the reusable, transferable unit of agent capability ([[superpowers-intro]])
+- **Mandatory skill invocation** — if an applicable skill exists, the agent must use it; deterministic control flow wrapped around probabilistic generation ([[superpowers-intro]])
+- **Cialdini persuasion principles measurably improve LLM skill compliance** (authority, scarcity, commitment, social proof) ([[superpowers-intro]])
 - Planning-first, subagent-driven development outperforms single-session approaches ([[superpowers-5]])
 - Adversarial subagent review catches "TBD" placeholder failures before implementation ([[superpowers-5]])
 - Cheaper models (e.g. Claude Haiku) can handle implementation when specs are detailed enough ([[superpowers-5]])
@@ -79,7 +82,8 @@ Superpowers matters to this research because:
 ## Links
 
 - Repository: [github.com/obra/superpowers](https://github.com/obra/superpowers)
-- Source page: [[superpowers-5]] — blog post on the methodology
+- Source page: [[superpowers-intro]] — October 2025 launch post ("How I'm using coding agents in October 2025")
+- Source page: [[superpowers-5]] — March 2026 post on the matured methodology
 - Author: Jesse Vincent — [blog.fsck.com](https://blog.fsck.com/)
 
 ## Open Questions

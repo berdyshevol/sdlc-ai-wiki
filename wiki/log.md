@@ -240,6 +240,19 @@ Pages created/updated:
 - `wiki/index.md` (updated — added source row)
 - `wiki/log.md` (updated)
 
+## [2026-04-13] ingest | Jesse Vincent — "Superpowers: How I'm using coding agents in October 2025"
+
+Ingested the October 9, 2025 launch post for the Superpowers plugin — the earliest article in the series and precursor to [[superpowers-5]]. Central claim: **skills are the interesting part of agentic development** — reusable, documented capabilities (SKILL.md) that the framework enforces as mandatory when applicable. The brainstorm → plan → implement workflow already includes automatic git worktrees, two execution modes (human PM vs. subagent dispatch + code review), and RED/GREEN TDD — the seed of the seven-stage cascade documented in [[superpowers-5]] six months later.
+
+Notable findings: (1) **Cialdini persuasion principles** (authority, scarcity, commitment, social proof) measurably improve LLM skill compliance — corroborated by Dan Shapiro's Wharton study, creating a bridge between the [[five-levels-shapiro]] author and the Superpowers methodology. (2) **Pressure-testing via subagent quizzes** — realistic scenarios ("production is bleeding money, do you debug or check ~/.claude/skills/?") surface compliance failures. (3) **Memory extraction** — Vincent fed Claude 2,249 markdown files of prior conversation lessons; most clustered issues were already covered by existing skills, validating the skill abstraction.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added blog URL)
+- `wiki/sources/superpowers-intro.md` (new)
+- `wiki/entities/superpowers.md` (updated — added as source, new key claims on skills/mandatory invocation/Cialdini)
+- `wiki/sources/superpowers-5.md` (updated — added precursor link)
+- `wiki/index.md` (updated — added source row, marked "earlier Superpowers installments" as partly ingested)
+
 ## [2026-04-13] create | Superpowers Entity Page (obra/superpowers)
 
 Created entity page for **Superpowers** — Jesse Vincent's open-source agentic skills framework (github.com/obra/superpowers, MIT, launched October 2025). The concrete, installable companion to the [[superpowers-5]] blog post: ships the cascade patterns (plan → implement → review, adversarial subagent review, subagent-driven development) as composable skills rather than prose. Implements a mandatory 7-stage workflow (brainstorming → git worktrees → planning → execution → TDD → code review → branch completion) with enforced RED-GREEN-REFACTOR. Installable across Claude Code, Cursor, Codex, OpenCode, GitHub Copilot CLI, and Gemini CLI via plugin marketplaces. Positioned as a cross-platform skill-layer bet — distinct from IDE-bound tools (Kiro, CodeLayer) and from Ralph Loop maximalism.

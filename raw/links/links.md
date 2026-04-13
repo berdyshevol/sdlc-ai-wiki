@@ -30,3 +30,6 @@
 
 10. Making AI Agents Mainstream with Dexter Horthy — Andrew / The Humans in the Loop (Heavybit)
     https://thehumansintheloop.substack.com/p/making-agents-mainstream-for-dev-with-dexter-horthy
+
+11. 12 Factor Agents (GitHub) — Dex / HumanLayer
+    https://github.com/humanlayer/12-factor-agents

@@ -3,7 +3,7 @@ title: "Everything We Got Wrong About RPI — From RPI to CRISPY (QRSPI)"
 type: source
 pillar: coding-agents
 created: 2026-04-08
-updated: 2026-04-08
+updated: 2026-04-13
 sources: [dex-rpi-to-crispy-coding-agents.md, dex-rpi-to-crispy.md, extracted_text.txt, "slides/From RPI to QRSPI - text.md"]
 tags: [rpi, crispy, qrspi, methodology, code-legibility, context-engineering, instruction-budget, humanlayer, dex]
 ---
@@ -54,6 +54,7 @@ Most significantly, Dex **reverses his position on code legibility**: after six 
 - **[[automation-levels]]** — Dex implicitly argues that rushing to Level 4-5 without solving quality creates dangerous technical debt. His 2-3x target suggests Level 3 is the sweet spot for now.
 - **[[context-engineering]]** — Major source for the concept. Two reads: "more information" vs. "better instructions and simpler tasks."
 - **[[instruction-budget]]** — Primary source for this concept.
+- **[[alexlavaee-rpi-to-qrspi]]** — Independent practitioner commentary: names the three failure modes (Instruction Budget Overflow / Magic Words Dependency / Plan-Reading Illusion), validates the 40% threshold across practitioners, and adds the sub-agents-as-context-firewalls distinction.
 
 ## Questions Raised
 

@@ -21,3 +21,12 @@
 
 7. Superpowers: How I'm using coding agents in October 2025 — Jesse Vincent
    https://blog.fsck.com/2025/10/09/superpowers/
+
+8. From RPI to QRSPI: Rebuilding the First Structured Workflow for Coding Agents — Alex Lavaee
+   https://alexlavaee.me/blog/from-rpi-to-qrspi/
+
+9. Skill Issue: Harness Engineering for Coding Agents — Kyle (HumanLayer blog)
+   https://www.humanlayer.dev/blog/skill-issue-harness-engineering-for-coding-agents
+
+10. Making AI Agents Mainstream with Dexter Horthy — Andrew / The Humans in the Loop (Heavybit)
+    https://thehumansintheloop.substack.com/p/making-agents-mainstream-for-dev-with-dexter-horthy

@@ -3,8 +3,8 @@ title: "Agent Harness"
 type: concept
 pillar: coding-agents
 created: 2026-04-09
-updated: 2026-04-09
-sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop]
+updated: 2026-04-13
+sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop, skill-issue-harness-engineering]
 tags: [agent-harness, orchestration, infrastructure, architecture]
 ---
 

@@ -240,6 +240,75 @@ Pages created/updated:
 - `wiki/index.md` (updated — added source row)
 - `wiki/log.md` (updated)
 
+## [2026-04-13] ingest | Andrew × Dex Horthy — "Making AI Agents Mainstream with Dexter Horthy" (Humans in the Loop interview)
+
+Ingested Andrew (Heavybit) interview with Dex Horthy on The Humans in the Loop Substack (March 26, 2026). Significant overlap with [[dex-rpi-to-crispy]] and [[matt-pocock-dex-horthy-chat]] but earns a separate source page for the **adoption/enterprise reframing** and the **product-vision articulation**.
+
+New material beyond prior Dex sources:
+
+1. **Expert-to-team adoption failure framing** — the tools work for the builders; break when enterprise engineers try the same recipes. "Standing in workshops full of enterprise engineers saying 'folks... don't forget to say the magic words. It was embarrassing.'"
+2. **HumanLayer product vision** — explicit "Google Docs / Notion / Figma-like SDLC experience" framing. Positions [[humanlayer-codelayer|CodeLayer]] as a collaboration surface, not just a harness. Clearer articulation than any prior source
+3. **Software self-building / SaaS-displacement thesis** — post-ZIRP "build internal tools" direction with Klarna's walked-back Salesforce/Workday narrative as caveat. Maturity counter: "There's a difference between spending 20 years building software and building an internal version in a hurry." Largely absent from his prior talks
+4. **QRDSPWIP naming origin** — full acronym didn't stick; QRSPI is the adopted subset. Fills a gap in [[dex-rpi-to-crispy]]
+5. **Ralph Loop "extract the lessons, don't ship it"** — HumanLayer's implementer agent operationalizes Ralph's context-engineering lesson: small/fast models write code + run tests; larger model spot-checks, keeps parent context low. Measured counterweight to [[everything-is-a-ralph-loop]] maximalism
+6. **Beads vs. production distinction** (sharper) — "Nobody gets paged at 3 a.m. if [OSS projects are] broken. Nobody gets fined millions of dollars if it's done wrong." Cleaner enterprise/regulated boundary for the code-legibility mandate
+
+Resolves the dangling "Humans in the Loop interview (March 2026)" reference in [[alexlavaee-rpi-to-qrspi]].
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added URL)
+- `wiki/sources/humans-in-the-loop-dex-interview.md` (new)
+- `wiki/entities/humanlayer.md` (updated — added as source)
+- `wiki/sources/alexlavaee-rpi-to-qrspi.md` (updated — resolved cross-reference)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
+## [2026-04-13] ingest | Kyle (HumanLayer) — "Skill Issue: Harness Engineering for Coding Agents"
+
+Ingested HumanLayer's canonical configuration-layer post (March 12, 2026), authored by **Kyle (@0xblacklight)** — not Dex, though published on humanlayer.dev and building on Dex's vocabulary. This is the tactical companion to [[dex-rpi-to-crispy]]: methodology layer (Dex) + configuration layer (Kyle). Explicitly cited by [[alexlavaee-rpi-to-qrspi]] as the canonical articulation of "harness engineering."
+
+Central thesis: *"it's not a model problem. It's a configuration problem."* Harness engineering (term coined by Viv Trivedy) ⊂ context engineering (coined by Dex) ⊂ prompt engineering. Mitchell Hashimoto's operational definition: *"anytime you find an agent makes a mistake, engineer a solution such that the agent never makes that mistake again."*
+
+Six harness components with empirical advice from "hundreds of agent sessions":
+1. **CLAUDE.md/AGENTS.md** under 60 lines; ETH Zurich (arxiv 2602.11988, 138 agentfiles) found LLM-generated files *hurt* performance by ~20% cost, human-written helped ~4%
+2. **MCP servers** — prefer CLI tools when training familiarity is high
+3. **Skills** — progressive disclosure, activation loads SKILL.md only when contextually relevant
+4. **Sub-agents as context firewalls** — parent sees only prompt + result, intermediate noise isolated (cross-references Lavaee's same framing)
+5. **Hooks** — biome + tsc example, "success is silent, only failures produce verbose output"
+6. **Back-pressure mechanisms** — subset tests over full suite
+
+Key original findings:
+- **Linear MCP → CLI wrapper case study** — thousands of tokens saved by replacing MCP server with 6 CLAUDE.md examples
+- **Reactive configuration philosophy** — add harness elements only after observed failures; preemptive design fails
+- **Terminal Bench 2.0 harness overfitting data** — Opus 4.6 ranks #33 in Claude Code's harness but #5 in harnesses unseen during post-training. Evidence that harness customization has measurable headroom beyond model improvements
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added URL)
+- `wiki/sources/skill-issue-harness-engineering.md` (new)
+- `wiki/entities/humanlayer.md` (updated — added as Configuration layer in product stack)
+- `wiki/concepts/agent-harness.md` (updated — added as source)
+- `wiki/sources/alexlavaee-rpi-to-qrspi.md` (updated — explicit citation link)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
+## [2026-04-13] ingest | Alex Lavaee — "From RPI to QRSPI: Rebuilding the First Structured Workflow for Coding Agents"
+
+Ingested Alex Lavaee's informed commentary on Dex Horthy's RPI → QRSPI evolution. Overlaps substantially with [[dex-rpi-to-crispy]] but earns a separate source page for its independent contributions:
+
+1. **Three-name taxonomy of RPI failures** — Instruction Budget Overflow, Magic Words Dependency, Plan-Reading Illusion. Sticky articulations of concepts Dex described in prose
+2. **Cross-practitioner validation of the 40% context threshold** — beyond HumanLayer's single data point; strengthens the [[context-engineering]] claim
+3. **Sub-agents as context firewalls vs. personas** — sharper architectural distinction than Dex explicitly makes. Sub-agents are context boundaries (filesystem artifacts), not role-playing characters
+4. **Framing as discipline maturation** — "the craft is maturing," positioning structured workflows as engineering discipline subject to iteration. Direct counterweight to Ralph Loop maximalism
+
+Author runs Atomic (open-source agent tooling). Article explicitly connects QRSPI to "harness engineering as the differentiator layer," aligning with [[anatomy-agent-harness]] thesis.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added URL)
+- `wiki/sources/alexlavaee-rpi-to-qrspi.md` (new)
+- `wiki/sources/dex-rpi-to-crispy.md` (updated — added cross-reference to commentary)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
 ## [2026-04-13] ingest | Jesse Vincent — "Superpowers: How I'm using coding agents in October 2025"
 
 Ingested the October 9, 2025 launch post for the Superpowers plugin — the earliest article in the series and precursor to [[superpowers-5]]. Central claim: **skills are the interesting part of agentic development** — reusable, documented capabilities (SKILL.md) that the framework enforces as mandatory when applicable. The brainstorm → plan → implement workflow already includes automatic git worktrees, two execution modes (human PM vs. subagent dispatch + code review), and RED/GREEN TDD — the seed of the seven-stage cascade documented in [[superpowers-5]] six months later.

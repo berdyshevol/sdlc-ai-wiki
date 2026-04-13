@@ -4,7 +4,7 @@ type: entity
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-11
-sources: [12-factor-agents, humanlayer-codelayer, agent-control-plane, dex-rpi-to-crispy, matt-pocock-dex-horthy-chat]
+sources: [12-factor-agents, humanlayer-codelayer, agent-control-plane, dex-rpi-to-crispy, matt-pocock-dex-horthy-chat, skill-issue-harness-engineering, humans-in-the-loop-dex-interview]
 tags: [company, tools, orchestration, open-source, crispy, rpi]
 ---
 
@@ -25,6 +25,7 @@ HumanLayer's products form a **layered architecture** for AI-assisted developmen
 |-------|---------|---------|-------|
 | Principles | [[12-factor-agents]] | Design methodology for production agents | ~19.2k |
 | Methodology | [[dex-rpi-to-crispy\|CRISPY]] | 7-stage coding workflow (evolved from RPI) | — |
+| Configuration | [[skill-issue-harness-engineering\|Skill Issue]] | Tactical harness-engineering guide (Kyle, Mar 2026) — CLAUDE.md, MCP, skills, sub-agents, hooks, back-pressure | — |
 | IDE | [[humanlayer-codelayer\|CodeLayer]] | Developer interface for orchestrating agents | ~10.3k |
 | Infrastructure | [[agent-control-plane\|ACP]] | Kubernetes-native agent runtime | ~384 |
 

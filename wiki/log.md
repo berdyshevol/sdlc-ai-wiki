@@ -2,7 +2,7 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-13
+updated: 2026-04-16
 ---
 
 # Wiki Log
@@ -331,4 +331,19 @@ Pages created/updated:
 - `wiki/entities/superpowers.md` (new)
 - `wiki/sources/superpowers-5.md` (updated — added link to new entity page)
 - `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
+- `wiki/log.md` (updated)
+
+## [2026-04-16] ingest-stub | Cole Medin — "Building an AI Dark Factory: A Codebase That Writes Its Own Code, Live"
+
+Registered a new source: **Cole Medin's** YouTube Live (~2h 24m), ID `Xg0tNz9pICI`, explicitly titled around the **Dark Factory** concept from [[five-levels-shapiro|Shapiro's Level 5]]. This is the wiki's first source from Cole Medin (Dynamous AI founder), and a direct contribution to the [[software-factory]] pillar from a creator aimed at mainstream AI-developer audiences rather than the HumanLayer/Huntley enterprise-frontier corner of the debate.
+
+**⚠️ Transcript retrieval failed from this environment.** YouTube is actively blocking this cloud-provider IP range, and every public transcript mirror attempted (Invidious instances × 15+, Piped instances, ytscribe, tactiq, noembed, downsub, youtube-transcript.io, kome.ai, supadata, pytubefix, yt-dlp, youtube-transcript-api) returned HTTP 401/403/429/503, required auth, or served an empty body. Metadata (title, channel, duration 8615s, thumbnail URL) was retrieved via YouTube's oEmbed endpoint + pytubefix before caption access was blocked.
+
+The source page is currently a **metadata-only stub** that captures expected Connections and Questions Raised based on the title, the channel's prior emphasis on context engineering, and the surrounding wiki context (Dark Factory is the strong-form "don't read the code" end of the [[code-legibility-debate]], sits at/above [[everything-is-a-ralph-loop|Huntley's Level 9]], and inverts [[dex-rpi-to-crispy|Dex's]] "please read the code" reversal). The raw transcript file contains manual-ingest instructions for completing the ingestion from a browser or residential IP.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added item 12: Cole Medin's YouTube Live)
+- `raw/youtube-transcripts/cole-medin-ai-dark-factory.md` (new — metadata + manual-ingest instructions; transcript body pending)
+- `wiki/sources/cole-medin-ai-dark-factory.md` (new — stub with Pending Transcript notice, Why This Source Matters, expected Connections, Questions Raised)
+- `wiki/index.md` (updated — added source row with pending-transcript warning)
 - `wiki/log.md` (updated)

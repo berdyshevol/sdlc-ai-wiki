@@ -33,3 +33,6 @@
 
 11. 12 Factor Agents (GitHub) — Dex / HumanLayer
     https://github.com/humanlayer/12-factor-agents
+
+12. Building an AI Dark Factory: A Codebase That Writes Its Own Code, Live — Cole Medin
+    https://www.youtube.com/live/Xg0tNz9pICI

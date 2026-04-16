@@ -333,6 +333,44 @@ Pages created/updated:
 - `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
 - `wiki/log.md` (updated)
 
+## [2026-04-16] ingest | Dmitry Savvinov (CodeSpeak) — "Modular takeover: from vibe-coded app to spec-driven development"
+
+Ingested the CodeSpeak April 8, 2026 blog post announcing **modular takeover** — the platform's April release that converts vibe-coded applications into multiple focused `.cs.md` specs via an interactive browser wizard. This is a major capability update to [[codespeak]] that renders the existing entity page's "Alpha v0.0.1 / primarily greenfield" framing out of date.
+
+**Retrieval caveat:** fetched via Claude Code `WebFetch`, which pipes HTML → markdown → AI processing. Direct quotes preserved where tool marked them; non-quoted prose is close paraphrase, not 1:1 text. Raw file (`raw/codespeak-modular-takeover.md`) includes an explicit retrieval note.
+
+Key new material beyond the existing entity page:
+
+1. **Vibe coding and SDD repositioned as sequential phases** — "Vibe coding excels at exploration. Evolving a vibe-coded app carefully is a different problem." The post frames modular takeover as an **off-ramp from vibe coding to SDD**, sharpening the [[ai-in-sdlc-research|dual-track thesis]] from "parallel alternatives" to "sequential stages with CodeSpeak as the graduation tool."
+
+2. **Folio case study — concrete shrink-factor data** — A ~3,000-line Go dual-pane terminal file manager was decomposed by `codespeak takeover` into 4 focused specs totaling **430 lines of Markdown (~7× reduction)**. First empirical dataset in the wiki on spec-vs-code size ratios. Combined with prior CodeSpeak numbers (Faker 9.9×, others 5.9–9×), the shrink factor appears to hold at 6–10× for bounded projects; production-SaaS data still absent.
+
+3. **Interactive web wizard for module boundaries** — The decomposition is not fully automated. The wizard proposes a "coarse initial structure reflecting the application's gross structure"; the developer can request splits, merges, rearrangements before confirming. Takeover is **human-gated at the module-boundary level**.
+
+4. **Concrete intent-preservation example** — Terminal-panel keyboard-passthrough rule: "only the following keys are handled by the application itself rather than forwarded to the terminal process: Ctrl+T, Ctrl+\\, Ctrl+Up, Ctrl+Down." The *why* (F10 must be forwarded so `htop` works inside the terminal) is documented in the spec as one sentence. In implementation code, it's invisible switch/case exclusions. Sharpest concrete example of [[dex-rpi-to-crispy|Mental Alignment via artifacts]] in the wiki.
+
+5. **Post-takeover Level-4 SDD demonstrated** — Adding F7/mkdir keybinding required: one function description in `file-ops.cs.md`, one row in keybinding table in `app.cs.md`. After `codespeak build`: all Go code (function, keyboard handlers, input routing, panel refresh) was auto-generated with no manual code writing. Evidence that takeover produces specs that function as source-of-truth for subsequent evolution, not just documentation.
+
+6. **Monolithic → modular evolution** — February's `codespeak takeover` produced a single monolithic spec file. April's version produces **multiple coupled specs** via "Managed files" + spec-dependencies machinery introduced in March. Parallels conventional SE's move from monorepo-single-package to modular.
+
+7. **Demo artifact is reproducible** — `codespeak-dev/folio`, branch `modular-takeover`, verified via `gh api` (repo pushed 2026-04-08). Includes both generated specs and the mkdir feature implementation.
+
+8. **Blog timeline context** — Seven-week evolution: monolithic takeover (Feb 23) → test generation (Mar 2) → spec dependencies + Managed files (Mar 9) → session-reconstructed specs + Anthropic-compatible providers (Mar 17) → `impl`/`test` commands (Mar 24) → **modular takeover with wizard** (Apr 8) → `vibe-sharing` data-donation repo (Apr 15). Weekly release cadence. Fetched the full timeline via `WebFetch` on `codespeak.dev/blog`.
+
+9. **CLI is now public** — `uv tool install codespeak-cli`. Previously GitHub-App-only. Commands: `init`, `build`, `takeover`, `impl`, `test`.
+
+10. **Data-strategy signal** — `codespeak-dev/vibe-sharing` (launched April 15, one week after modular takeover) asks users to donate vibe-coded projects — code + git history + agent sessions — for improving takeover quality. Takeover is the product priority; the team is betting on user-contributed training data. Implications: privacy, quality plateau vs. growth.
+
+This post also strengthens the [[code-legibility-debate]] School 1 position — when specs are 7–10× shorter than code and capture intent code doesn't, "read the spec, not the code" becomes empirically defensible for well-bounded applications.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added item 14: blog URL + demo repo + CLI install command)
+- `raw/codespeak-modular-takeover.md` (new — article text with retrieval caveat, repo reference, and blog-timeline context)
+- `wiki/sources/codespeak-modular-takeover.md` (new — full source page with Summary, Key Claims, Connections, Questions Raised)
+- `wiki/entities/codespeak.md` (major update — new Modular Takeover section with shrink-factor table and keyboard-passthrough example; new CLI Commands section; Community/Data Strategy section; Blog Timeline table; updated Status to "Active alpha, weekly releases"; updated Comparison table; partially closed brownfield open question)
+- `wiki/index.md` (updated — new source row; updated CodeSpeak entity summary)
+- `wiki/log.md` (updated)
+
 ## [2026-04-16] ingest | Paul Everett — "Spec-Driven Development with Coding Agents" (DeepLearning.AI × JetBrains course)
 
 Ingested the DeepLearning.AI × JetBrains short course taught by **Paul Everett** (JetBrains developer advocate), introduced by **Andrew Ng**. First structured hands-on course source in the wiki (vs. talks, blog posts, or papers). Ships a reproducible companion repo (`https-deeplearning-ai/sc-spec-driven-development-files`) with 10 lesson-snapshot folders, example specs, and two reusable skills (`changelog`, `feature-spec`). Verified the repo via `gh api` and pulled excerpts from `Lesson_08/specs/mission.md`, `roadmap.md`, and `skills/feature-spec/SKILL.md` for grounding.

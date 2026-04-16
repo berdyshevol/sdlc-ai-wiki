@@ -35,6 +35,7 @@ updated: 2026-04-16
 | [[matt-pocock-dex-horthy-chat]] | Matt Pocock × Dex (HumanLayer) | Coding Agents | Live conversation (Jan 2026): cup metaphor for task sizing, quadratic-attention explained, "Ralph is back" 20k-LOC cautionary PR, cron-Ralph (3 iterations/night), pipeline-Ralph, untrusted-input safety, learning tests, tracer bullets, CodeLayer rebuilt in 6 weeks around CRISPY. |
 | [[cole-medin-ai-dark-factory]] | Cole Medin | Software Factories | YouTube Live (~2h 24m): "Building an AI Dark Factory: A Codebase That Writes Its Own Code." ⚠️ Transcript pending — metadata-only stub; auto-captions blocked from this environment. |
 | [[sdd-course-deeplearning-ai]] | Paul Everett (JetBrains) | Spec-Driven | DeepLearning.AI × JetBrains course (Andrew Ng intro). Three-file Constitution (mission/tech-stack/roadmap) + per-feature loop on dated branches (plan/requirements/validation) + explicit replanning phase. Skills as workflow automation. Brownfield by reverse-engineering from existing code. First mainstream course articulation of the full SDD loop; reproducible companion repo with 10 lesson snapshots. |
+| [[codespeak-modular-takeover]] | Dmitry Savvinov (CodeSpeak) | Spec-Driven | Apr 8 blog post announcing CodeSpeak's **modular takeover**: vibe-coded app → `codespeak takeover` → interactive web wizard proposes modular decomposition → confirm → multiple focused specs. Folio demo: ~3000 Go LOC → 430 MD lines × 4 specs = **~7× shrink**. Reframes vibe coding and SDD as **sequential phases** (not parallel alternatives). First quantitative shrink-factor dataset in the wiki. |
 
 ### Sources To Ingest
 
@@ -74,7 +75,7 @@ updated: 2026-04-16
 |------|------|---------|
 | [[humanlayer]] | Company | Full-stack AI coding agent company: 12-factor principles → CodeLayer IDE → Agent Control Plane infrastructure. |
 | [[bmad-method]] | Framework | Multi-agent Agile team simulation with 6 named personas, three planning tracks (Quick Flow/BMad/Enterprise), adversarial review, fresh-chat requirement. Runs on Claude Code/Cursor/Windsurf. 19.1k stars. |
-| [[codespeak]] | Tool/Platform | Spec-driven dev platform: markdown specs (`.cs.md`) → full app generation via Claude. GitHub-native, auto-commits. Brownfield conversions of faker, yt-dlp, beautifulsoup4. Alpha v0.0.1. |
+| [[codespeak]] | Tool/Platform | Spec-driven dev platform: markdown specs (`.cs.md`) → full app generation via Claude. CLI + GitHub App + modular takeover via web wizard (Apr 2026). Brownfield conversions: faker (9.9×), yt-dlp, beautifulsoup4, markitdown, folio (~7×). Active alpha with weekly releases. Strictest SDD in the wiki — you never write code. |
 | [[github-copilot]] | Tool | AI coding assistant (GitHub/OpenAI). Most widely adopted AI dev tool. IDE autocomplete, code generation, test writing. Case study in [[ai-in-sdlc-research]]. Level 1-2 in Shapiro's framework. |
 | [[kiro]] | Tool/IDE | AWS agentic development environment. Converts prompts into structured specs and production-ready workflows. SDD framework alongside Spec Kit and BMAD. |
 | [[spec-kit]] | Framework | GitHub's open-source SDD toolkit. `specify → plan → tasks → implement` pipeline. Used in practitioner observation alongside BMAD with positive results. |

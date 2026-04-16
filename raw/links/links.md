@@ -40,3 +40,8 @@
 13. Spec-Driven Development with Coding Agents — DeepLearning.AI × JetBrains (Paul Everett)
     https://learn.deeplearning.ai/courses/spec-driven-development-with-coding-agents
     Companion repo: https://github.com/https-deeplearning-ai/sc-spec-driven-development-files
+
+14. Modular takeover: from vibe-coded app to spec-driven development — Dmitry Savvinov (CodeSpeak)
+    https://codespeak.dev/blog/modular-takeover-20260408
+    Demo repo: https://github.com/codespeak-dev/folio (branch `modular-takeover`)
+    CLI: `uv tool install codespeak-cli`

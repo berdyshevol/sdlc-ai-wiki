@@ -2,7 +2,7 @@
 title: Wiki Index
 type: index
 created: 2026-04-08
-updated: 2026-04-13
+updated: 2026-04-16
 ---
 
 # Wiki Index
@@ -33,6 +33,7 @@ updated: 2026-04-13
 | [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Ralph Loop as mindset and orchestrator pattern. Extends automation to "level 9" — evolutionary software that self-heals and optimizes for revenue. Introduces The Weaving Loom. Provocative claim: "software development is dead." |
 | [[bmad-method-docs]] | bmadcode | Spec-Driven | Official BMAD docs: four-phase cycle, three planning tracks (Quick Flow/BMad/Enterprise), 6 named agent personas, adversarial review, fresh-chat requirement, project-context.md as shared context. |
 | [[matt-pocock-dex-horthy-chat]] | Matt Pocock × Dex (HumanLayer) | Coding Agents | Live conversation (Jan 2026): cup metaphor for task sizing, quadratic-attention explained, "Ralph is back" 20k-LOC cautionary PR, cron-Ralph (3 iterations/night), pipeline-Ralph, untrusted-input safety, learning tests, tracer bullets, CodeLayer rebuilt in 6 weeks around CRISPY. |
+| [[cole-medin-ai-dark-factory]] | Cole Medin | Software Factories | YouTube Live (~2h 24m): "Building an AI Dark Factory: A Codebase That Writes Its Own Code." ⚠️ Transcript pending — metadata-only stub; auto-captions blocked from this environment. |
 
 ### Sources To Ingest
 

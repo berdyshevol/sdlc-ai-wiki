@@ -333,6 +333,41 @@ Pages created/updated:
 - `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
 - `wiki/log.md` (updated)
 
+## [2026-04-16] ingest | Paul Everett — "Spec-Driven Development with Coding Agents" (DeepLearning.AI × JetBrains course)
+
+Ingested the DeepLearning.AI × JetBrains short course taught by **Paul Everett** (JetBrains developer advocate), introduced by **Andrew Ng**. First structured hands-on course source in the wiki (vs. talks, blog posts, or papers). Ships a reproducible companion repo (`https-deeplearning-ai/sc-spec-driven-development-files`) with 10 lesson-snapshot folders, example specs, and two reusable skills (`changelog`, `feature-spec`). Verified the repo via `gh api` and pulled excerpts from `Lesson_08/specs/mission.md`, `roadmap.md`, and `skills/feature-spec/SKILL.md` for grounding.
+
+The course codifies the most prescriptive greenfield SDD workflow the wiki has documented to date:
+
+1. **Constitution (3 files)** — `mission.md` (why / stakeholders), `tech-stack.md` (how / engineers), `roadmap.md` (what next / living phase list). Agent-agnostic, structured — explicitly contrasted with the monolithic `agents.md` pattern.
+2. **Feature loop (3 files, on a dated branch)** — `specs/YYYY-MM-DD-<feature-name>/` containing `plan.md` (numbered task groups), `requirements.md` (Scope/Decisions/Context), `validation.md` (automated + manual + tone + definition-of-done). `/clear` between features is explicit discipline.
+3. **Replanning** as a first-class phase — constitution updates in their own branch, product-manager updates absorbed into specs *before* code, workflow improvements captured as **skills**.
+
+New material beyond prior SDD sources:
+
+- **"The agent is the muscle, but the SPEC is the brain"** — clean pedagogical summary of the architect analogy, targeting professional IDE users.
+- **`AskUserQuestion` with exactly 3 questions (Scope / Decisions / Context)** — codified in the `feature-spec` SKILL.md interview pattern; the structure is the contribution, the tool is optional.
+- **"Don't edit directly — ask the agent"** — Lesson 4's anti-drift rule: manual edits bypass the agent and make other artifacts fall out of sync. Most explicit drift-discipline articulation in the wiki.
+- **Cognitive debt / AI fatigue as human-side complement to context rot** — Lessons 7 and 9. Managed by size discipline (smaller task groups) and review level (spec, not CSS class).
+- **Sub-agents for deep review "preserve the main agent's context window, rather than polluting it"** — first appearance of the [[alexlavaee-rpi-to-qrspi|Lavaee context-firewall framing]] in **mainstream course content**. Direct word-for-word convergence without cross-reference.
+- **MVP as an "extreme test" of the constitution** — Lesson 10 reframes shipping the rest of the roadmap in one shot: only do this if you trust your spec; if the output drifts, that's a signal to replan, not to rush.
+- **Brownfield by reverse-engineering** — Lesson 11: "the agent will discover and in a sense reverse-engineer the SDD artifacts from the existing code base." Inputs = README, TODO, issue trackers, commits. Most accessible brownfield SDD framing in the wiki.
+- **Middle-ground position in the code-legibility debate** — Lesson 7 leans School 1 ("focus on whether features reflect the spec, not CSS classes"), Lesson 9 leans School 2 ("make sure it creates code you can commit under your name"). Synthesis: review at spec/behavior level; reserve line-level reading for security, DB, compounding areas.
+- **Tool-agnostic stance** — "The specs travel with you when you switch tools." WebStorm + Claude Code is shown but VS Code + Codex CLI, Zed + local model, Cursor, Gemini CLI are all flagged as equivalent. Convergent with [[alexlavaee-rpi-to-qrspi|Lavaee's]] portability claim but framed as an onboarding benefit.
+- **JetBrains partnership signal** — IDE vendor betting on SDD as a reason to stay in professional IDEs rather than migrating to chat-first AI UIs.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added item 13: course URL + companion repo)
+- `raw/sdd-course-deeplearning-ai.md` (new — transcript consolidated across 12 video segments + verified repo structure + pulled excerpts from `Lesson_08/specs/mission.md`, `roadmap.md`, and `skills/feature-spec/SKILL.md`)
+- `wiki/sources/sdd-course-deeplearning-ai.md` (new — full source page with Summary, Key Claims, Connections, Questions Raised)
+- `wiki/concepts/spec-driven-development.md` (major update — added Canonical Workflow section with three-layer Constitution/Feature-Loop/Replanning structure; refreshed Key Sources, vibe-coding contrast, Open Questions)
+- `wiki/concepts/context-engineering.md` (updated — added course to Key Sources with cognitive-debt and sub-agents-as-context-firewall points)
+- `wiki/concepts/code-legibility-debate.md` (updated — added course as mainstream middle-ground articulation)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
+**Note:** The user-supplied transcript was truncated partway through Lesson 11. Lessons 12 ("Build Your Own Workflow") and 13 ("Agent Replaceability") are present in the companion repo but not in the ingested transcript. Worth ingesting later — Lesson 13's "Agent Replaceability" is particularly relevant to the wiki's tool-portability thread.
+
 ## [2026-04-16] ingest-stub | Cole Medin — "Building an AI Dark Factory: A Codebase That Writes Its Own Code, Live"
 
 Registered a new source: **Cole Medin's** YouTube Live (~2h 24m), ID `Xg0tNz9pICI`, explicitly titled around the **Dark Factory** concept from [[five-levels-shapiro|Shapiro's Level 5]]. This is the wiki's first source from Cole Medin (Dynamous AI founder), and a direct contribution to the [[software-factory]] pillar from a creator aimed at mainstream AI-developer audiences rather than the HumanLayer/Huntley enterprise-frontier corner of the debate.

@@ -3,9 +3,9 @@ title: Spec-Driven Development
 type: concept
 pillar: spec-driven
 created: 2026-04-08
-updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, ai-in-sdlc-research]
-tags: [specifications, automation, code-generation, methodology, vibe-coding]
+updated: 2026-04-16
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, ai-in-sdlc-research, sdd-course-deeplearning-ai]
+tags: [specifications, automation, code-generation, methodology, vibe-coding, constitution, feature-loop, replanning]
 ---
 
 # Spec-Driven Development
@@ -21,6 +21,7 @@ This inverts the traditional relationship between documentation and code. Instea
 - [[five-levels-shapiro]] — Level 4 (Autonomous) is essentially spec-driven: "You leave for 12 hours, and check if tests pass"
 - [[superpowers-5]] — The cascade pattern (spec → implementation → code review) is spec-driven in practice
 - [[12-factor-agents]] — Factors #2-3 (own prompts/context) relate to spec management
+- [[sdd-course-deeplearning-ai]] — DeepLearning.AI × JetBrains course (Paul Everett, 2026). The most structured greenfield template in the wiki: three-file Constitution (`mission.md` + `tech-stack.md` + `roadmap.md`) + per-feature loop (`plan.md` + `requirements.md` + `validation.md`) on a dated branch + explicit **replanning phase** between features. Ships a reproducible companion repo with 10 lesson snapshots.
 
 ## Tools and Frameworks
 
@@ -28,6 +29,29 @@ This inverts the traditional relationship between documentation and code. Instea
 - **[[bmad-method|BMAD method]]** — Multi-agent framework simulating a full Agile team with 12+ AI agent roles and 34+ workflows. Covers the entire SDLC from brainstorming to QA. Runs on top of Claude Code, Cursor, Windsurf.
 - **[[spec-kit|Spec Kit]]** — GitHub's open-source toolkit implementing a `specify → plan → tasks → implement` pipeline. Mid-size project scope. Quick setup (minutes). Used in practitioner observation alongside BMAD.
 - **[[kiro|Kiro]]** — AWS agentic development environment that converts informal prompts into structured specs and production-ready workflows. Feature-level scope. Major cloud vendor backing validates the SDD approach.
+
+## Canonical Workflow (from [[sdd-course-deeplearning-ai]])
+
+The DeepLearning.AI × JetBrains course (April 2026) articulates a prescriptive, tool-agnostic SDD workflow that converges with and formalizes patterns scattered across other sources:
+
+1. **Constitution** — three markdown files under `specs/` at project root, committed once and maintained as a living document:
+   - `mission.md` — the *why* (stakeholder-facing: vision, audience, scope)
+   - `tech-stack.md` — the *how* (engineering team: technologies and constraints)
+   - `roadmap.md` — the *what next* (living sequence of small phases)
+
+2. **Feature loop** — per feature, on a dedicated branch, with fresh agent context (`/clear`):
+   - Plan → `plan.md` (numbered task groups)
+   - Implement → code changes
+   - Validate → `validation.md` (automated + manual + tone check + definition of done)
+   - All three kept in `specs/YYYY-MM-DD-<feature-name>/`
+
+3. **Replanning** — between features, a first-class phase (not a retrospective):
+   - Update the Constitution in its own branch for traceability
+   - Absorb product-manager updates into specs *before* code
+   - Re-group roadmap phases if insight has changed the priority
+   - Capture workflow improvements as **skills** (e.g., a `changelog` skill, a `feature-spec` skill)
+
+This converges with [[bmad-method-docs|BMAD's]] fresh-chat-per-workflow discipline, Dex's [[dex-rpi-to-crispy|Mental Alignment via artifacts]], and [[superpowers-intro|Jesse Vincent's]] skills-as-reusable-capability pattern — but is the **first mainstream course articulation** of the full loop.
 
 ## Current Understanding
 
@@ -53,6 +77,8 @@ The term **vibe coding** was popularized by Andrej Karpathy (Feb 2025) to descri
 
 SDD and vibe coding represent a **fundamental bifurcation** in AI-assisted development. Per [[ai-in-sdlc-research]], organizations are likely to maintain **dual-track workflows**: vibe coding for exploration and proof-of-concept, SDD for production features — with governance rigor scaling to the risk and durability of the deliverable.
 
+[[sdd-course-deeplearning-ai|Paul Everett's course]] (Lesson 2) restates this dichotomy in course-pedagogy terms: **"Vibe coding works okay for a button, but it doesn't scale to a large ongoing project. While high-level prompts are fast, they lead to disposable code and mounting technical debt. We need engineering."** SDD is framed there as "the professional response to the chaos of unsupervised AI generation" — the same dual-track observation, now as mainstream educational content.
+
 ## Practitioner Evidence
 
 ### SDD in a Production SaaS Environment (from [[ai-in-sdlc-research]])
@@ -72,10 +98,12 @@ After introducing structured specifications, three observable changes emerged:
 - What makes a good spec for AI consumption vs. human consumption? Are they different?
 - How do you handle emergent requirements that only become clear during implementation?
 - What's the right granularity for specs? Too high-level and the AI makes bad decisions; too detailed and you're basically writing pseudocode
-- How do spec-driven approaches handle legacy codebases where no spec exists?
+- ~~How do spec-driven approaches handle legacy codebases where no spec exists?~~ *Partially answered by [[sdd-course-deeplearning-ai]] Lesson 11: "the agent will discover and in a sense reverse-engineer the SDD artifacts from the existing code base" — the constitution is rebuilt from README, TODO, issue trackers, commits, existing code. Open: does this scale to multi-hundred-thousand-LOC codebases?*
 - What's the relationship between specs and tests? Can one be generated from the other?
 - Is the dual-track model (vibe coding for exploration, SDD for production) stable long-term, or will one approach dominate?
 - How do you measure ROI of SDD vs. vibe coding in a controlled setting?
+- **Is the three-file constitution (mission/tech-stack/roadmap) load-bearing, or can it be reduced?** BMAD uses a single `project-context.md`; Spec Kit uses a different breakdown; the DeepLearning.AI course uses three. What are the tradeoffs?
+- **Versioning of specs** — how to associate which spec version produced which code change? [[sdd-course-deeplearning-ai|The course]] flags this as "an evolving topic in the community."
 
 ## Related Concepts
 

@@ -34,6 +34,7 @@ updated: 2026-04-16
 | [[bmad-method-docs]] | bmadcode | Spec-Driven | Official BMAD docs: four-phase cycle, three planning tracks (Quick Flow/BMad/Enterprise), 6 named agent personas, adversarial review, fresh-chat requirement, project-context.md as shared context. |
 | [[matt-pocock-dex-horthy-chat]] | Matt Pocock × Dex (HumanLayer) | Coding Agents | Live conversation (Jan 2026): cup metaphor for task sizing, quadratic-attention explained, "Ralph is back" 20k-LOC cautionary PR, cron-Ralph (3 iterations/night), pipeline-Ralph, untrusted-input safety, learning tests, tracer bullets, CodeLayer rebuilt in 6 weeks around CRISPY. |
 | [[cole-medin-ai-dark-factory]] | Cole Medin | Software Factories | YouTube Live (~2h 24m): "Building an AI Dark Factory: A Codebase That Writes Its Own Code." ⚠️ Transcript pending — metadata-only stub; auto-captions blocked from this environment. |
+| [[sdd-course-deeplearning-ai]] | Paul Everett (JetBrains) | Spec-Driven | DeepLearning.AI × JetBrains course (Andrew Ng intro). Three-file Constitution (mission/tech-stack/roadmap) + per-feature loop on dated branches (plan/requirements/validation) + explicit replanning phase. Skills as workflow automation. Brownfield by reverse-engineering from existing code. First mainstream course articulation of the full SDD loop; reproducible companion repo with 10 lesson snapshots. |
 
 ### Sources To Ingest
 

@@ -36,3 +36,7 @@
 
 12. Building an AI Dark Factory: A Codebase That Writes Its Own Code, Live — Cole Medin
     https://www.youtube.com/live/Xg0tNz9pICI
+
+13. Spec-Driven Development with Coding Agents — DeepLearning.AI × JetBrains (Paul Everett)
+    https://learn.deeplearning.ai/courses/spec-driven-development-with-coding-agents
+    Companion repo: https://github.com/https-deeplearning-ai/sc-spec-driven-development-files

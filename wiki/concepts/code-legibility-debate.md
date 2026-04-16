@@ -3,9 +3,9 @@ title: "Code Legibility Debate: Black Box vs. Must-Read"
 type: concept
 pillar: code-legibility
 created: 2026-04-08
-updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026]
-tags: [code-review, readability, specs-vs-code, two-schools, philosophy, slop, trust]
+updated: 2026-04-16
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, sdd-course-deeplearning-ai]
+tags: [code-review, readability, specs-vs-code, two-schools, philosophy, slop, trust, review-level, cognitive-debt]
 ---
 
 # Code Legibility Debate
@@ -27,6 +27,7 @@ Code is still the real artifact that runs in production. Specs can be incomplete
 - [[12-factor-agents]] — Factor #8 ("Own Your Control Flow") implies you need to understand what the agent is doing — leans School 2
 - **[[dex-rpi-to-crispy]]** — ⚠️ **Major data point.** Dex reverses his August 2025 position. After 6 months of not reading code: "It did not end well. We had to rip out and replace large parts of that system." Now says: "Please I'm begging you to read the code. We have a profession to uphold." Draws a sharp line between OSS (acceptable to skip) and production SaaS (must read).
 - **[[coding-agents-conf-2026]]** — Scott Breitenother (Kilo Code): "AI shifts the work, it doesn't remove it." Trust is the bottleneck, not capability. Scale AI: leading models score ~30% on codebase understanding. Both suggest code review remains essential because agents aren't reliable enough to go unsupervised.
+- **[[sdd-course-deeplearning-ai]]** — **Mainstream middle-ground articulation.** Paul Everett's course explicitly distinguishes *what* to read. School-1-leaning: "focus your review on high-level concerns like whether the features work and reflect the spec, rather than details like which CSS classes were implemented" (Lesson 7). School-2-leaning: "just make sure it creates code that you can commit under your name" (Lesson 9) — i.e., you're still responsible for what you merge. The synthesis: **review at the spec/behavior level for most changes; reserve line-level reading for security, database, and anything that could compound later.**
 
 ## Current Understanding
 

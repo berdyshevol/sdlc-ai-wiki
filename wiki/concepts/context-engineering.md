@@ -3,9 +3,9 @@ title: "Context Engineering"
 type: concept
 pillar: coding-agents
 created: 2026-04-08
-updated: 2026-04-08
-sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness, matt-pocock-dex-horthy-chat]
-tags: [context-window, prompting, architecture, dumb-zone, context-rot, quadratic-attention, cup-metaphor]
+updated: 2026-04-16
+sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness, matt-pocock-dex-horthy-chat, sdd-course-deeplearning-ai]
+tags: [context-window, prompting, architecture, dumb-zone, context-rot, quadratic-attention, cup-metaphor, cognitive-debt, ai-fatigue]
 ---
 
 # Context Engineering
@@ -25,6 +25,7 @@ Dex argues the second read is more important and less discussed.
 - **[[coding-agents-conf-2026]]** — Kilo Code: context must expand with trust level (autocomplete needs current file; orchestration needs multiple repos). Pinterest: 3-tier memory architecture (hot/domain/cold) as context management. Databricks: too many MCPs degrade output.
 - **[[12-factor-agents]]** — Principles of owning your context, small focused agents.
 - **[[matt-pocock-dex-horthy-chat]]** — Conversational supplement: explicit quadratic-attention explanation, the "cup" metaphor for task sizing, and the cron-Ralph pattern as a context engineering deployment shape.
+- **[[sdd-course-deeplearning-ai]]** — DeepLearning.AI × JetBrains course. Mainstream-pedagogy version of the same principles: **clear between features** (`/clear` is explicit Lesson 9 discipline); **sub-agents for deep review preserve the main agent's context window, rather than polluting it**; **cognitive debt** (the mental load of tracking fast AI-generated changes) as the human-side complement to context rot — managed by size discipline (smaller task groups) and review level (spec, not CSS class).
 
 ## Current Understanding
 

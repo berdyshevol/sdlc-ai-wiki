@@ -4,7 +4,7 @@ type: overview
 created: 2026-04-08
 updated: 2026-04-09
 
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness, long-running-claude, everything-is-a-ralph-loop, bmad-method-docs]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness, long-running-claude, everything-is-a-ralph-loop, bmad-method-docs, sdd-course-deeplearning-ai]
 tags: [overview, synthesis]
 ---
 
@@ -69,6 +69,8 @@ Across the sources ingested so far, a coherent picture is forming:
 
 12. **The Ralph Loop maximalists push the factory vision to its extreme.** Geoffrey Huntley ([[everything-is-a-ralph-loop]]) extends the automation levels beyond Shapiro's Level 5 to "Level 9" — autonomous loops that evolve products and optimize for revenue. His core claim: the engineer's role has already shifted from "brick-by-brick builder" to "loop programmer." This is the most aggressive articulation of the software factory thesis in the wiki. While Dex advocates "2-3x not 10x" and Anthropic's long-running Claude work is cautiously scoped to scientific computing, Huntley claims general-purpose autonomous development is here now ("software development is dead"). The tension between these positions — cautious pragmatism vs. full-automation maximalism — is a key open question. Notably, Anthropic's own research ([[long-running-claude]]) explicitly references and validates the Ralph Loop pattern, suggesting the truth may lie somewhere between Dex's conservatism and Huntley's maximalism.
 
+14. **SDD has reached mainstream educational channels.** [[sdd-course-deeplearning-ai]] (Paul Everett, DeepLearning.AI × JetBrains, April 2026) is the first *course* source in the wiki — a 13-lesson hands-on workflow with a reproducible companion repo. It codifies a prescriptive three-layer template (three-file Constitution + per-feature dated branches with three-file spec + first-class replanning phase) that converges without cross-reference on patterns the HumanLayer/Superpowers/BMAD corner of the debate has been articulating in prose: `/clear` between features = [[bmad-method-docs|BMAD fresh-chat]], sub-agents as context firewalls = [[alexlavaee-rpi-to-qrspi|Lavaee]], review at spec level not CSS classes = Dex's [[instruction-budget]] thesis, skills as reusable capability = [[superpowers|Vincent's Superpowers]]. The JetBrains partnership signal matters: IDE vendors are betting SDD is the reason professional developers stay in IDE-centric workflows rather than migrating to chat-first AI UIs. Brownfield is no longer framed as an open problem — the course explicitly instructs the agent to "reverse-engineer the SDD artifacts from the existing code base" (Lesson 11) using README, TODO, issue trackers, and existing code.
+
 13. **The harness is the product, not the model.** [[anatomy-agent-harness]] synthesizes evidence that the non-model infrastructure (the "[[agent-harness]]") is where competitive differentiation lives. LangChain jumped from outside the top 30 to rank 5 on TerminalBench 2.0 by changing only harness infrastructure (same model, same weights). Five major frameworks (Claude Agent SDK, OpenAI Agents SDK, LangGraph, CrewAI, AutoGen) have converged on the same core pattern (orchestration loop + tools + memory + context management) but diverge on a **thin-to-thick spectrum**: Anthropic bets on trusting the model; LangGraph bets on encoding logic in code. The trend is toward thinner harnesses as models improve, but co-evolution (models post-trained with specific harnesses) creates tight coupling that complicates upgrades. The seven architectural decisions identified (agent count, reasoning strategy, context strategy, verification, permissions, tool scoping, harness thickness) provide a practical design framework.
 
 ## Sources Ingested
@@ -87,6 +89,7 @@ Across the sources ingested so far, a coherent picture is forming:
 | 10 | [[long-running-claude]] | Siddharth Mishra-Sharma (Anthropic) | Coding Agents / Factories | Mar 2026 |
 | 11 | [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Jan 2026 |
 | 12 | [[bmad-method-docs]] | bmadcode | Spec-Driven | 2026 |
+| 13 | [[sdd-course-deeplearning-ai]] | Paul Everett (JetBrains) | Spec-Driven | Apr 2026 |
 
 ## Sources To Ingest
 

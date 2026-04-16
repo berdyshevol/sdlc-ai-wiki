@@ -49,3 +49,7 @@
 15. Your intent is everything: Reconstructing specs from vibe coding sessions — Andrey Breslav (CodeSpeak)
     https://codespeak.dev/blog/vibe-takeover-20260317
     CodeSpeak 0.3.6 release: takeover reads Claude Code sessions, language-agnostic coverage, Anthropic-compatible providers
+
+16. First step in modularity: Spec dependencies and Managed files — CodeSpeak
+    https://codespeak.dev/blog/modularity-20260309
+    CodeSpeak 0.3.4 release: spec imports (`---\nimport X.cs.md\n---`) with dependency-ordered builds + managed files (per-spec source-file scope) + `codespeak update-managed-files` / `codespeak whitelist`

@@ -4,7 +4,7 @@ type: entity
 pillar: spec-driven
 created: 2026-04-08
 updated: 2026-04-16
-sources: [codespeak-modular-takeover, codespeak-vibe-takeover]
+sources: [codespeak-modular-takeover, codespeak-vibe-takeover, codespeak-modularity]
 tags: [tool, spec-driven, code-generation, claude, anthropic, github-integration, takeover, modular, brownfield, cli, vibe-sharing]
 ---
 
@@ -26,6 +26,47 @@ tags: [tool, spec-driven, code-generation, claude, anthropic, github-integration
 CodeSpeak's position, most clearly articulated in [[codespeak-vibe-takeover|Andrey Breslav's March 17, 2026 post]]: LLMs are excellent at filling gaps when given high-level blueprints; humans should focus on *intent* — *"the non-trivial, the differentiating, the interesting"* — and leave implementation details to the machine. The long-term goal is explicit: *"Our goal is to eventually build a world where you don't need to look at the code at all, even to review it."* This is the **strongest Level-5 / School-1 position** in the wiki.
 
 Vibe coding is explicitly repositioned as *intent-elicitation*, not coding: *"dialog-based coding agents are good tools for intent elicitation and exploration."* Takeover's job is to mine the intent out of the resulting code + chat history into specs that function as source-of-truth going forward.
+
+## Modularity Primitives (March 2026, v0.3.4) — imports + managed files
+
+Introduced in [[codespeak-modularity|the March 9 post]]. The **architectural foundation** for multi-spec projects — every subsequent CodeSpeak feature (session-reading takeover, modular takeover) runs on this model.
+
+### Spec imports (dependency-ordered builds)
+
+Specs declare dependencies via frontmatter:
+
+```markdown
+---
+import storage.cs.md
+---
+```
+
+Imports are **transitive** (A → B → C builds all in correct order). When you run `codespeak build main.cs.md`, CodeSpeak:
+1. Resolves the dependency graph
+2. Builds **only changed** specs
+3. Rebuilds in correct order (dependencies first)
+
+Memo-app demo: changing `storage.cs.md` from JSON to SQLite (one-line diff) triggers `storage.py` to be rewritten; `main.py` is untouched because the interface to storage didn't change. Progress titles are **semantic** (e.g., *"Changing memo storage from JSON to SQLite"*) — CodeSpeak understands the intent of the diff, not just that a diff exists.
+
+### Managed files (per-spec source-file scope)
+
+Every spec has a **scope** — the source files it created or took over. Writes inside scope are silent; writes outside scope produce a **notification at end of build**. Four-way trust model for handling boundary crossings:
+
+| Mode | Config | Behavior |
+|------|--------|----------|
+| Permissive + notification (default) | — | Allow writes outside scope, surface them in build output |
+| Suppress | `"suppressNonManagedFilesNotification": true` | Allow, don't report |
+| Strict | `"strictManagedFilesControl": true` | Block writes outside scope entirely |
+| Per-spec whitelist | `codespeak update-managed-files 'pyproject.toml'` | This spec owns this file too |
+| Project whitelist (globs supported) | `codespeak whitelist 'config/*.yaml'` | Any spec may modify these files |
+
+### Why this matters
+
+Managed files is the runtime model that makes **per-spec change locality** enforceable rather than aspirational. Without it, every CodeSpeak build is implicitly project-wide and may silently rewrite files belonging to other modules. With it, you see exactly what crossed the boundary, and you can tighten the boundary over time.
+
+### Honestly admitted future work (per post)
+
+*"In future versions we are going to look into: specifying APIs for specs to provide a clean boundary between modules; reporting errors when an imported spec does not provide what the importing one expects; generating modules in relative isolation to make them reusable in other projects."* Translation: **spec-to-spec contracts are not yet enforced** in v0.3.4. If a dependency changes its interface, CodeSpeak won't catch the mismatch in the importing spec.
 
 ## Session-reading Takeover (March 2026, v0.3.6)
 
@@ -140,7 +181,7 @@ Launched **April 15, 2026**: `codespeak-dev/vibe-sharing` — a data-donation to
 |------|------|----------------|
 | 2026-02-23 | First glimpse of `codespeak takeover` | Monolithic takeover (single spec output) |
 | 2026-03-02 | Test coverage improvement | CodeSpeak generates tests |
-| 2026-03-09 | Spec dependencies + Managed files | Multi-spec projects, coupling primitives |
+| **2026-03-09** | **[[codespeak-modularity\|Spec dependencies and Managed files]]** | **v0.3.4: `import X.cs.md` frontmatter for dependency-ordered builds + managed-files scope per spec + `codespeak update-managed-files` + `codespeak whitelist` (supports globs) + four-way trust model for non-managed writes (permissive default / suppress / strict / per-spec)** |
 | **2026-03-17** | **[[codespeak-vibe-takeover\|Reconstructing specs from vibe coding sessions]]** | **v0.3.6: takeover reads Claude Code sessions; language-agnostic LCOV coverage; Anthropic-compatible providers; prompt caching; Sonnet 4.6 default; cost caps** |
 | 2026-03-24 | Tests + `impl` command | `codespeak test`, `codespeak impl`, faster builds |
 | **2026-04-08** | **[[codespeak-modular-takeover\|Modular takeover]]** | **Web wizard, multi-spec decomposition** |

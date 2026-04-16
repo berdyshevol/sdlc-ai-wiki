@@ -333,6 +333,51 @@ Pages created/updated:
 - `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
 - `wiki/log.md` (updated)
 
+## [2026-04-16] ingest | CodeSpeak — "First step in modularity: Spec dependencies and Managed files"
+
+Ingested the CodeSpeak **March 9, 2026 blog post (v0.3.4)** — the **foundational** post in CodeSpeak's 2026 arc. Introduces the two primitives — **spec imports** and **managed files** — that every later feature (session-reading takeover, modular takeover) architecturally depends on. Fetched via Claude Code `WebFetch` with aggressive verbatim prompt; close-to-raw text retrieved, including the complete memo-app code example and full four-way trust-model option list.
+
+This now completes the CodeSpeak-2026 dependency triangle in the wiki:
+
+```
+Mar 9 (v0.3.4)  — spec imports + managed files  ← infrastructure
+Mar 17 (v0.3.6) — session-reading takeover       ← still single-spec output
+Apr 8 (Modular) — web wizard + multi-spec output ← uses both above
+```
+
+Key new material beyond what was already in the wiki:
+
+1. **Two new primitives: `import` directive + managed files.** Specs declare dependencies in frontmatter (`---\nimport storage.cs.md\n---`); CodeSpeak builds in dependency order, skipping unchanged specs. Every spec has a **scope** — the source files it owns; writes inside scope are silent, writes outside produce a notification.
+
+2. **Change-scoping principle formalized:** *"when a spec S gets updated, only the code S manages should normally update."* Demonstrated concretely by the memo-app example: one-line diff in `storage.cs.md` (JSON → SQLite) rewrites `storage.py` only, `main.py` untouched because the storage interface didn't change.
+
+3. **Four-way trust model for non-managed writes.** Default = permissive with notification. Alternatives: suppress notification, strict mode (block writes outside scope), per-spec whitelist (`codespeak update-managed-files`), project-wide whitelist with glob support (`codespeak whitelist 'config/*.yaml'`). This is a **nuanced and honest** trust model — CodeSpeak surfaces agent behavior at module boundaries rather than hiding or blocking it by default. Worth emulating elsewhere.
+
+4. **Semantic diff titles in build progress.** Progress UI shows *"Changing memo storage from JSON to SQLite"* rather than generic *"Implement spec."* Suggests CodeSpeak does non-trivial spec-diff analysis — not just re-run-the-pipeline. Small but telling.
+
+5. **Explicit admission of unsolved SDD correctness problems.** Future goals listed at the end of the post:
+   - *"specifying APIs for specs to provide a clean boundary between modules"*
+   - *"reporting errors when an imported spec does not provide what the importing one expects"*
+   - *"generating modules in relative isolation to make them reusable in other projects"*
+   
+   These are the three hardest problems in modular SDD — contract definition, contract-violation detection, module isolation. **Not solved in v0.3.4.** Interface mismatches between imported specs don't produce errors; they produce code that may not work.
+
+6. **`codespeak build` has change detection.** Passing `main.cs.md` when only `storage.cs.md` changed → only the storage spec rebuilds. Dependency graph + content-hash caching without explicit user config.
+
+7. **First concrete example of modular SDD in the wiki.** The memo-app demo (10-line `storage.cs.md` + 15-line `main.cs.md` with import) is the minimum viable example of multi-spec SDD. Useful teaching artifact.
+
+8. **Conceptual connection to BMAD `project-context.md` — by contrast.** BMAD pools context into one shared file across all agents. CodeSpeak managed files **isolate** context per-spec, with explicit crossing points. Two philosophies of multi-module SDD: pooling (BMAD) vs. isolation with observable boundaries (CodeSpeak). The wiki's Connections section surfaces this contrast.
+
+9. **Connection to [[skill-issue-harness-engineering|Kyle's]] "success is silent" principle — inverted for boundaries.** Kyle: success silent, failures verbose. CodeSpeak managed files: in-scope writes silent, boundary crossings verbose. The inversion makes sense — you want to notice the agent touching something it doesn't own.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added item 16)
+- `raw/codespeak-modularity.md` (new — close-to-verbatim article with complete memo-app code example and four-way trust-model table)
+- `wiki/sources/codespeak-modularity.md` (new — full source page with Summary, 8 Key Claims, Connections to 9 pages, 8 Questions Raised)
+- `wiki/entities/codespeak.md` (major update — added **Modularity Primitives (March 2026, v0.3.4)** section with import syntax, memo-app reference, four-way trust model table, and honest-future-work note; updated Blog Timeline row to link the new source page; updated sources frontmatter)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
 ## [2026-04-16] ingest | Andrey Breslav (CodeSpeak) — "Your intent is everything: Reconstructing specs from vibe coding sessions"
 
 Ingested the CodeSpeak March 17, 2026 blog post (**v0.3.6 release**) — the chronological predecessor to [[codespeak-modular-takeover]]. Fetched via Claude Code `WebFetch` with an aggressive verbatim prompt; this time the tool returned close-to-raw text (code blocks, CLI examples, progress-output verbatim), substantially more faithful than the April 8 fetch.

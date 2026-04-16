@@ -45,3 +45,7 @@
     https://codespeak.dev/blog/modular-takeover-20260408
     Demo repo: https://github.com/codespeak-dev/folio (branch `modular-takeover`)
     CLI: `uv tool install codespeak-cli`
+
+15. Your intent is everything: Reconstructing specs from vibe coding sessions — Andrey Breslav (CodeSpeak)
+    https://codespeak.dev/blog/vibe-takeover-20260317
+    CodeSpeak 0.3.6 release: takeover reads Claude Code sessions, language-agnostic coverage, Anthropic-compatible providers

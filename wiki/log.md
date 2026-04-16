@@ -333,6 +333,47 @@ Pages created/updated:
 - `wiki/index.md` (updated — added entity row, marked Jesse Vincent as covered)
 - `wiki/log.md` (updated)
 
+## [2026-04-16] ingest | Andrey Breslav (CodeSpeak) — "Your intent is everything: Reconstructing specs from vibe coding sessions"
+
+Ingested the CodeSpeak March 17, 2026 blog post (**v0.3.6 release**) — the chronological predecessor to [[codespeak-modular-takeover]]. Fetched via Claude Code `WebFetch` with an aggressive verbatim prompt; this time the tool returned close-to-raw text (code blocks, CLI examples, progress-output verbatim), substantially more faithful than the April 8 fetch.
+
+Key new material beyond what was already in the wiki:
+
+1. **"Human intent is what matters" — CodeSpeak's philosophical manifesto.** Andrey Breslav's sharpest articulation of CodeSpeak's positioning: humans own *"the non-trivial, the differentiating, the interesting"*; LLMs fill gaps. *"Many things that have always been obvious to humans are now obvious to machines as well."* Position is structurally opposite to [[everything-is-a-ralph-loop|Huntley's]] *"software development is dead."*
+
+2. **Strongest School-1 statement recorded in the wiki.** Breslav: *"Our goal is to eventually build a world where you don't need to look at the code at all, even to review it."* Hedged as future goal but direction unambiguous. Now the polar opposite of [[dex-rpi-to-crispy|Dex's]] "please read the code" reversal. [[code-legibility-debate]] has a clearer polar pair.
+
+3. **Vibe coding definitively framed as intent-elicitation, not coding.** *"Dialog-based coding agents are good tools for intent elicitation and exploration."* Vibe coding's role is to help you *"overcome the blank canvas problem, and to understand what we want."* Output is a prototype + chat history — both *artifacts of thinking*, not end products. This is the sharpest vibe-vs-SDD framing in the wiki.
+
+4. **Canonical shrink claim: 5-10× stated as rule-of-thumb.** *"Specs are often 5-10 times shorter, because they are more high-level."* The first time this number appears in CodeSpeak's public communications. Later validated by Folio (~7×) and Faker (9.9×) per [[codespeak-modular-takeover]].
+
+5. **Vibe-session scale datapoint.** A single subsystem takeover processed **24 Claude Code sessions with 150 prompts**. First public datapoint on realistic vibe-coding session volume. Implications for context engineering: compressing 150-prompt history into one spec is a non-trivial problem.
+
+6. **Session-reading primitive introduced — the foundation for modular takeover.** This post's takeover reads Claude Code sessions alongside code; it was the missing primitive that made April's modular decomposition accurate. Seeing both posts together exposes a visible three-week engineering cycle: the *"support generating more than one spec file"* limitation stated here as "to be fixed" is exactly what modular takeover solved 22 days later.
+
+7. **Opt-in three-state permission flow.** *"[Y] Allow / [N] Not now / [D] No, never"* stored in `~/.codespeak/preferences.json` per-project. Privacy-by-design for session access, not just privacy-by-policy. Rare in AI developer tools.
+
+8. **Honest current-version limitations list.** Breslav explicitly lists: single-spec only, Claude Code only, specs may miss or over-include, no delete-code-regenerate guarantee, no spec-diff → code-diff verification. *"Make sure that if we delete the code, an equivalent implementation can be generated from the spec"* is stated as a **future goal, not a current guarantee** — honest admission of the fundamental risk of strict-SDD.
+
+9. **Version confirmation: 0.3.6, not v0.0.1.** This closes the out-of-date entity-page framing. The wiki now has CodeSpeak at 0.3.6 (March 17) and documented weekly releases up to April 15.
+
+10. **Operational cost-engineering:** prompt caching enabled, Claude **Sonnet 4.6** as default model, opt-in **cost cap per build**, `.codespeak` snapshot folder (vs. previous `.last-known` files). Signals CodeSpeak usage at scale is producing real cost pressure.
+
+11. **Anthropic-compatible providers via `ANTHROPIC_BASE_URL`** — `z.ai` cited as example. Whitelisted for security. CodeSpeak hedging against Anthropic lock-in.
+
+12. **Language-agnostic autonomous test generation:** `codespeak coverage --auto-configure` (detects language + framework) + `codespeak coverage --target 100 --max-iterations 5` (iteratively adds missing tests). Test generation is part of the spec→code→verify loop, not a separate tool.
+
+This post is the **philosophical and technical anchor** for the CodeSpeak corpus. Prior ingests documented the *product mechanics* (modular takeover wizard, shrink factors). This post documents the *why* — and provides the strongest code-legibility School-1 quote in the wiki.
+
+Pages created/updated:
+- `raw/links/links.md` (updated — added item 15)
+- `raw/codespeak-vibe-takeover.md` (new — close-to-verbatim article with retrieval note)
+- `wiki/sources/codespeak-vibe-takeover.md` (new — full source page with Summary, Key Claims, Connections, Questions Raised)
+- `wiki/entities/codespeak.md` (updated — added **Philosophy** section with manifesto quote + **Session-reading Takeover** section documenting v0.3.6 capability + 24-session/150-prompt scale + `.codespeak` preferences path; updated sources frontmatter; updated Blog Timeline row to link the new source page)
+- `wiki/concepts/code-legibility-debate.md` (updated — added [[codespeak-vibe-takeover]] as strongest School-1 statement; added frontmatter source)
+- `wiki/index.md` (updated — added source row)
+- `wiki/log.md` (updated)
+
 ## [2026-04-16] ingest | Dmitry Savvinov (CodeSpeak) — "Modular takeover: from vibe-coded app to spec-driven development"
 
 Ingested the CodeSpeak April 8, 2026 blog post announcing **modular takeover** — the platform's April release that converts vibe-coded applications into multiple focused `.cs.md` specs via an interactive browser wizard. This is a major capability update to [[codespeak]] that renders the existing entity page's "Alpha v0.0.1 / primarily greenfield" framing out of date.

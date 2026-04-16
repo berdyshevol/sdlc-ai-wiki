@@ -4,8 +4,8 @@ type: concept
 pillar: code-legibility
 created: 2026-04-08
 updated: 2026-04-16
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, sdd-course-deeplearning-ai]
-tags: [code-review, readability, specs-vs-code, two-schools, philosophy, slop, trust, review-level, cognitive-debt]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, sdd-course-deeplearning-ai, codespeak-vibe-takeover]
+tags: [code-review, readability, specs-vs-code, two-schools, philosophy, slop, trust, review-level, cognitive-debt, intent]
 ---
 
 # Code Legibility Debate
@@ -28,6 +28,7 @@ Code is still the real artifact that runs in production. Specs can be incomplete
 - **[[dex-rpi-to-crispy]]** — ⚠️ **Major data point.** Dex reverses his August 2025 position. After 6 months of not reading code: "It did not end well. We had to rip out and replace large parts of that system." Now says: "Please I'm begging you to read the code. We have a profession to uphold." Draws a sharp line between OSS (acceptable to skip) and production SaaS (must read).
 - **[[coding-agents-conf-2026]]** — Scott Breitenother (Kilo Code): "AI shifts the work, it doesn't remove it." Trust is the bottleneck, not capability. Scale AI: leading models score ~30% on codebase understanding. Both suggest code review remains essential because agents aren't reliable enough to go unsupervised.
 - **[[sdd-course-deeplearning-ai]]** — **Mainstream middle-ground articulation.** Paul Everett's course explicitly distinguishes *what* to read. School-1-leaning: "focus your review on high-level concerns like whether the features work and reflect the spec, rather than details like which CSS classes were implemented" (Lesson 7). School-2-leaning: "just make sure it creates code that you can commit under your name" (Lesson 9) — i.e., you're still responsible for what you merge. The synthesis: **review at the spec/behavior level for most changes; reserve line-level reading for security, database, and anything that could compound later.**
+- **[[codespeak-vibe-takeover]]** — **Strongest School-1 statement in the wiki.** Andrey Breslav (CodeSpeak): *"Our goal is to eventually build a world where you don't need to look at the code at all, even to review it."* Hedged as a future goal, but unambiguous in direction. Combined with the empirical 5-10× shrink factor between specs and code, CodeSpeak's position is that reading a 430-line spec is legitimately sufficient review for a 3000-line implementation. This is the polar opposite of [[dex-rpi-to-crispy|Dex's]] "please read the code."
 
 ## Current Understanding
 

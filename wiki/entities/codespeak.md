@@ -4,7 +4,7 @@ type: entity
 pillar: spec-driven
 created: 2026-04-08
 updated: 2026-04-16
-sources: [codespeak-modular-takeover]
+sources: [codespeak-modular-takeover, codespeak-vibe-takeover]
 tags: [tool, spec-driven, code-generation, claude, anthropic, github-integration, takeover, modular, brownfield, cli, vibe-sharing]
 ---
 
@@ -20,6 +20,20 @@ tags: [tool, spec-driven, code-generation, claude, anthropic, github-integration
 - **Status:** Active alpha, weekly feature releases
 - **CLI install:** `uv tool install codespeak-cli`
 - **AI Backend:** Anthropic Claude + Anthropic-compatible providers (since March 17, 2026)
+
+## Philosophy — "Human intent is what matters"
+
+CodeSpeak's position, most clearly articulated in [[codespeak-vibe-takeover|Andrey Breslav's March 17, 2026 post]]: LLMs are excellent at filling gaps when given high-level blueprints; humans should focus on *intent* — *"the non-trivial, the differentiating, the interesting"* — and leave implementation details to the machine. The long-term goal is explicit: *"Our goal is to eventually build a world where you don't need to look at the code at all, even to review it."* This is the **strongest Level-5 / School-1 position** in the wiki.
+
+Vibe coding is explicitly repositioned as *intent-elicitation*, not coding: *"dialog-based coding agents are good tools for intent elicitation and exploration."* Takeover's job is to mine the intent out of the resulting code + chat history into specs that function as source-of-truth going forward.
+
+## Session-reading Takeover (March 2026, v0.3.6)
+
+Introduced in [[codespeak-vibe-takeover|the March 17 post]]. The insight: code alone underspecifies intent; vibe-coding chat histories (*"corrections, dead ends, answers to `AskUserQuestion`"*) contain the missing context. Takeover now reads Claude Code sessions alongside code.
+
+Documented scale from the post: a single subsystem takeover processed **24 Claude Code sessions with 150 prompts**. Opt-in, three-state permission flow (Allow / Not now / **No, never**), stored in `~/.codespeak/preferences.json` per-project. Output at this version: single `.cs.md` file per subsystem (multi-file support was the explicit next goal, shipped 22 days later in modular takeover).
+
+Post stated the canonical shrink factor: *"Specs are often 5-10 times shorter."* Later validated empirically in [[codespeak-modular-takeover|Folio (~7×) and Faker (9.9×)]].
 
 ## Modular Takeover (April 2026) — brownfield workflow
 
@@ -127,7 +141,7 @@ Launched **April 15, 2026**: `codespeak-dev/vibe-sharing` — a data-donation to
 | 2026-02-23 | First glimpse of `codespeak takeover` | Monolithic takeover (single spec output) |
 | 2026-03-02 | Test coverage improvement | CodeSpeak generates tests |
 | 2026-03-09 | Spec dependencies + Managed files | Multi-spec projects, coupling primitives |
-| 2026-03-17 | Reconstructing specs from vibe coding sessions | Anthropic-compatible providers |
+| **2026-03-17** | **[[codespeak-vibe-takeover\|Reconstructing specs from vibe coding sessions]]** | **v0.3.6: takeover reads Claude Code sessions; language-agnostic LCOV coverage; Anthropic-compatible providers; prompt caching; Sonnet 4.6 default; cost caps** |
 | 2026-03-24 | Tests + `impl` command | `codespeak test`, `codespeak impl`, faster builds |
 | **2026-04-08** | **[[codespeak-modular-takeover\|Modular takeover]]** | **Web wizard, multi-spec decomposition** |
 | 2026-04-15 | (repo-only) `vibe-sharing` launched | Data-donation program

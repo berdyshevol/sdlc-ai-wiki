@@ -53,3 +53,7 @@
 16. First step in modularity: Spec dependencies and Managed files — CodeSpeak
     https://codespeak.dev/blog/modularity-20260309
     CodeSpeak 0.3.4 release: spec imports (`---\nimport X.cs.md\n---`) with dependency-ordered builds + managed files (per-spec source-file scope) + `codespeak update-managed-files` / `codespeak whitelist`
+
+17. The Agentic Coding Stack: 7 Tools, 5 Layers, and the Missing Link Nobody Has Built Yet — Murat Aslan (Dev Genius, Apr 2026)
+    https://blog.devgenius.io/the-agentic-coding-stack-7-tools-5-layers-and-the-missing-link-nobody-has-built-yet-de264b260db3
+    Series 1 of "Agentic Coding Systems." Stack-map of 7 tools (BMAD-METHOD, spec-kit, superpowers, Ctxo, RTK, context-mode, gsd-2) across 5 layers (Delivery Methodology, Agent Discipline, Technical Context, Token Optimization, Product Surface). Identifies spec-to-code traceability as the unclaimed layer. Author repo: https://github.com/murataslan1

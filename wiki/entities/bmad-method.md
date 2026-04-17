@@ -4,8 +4,8 @@ type: entity
 pillar: spec-driven
 created: 2026-04-08
 updated: 2026-04-09
-sources: [SDD comparison table, research-04-AI-in-SDLC.docx, bmad-method-docs]
-tags: [framework, methodology, multi-agent, agile, spec-driven, open-source]
+sources: [SDD comparison table, research-04-AI-in-SDLC.docx, bmad-method-docs, agentic-coding-stack-aslan]
+tags: [framework, methodology, multi-agent, agile, spec-driven, open-source, l1-delivery-methodology]
 ---
 
 # BMAD Method
@@ -155,6 +155,17 @@ From the [[spec-driven-development]] comparison:
 
 **Key distinction:** BMAD is an **opinionated framework** — it prescribes how you should work. Claude Code is an **unopinionated platform** — you assemble your own workflow. Since BMAD runs *on top of* Claude Code, they are **complementary, not competing**. In the [[agent-harness]] taxonomy, BMAD is a thick methodology harness layered over thinner agent SDK harnesses.
 
+## Position in the Aslan Stack
+
+[[agentic-coding-stack-aslan]] places BMAD at **Layer 1 (Delivery Methodology)** — answering *"when should the AI analyze, plan, and implement?"* alongside [[spec-kit]]. Aslan's framing:
+
+- **Core value:** *"BMAD's real value is not 'more prompts.' It is sequencing. The four-phase structure forces the agent to analyze first, plan second, solution third, and implement last. That one constraint prevents a surprising amount of architectural churn."*
+- **When to use:** *"Strongest when your real enemy is premature implementation."*
+- **Trade-off:** *"Ceremony. BMAD is intentionally opinionated. For a narrow fix or a one-file patch, the workflow overhead can outweigh the gain. It also costs more tokens because each stage loads its own planning context."*
+- **vs. spec-kit:** *"BMAD is the heavier operating model. spec-kit is the cleaner starting point for teams that want structure without a full methodology culture shift. If you choose BMAD, choose it because you want process depth. If you choose spec-kit, choose it because you want lighter structure."*
+
+Aslan recommends BMAD in the **team-workflow stack**: BMAD + [[superpowers]] + [[ctxo|Ctxo]] + [[gsd-2]] — where BMAD provides sequencing, superpowers enforces implementation discipline, Ctxo gives semantic understanding, and gsd-2 gives the team a structured operating surface.
+
 ## Hybrid Model (BMAD + Spec-kit)
 
 A notable approach from industry analysis combines BMAD's strategic planning with Spec-kit's tactical execution:
@@ -219,6 +230,7 @@ BMAD is significant to this research because:
 ## Links
 
 - [[bmad-method-docs]] — official documentation source page
+- [[agentic-coding-stack-aslan]] — places BMAD at Layer 1 (Delivery Methodology) of the agentic coding stack
 - [[spec-driven-development]] — the methodology BMAD embodies
 - [[context-engineering]] — project-context.md as shared context
 - [[instruction-budget]] — fresh chat requirement as workaround

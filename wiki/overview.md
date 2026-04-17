@@ -2,9 +2,9 @@
 title: "SDLC AI Automation: Research Overview"
 type: overview
 created: 2026-04-08
-updated: 2026-04-09
+updated: 2026-04-16
 
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness, long-running-claude, everything-is-a-ralph-loop, bmad-method-docs, sdd-course-deeplearning-ai]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, ai-in-sdlc-research, anatomy-agent-harness, long-running-claude, everything-is-a-ralph-loop, bmad-method-docs, sdd-course-deeplearning-ai, agentic-coding-stack-aslan]
 tags: [overview, synthesis]
 ---
 
@@ -73,6 +73,8 @@ Across the sources ingested so far, a coherent picture is forming:
 
 13. **The harness is the product, not the model.** [[anatomy-agent-harness]] synthesizes evidence that the non-model infrastructure (the "[[agent-harness]]") is where competitive differentiation lives. LangChain jumped from outside the top 30 to rank 5 on TerminalBench 2.0 by changing only harness infrastructure (same model, same weights). Five major frameworks (Claude Agent SDK, OpenAI Agents SDK, LangGraph, CrewAI, AutoGen) have converged on the same core pattern (orchestration loop + tools + memory + context management) but diverge on a **thin-to-thick spectrum**: Anthropic bets on trusting the model; LangGraph bets on encoding logic in code. The trend is toward thinner harnesses as models improve, but co-evolution (models post-trained with specific harnesses) creates tight coupling that complicates upgrades. The seven architectural decisions identified (agent count, reasoning strategy, context strategy, verification, permissions, tool scoping, harness thickness) provide a practical design framework.
 
+15. **Agentic coding is a stack, not a tool — and the missing layer is spec-to-code traceability.** [[agentic-coding-stack-aslan]] (Murat Aslan, April 2026) sets out a five-layer composition model — Delivery Methodology (BMAD, spec-kit), Agent Discipline ([[superpowers]]), Technical Context ([[ctxo|Ctxo]]), Token Optimization ([[rtk|RTK]], [[context-mode]]), Product Surface ([[gsd-2]]) — and argues *"serious agentic coding needs a stack, not a favorite tool."* Each layer reduces a specific subset of five named failure modes (consistency, context loss, specification gaps, review bottlenecks, multi-session conflicts). This is the wiki's first explicit failure-mode taxonomy and provides clean architectural slots for previously-overlapping entities. Aslan's headline claim is that the **bridge between specification and implementation is still weak**: no broadly adopted system tracks a requirement through design, code symbols, tests, and ongoing change. He frames this as the next strategic frontier: *"If someone builds that bridge well, they will own the most strategic connective tissue in the agentic coding stack."* This is also a third position in the [[code-legibility-debate]]: not "read the code" or "treat as black box" but "build the bridge so you can navigate spec ↔ code on demand." Sister piece to [[anatomy-agent-harness]] — both 2026 syntheses, neither cites the other; the workflow-layer view ([[agentic-coding-stack-layers]]) and the agent-component view ([[agent-harness]]) are now both formalized in the wiki.
+
 ## Sources Ingested
 
 | # | Source | Author | Pillar | Date |
@@ -90,6 +92,7 @@ Across the sources ingested so far, a coherent picture is forming:
 | 11 | [[everything-is-a-ralph-loop]] | Geoffrey Huntley | Software Factories | Jan 2026 |
 | 12 | [[bmad-method-docs]] | bmadcode | Spec-Driven | 2026 |
 | 13 | [[sdd-course-deeplearning-ai]] | Paul Everett (JetBrains) | Spec-Driven | Apr 2026 |
+| 14 | [[agentic-coding-stack-aslan]] | Murat Aslan | All five pillars | Apr 2026 |
 
 ## Sources To Ingest
 
@@ -112,3 +115,5 @@ Across the sources ingested so far, a coherent picture is forming:
 10. **NEW:** How do you measure the ROI of structured AI coding methodologies (CRISPY, RePPIT) vs. unstructured approaches?
 11. **NEW:** Is the trend toward thinner harnesses inevitable, or will new capabilities require new harness complexity? (co-evolution trap)
 12. **NEW:** Will agent harness architecture converge on a standard (like POSIX), or remain fragmented across frameworks?
+13. **NEW:** Will spec-to-code traceability emerge as a distinct product category — or will it be absorbed by L1 methodology tools (BMAD/spec-kit) extending downward, or by L3 semantic tools ([[ctxo|Ctxo]]) extending upward? Per [[agentic-coding-stack-aslan]], whoever builds it well *"will own the most strategic connective tissue in the agentic coding stack."*
+14. **NEW:** Are Aslan's five layers truly orthogonal? L5 (Product Surface) is occupied by only one named tool ([[gsd-2]]); the others have multiple instances. Is L5 a real layer or a packaging artifact?

@@ -4,8 +4,8 @@ type: concept
 pillar: spec-driven
 created: 2026-04-08
 updated: 2026-04-16
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, ai-in-sdlc-research, sdd-course-deeplearning-ai]
-tags: [specifications, automation, code-generation, methodology, vibe-coding, constitution, feature-loop, replanning]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, ai-in-sdlc-research, sdd-course-deeplearning-ai, agentic-coding-stack-aslan]
+tags: [specifications, automation, code-generation, methodology, vibe-coding, constitution, feature-loop, replanning, traceability]
 ---
 
 # Spec-Driven Development
@@ -22,6 +22,7 @@ This inverts the traditional relationship between documentation and code. Instea
 - [[superpowers-5]] — The cascade pattern (spec → implementation → code review) is spec-driven in practice
 - [[12-factor-agents]] — Factors #2-3 (own prompts/context) relate to spec management
 - [[sdd-course-deeplearning-ai]] — DeepLearning.AI × JetBrains course (Paul Everett, 2026). The most structured greenfield template in the wiki: three-file Constitution (`mission.md` + `tech-stack.md` + `roadmap.md`) + per-feature loop (`plan.md` + `requirements.md` + `validation.md`) on a dated branch + explicit **replanning phase** between features. Ships a reproducible companion repo with 10 lesson snapshots.
+- [[agentic-coding-stack-aslan]] — Names **spec-to-code traceability** as the unsolved unclaimed layer of agentic coding. SDD has good coverage of the *create-spec* and *generate-code* phases; the *bridge between them* (which symbols implement which requirement, which tests cover which spec item, what breaks if requirement X changes, who else is touching this) is still weak. *"If someone builds that bridge well, they will not just have a useful feature. They will own the most strategic connective tissue in the agentic coding stack."*
 
 ## Tools and Frameworks
 
@@ -104,6 +105,7 @@ After introducing structured specifications, three observable changes emerged:
 - How do you measure ROI of SDD vs. vibe coding in a controlled setting?
 - **Is the three-file constitution (mission/tech-stack/roadmap) load-bearing, or can it be reduced?** BMAD uses a single `project-context.md`; Spec Kit uses a different breakdown; the DeepLearning.AI course uses three. What are the tradeoffs?
 - **Versioning of specs** — how to associate which spec version produced which code change? [[sdd-course-deeplearning-ai|The course]] flags this as "an evolving topic in the community."
+- **Spec-to-code traceability** — [[agentic-coding-stack-aslan|named explicitly by Aslan]] as the unbuilt missing link. Four operational questions: which code symbols implement requirement RQ-12, which tests cover this spec item, if this requirement changes what breaks, which open PRs/agents are touching the same requirement. Adjacent partial answers exist ([[bmad-method|BMAD's project-context.md]], [[codespeak|CodeSpeak's managed files]], [[sdd-course-deeplearning-ai|dated spec branches]]), but no broadly adopted **queryable, runtime, bidirectional** traceability layer exists. The code-side half of the bridge is closest in [[ctxo|Ctxo]]; the spec-side half is unbuilt.
 
 ## Related Concepts
 
@@ -111,3 +113,4 @@ After introducing structured specifications, three observable changes emerged:
 - [[automation-levels]] — enables Level 4+ in Shapiro's framework
 - [[code-legibility-debate]] — if specs are the source of truth, do you need to read code?
 - [[human-in-the-loop]] — the human's role shifts from coder to spec writer/reviewer
+- [[agentic-coding-stack-layers]] — SDD frameworks ([[bmad-method|BMAD]], [[spec-kit]]) sit at L1 (Delivery Methodology) of the agentic coding stack

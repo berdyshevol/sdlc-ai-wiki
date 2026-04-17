@@ -3,6 +3,7 @@ title: Wiki Index
 type: index
 created: 2026-04-08
 updated: 2026-04-16
+last_change: agentic-coding-stack-aslan ingest
 ---
 
 # Wiki Index
@@ -38,6 +39,7 @@ updated: 2026-04-16
 | [[codespeak-modular-takeover]] | Dmitry Savvinov (CodeSpeak) | Spec-Driven | Apr 8 blog post announcing CodeSpeak's **modular takeover**: vibe-coded app → `codespeak takeover` → interactive web wizard proposes modular decomposition → confirm → multiple focused specs. Folio demo: ~3000 Go LOC → 430 MD lines × 4 specs = **~7× shrink**. Reframes vibe coding and SDD as **sequential phases** (not parallel alternatives). First quantitative shrink-factor dataset in the wiki. |
 | [[codespeak-vibe-takeover]] | Andrey Breslav (CodeSpeak) | Spec-Driven / Code Legibility | Mar 17 post (CodeSpeak 0.3.6): takeover reads Claude Code sessions (24 sessions / 150 prompts per subsystem), language-agnostic LCOV coverage, Anthropic-compatible providers. Philosophical core: *"human intent is what matters"* + maximalist goal *"build a world where you don't need to look at the code at all, even to review it."* **Strongest School-1 statement in the wiki.** Chronological predecessor to modular takeover. |
 | [[codespeak-modularity]] | CodeSpeak team | Spec-Driven | Mar 9 post (CodeSpeak 0.3.4): introduces **spec imports** (`import X.cs.md` in frontmatter, transitive, dependency-ordered builds) + **managed files** (per-spec source-file scope with four-way trust model for non-managed writes). The **architectural foundation** for multi-spec CodeSpeak projects — modular takeover (Apr 8) runs on this primitive. Memo-app demo shows one-line spec change rewriting only one module. |
+| [[agentic-coding-stack-aslan]] | Murat Aslan | All five pillars | Apr 2026 Dev Genius post. Stack-map of 7 tools across 5 layers (Delivery Methodology / Agent Discipline / Technical Context / Token Optimization / Product Surface). First explicit failure-mode taxonomy for agentic coding (5 modes). Adds 4 new entities to the wiki ([[ctxo|Ctxo]], [[rtk|RTK]], [[context-mode]], [[gsd-2]]). Sharpens [[superpowers]] positioning at L2. Names **spec-to-code traceability** as the unbuilt missing link — third position in [[code-legibility-debate]]. |
 
 ### Sources To Ingest
 
@@ -61,6 +63,7 @@ updated: 2026-04-16
 | [[context-engineering]] | Coding Agents | Managing context window contents for quality. "Smart Zone" / "Dumb Zone" at 40%. Mental Alignment via static artifacts. Two reads: more info vs. better instructions. |
 | [[agent-memory]] | Coding Agents | Mechanisms for cross-session knowledge retention. Next frontier after commoditized capabilities (Cleric, Pinterest). |
 | [[agent-harness]] | Coding Agents | The complete non-model infrastructure wrapping an LLM. 12 components, Von Neumann analogy, thin vs. thick spectrum, scaffolding metaphor. |
+| [[agentic-coding-stack-layers]] | Coding Agents | Five-layer composition model from [[agentic-coding-stack-aslan|Aslan 2026]]: Delivery Methodology / Agent Discipline / Technical Context / Token Optimization / Product Surface. Workflow-oriented complement to [[agent-harness]]. Names spec-to-code traceability as the unbuilt missing link. |
 
 ### Concepts To Create
 
@@ -70,6 +73,7 @@ updated: 2026-04-16
 - **Adversarial review** — using AI to validate AI-generated specs/code
 - **Agentic search** — LLM-driven code exploration using grep/find/cat vs. vector search (Braintrust data)
 - **Enterprise agent governance** — centralized management of multiple coding tools (Databricks gateway)
+- **Spec-to-code traceability** — the unbuilt connective tissue named in [[agentic-coding-stack-aslan]]; queryable bridge between requirements and code symbols / tests / PRs
 
 ## Entities
 
@@ -86,7 +90,11 @@ updated: 2026-04-16
 | [[langgraph]] | Framework | LangChain's graph-based agent framework. Explicit state graphs, typed dicts + checkpoints, nested graph multi-agent. Thick harness, graph-based control. |
 | [[crewai]] | Framework | Role-based multi-agent framework. Agent-Task-Crew model, Flows layer for deterministic backbone. Medium-thick harness. |
 | [[autogen]] | Framework | Microsoft's conversation-driven orchestration. 3-layer architecture, 5 orchestration patterns including magentic. Evolving into Microsoft Agent Framework. |
-| [[superpowers]] | Framework | Jesse Vincent's open-source skills framework (github.com/obra/superpowers). 7-stage workflow (brainstorm → worktree → plan → execute → TDD → review → complete), composable skills, mandatory RED-GREEN-REFACTOR. Installable across Claude Code, Cursor, Codex, Copilot CLI, Gemini CLI. |
+| [[superpowers]] | Framework | Jesse Vincent's open-source skills framework (github.com/obra/superpowers). 7-stage workflow (brainstorm → worktree → plan → execute → TDD → review → complete), composable skills, mandatory RED-GREEN-REFACTOR. Installable across Claude Code, Cursor, Codex, Copilot CLI, Gemini CLI. **Layer 2 (Agent Discipline)** in [[agentic-coding-stack-layers]]. |
+| [[ctxo]] | Tool/MCP Server | Semantic codebase analysis via MCP. Six primitives: `get_blast_radius`, `get_logic_slice`, `get_why_context`, `get_symbol_importance`, `find_dead_code`, `get_pr_impact`. Strongest TS/JS support. **Layer 3 (Technical Context)** — *"the scarcest capability in the current ecosystem"* (Aslan). |
+| [[rtk]] | Tool/CLI Proxy | Rust shell-output proxy with command-specific filters. Intercepts before output reaches the agent. **Layer 4 (Token Optimization)** alongside [[context-mode]]. *"The fastest way to improve a noisy shell-based workflow without redesigning how the agent works"* (Aslan). |
+| [[context-mode]] | Tool/MCP Server | MCP sandbox where the agent writes code to compute the answer; only `console.log()` enters context. SQLite + FTS5 for cross-session continuity. **Layer 4 (Token Optimization)** — pairs with [[rtk|RTK]] for at-scale workflows. |
+| [[gsd-2]] | Tool/Platform | Autonomous coding-agent platform: `gsd auto → plan → execute → verify → commit → repeat`. Worktree isolation, state recovery, multi-provider, cost tracking, milestone execution. **Layer 5 (Product Surface)** — sole inhabitant. Sibling to [[humanlayer-codelayer|CodeLayer]] and [[agent-control-plane|ACP]]. |
 
 ### Entities To Create
 

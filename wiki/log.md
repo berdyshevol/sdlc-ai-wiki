@@ -3,6 +3,7 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-16
+last_change: agentic-coding-stack-aslan ingest
 ---
 
 # Wiki Log
@@ -505,4 +506,55 @@ Pages created/updated:
 - `raw/youtube-transcripts/cole-medin-ai-dark-factory.md` (new — metadata + manual-ingest instructions; transcript body pending)
 - `wiki/sources/cole-medin-ai-dark-factory.md` (new — stub with Pending Transcript notice, Why This Source Matters, expected Connections, Questions Raised)
 - `wiki/index.md` (updated — added source row with pending-transcript warning)
+- `wiki/log.md` (updated)
+
+## [2026-04-16] ingest | Murat Aslan — "The Agentic Coding Stack: 7 Tools, 5 Layers, and the Missing Link Nobody Has Built Yet"
+
+Ingested Murat Aslan's April 2026 Dev Genius post (Series 1 of "Agentic Coding Systems"). The post is the wiki's cleanest cross-pillar synthesis to date — it touches all five research pillars in a single 13-min read.
+
+**Retrieval note:** Cloudflare blocked direct curl/WebFetch on `blog.devgenius.io` (and `medium.com/p/<id>`). Article body retrieved via Playwright headless browser DOM `innerText` extraction. Wayback Machine had no snapshot. Raw file (`raw/agentic-coding-stack-aslan-2026.md`) contains the full ~20.6k-char verbatim article body.
+
+Aslan's central move is to reject "which tool wins?" framing and propose a **five-layer composition model** for the agentic coding stack:
+
+- **L1 — Delivery Methodology** (when should the AI analyze/plan/implement?): [[bmad-method|BMAD-METHOD]], [[spec-kit]]
+- **L2 — Agent Discipline** (how should the AI behave while building?): [[superpowers]]
+- **L3 — Technical Context** (what does the code actually mean?): [[ctxo|Ctxo]]
+- **L4 — Token Optimization** (how much tool output should enter context?): [[rtk|RTK]], [[context-mode]]
+- **L5 — Product Surface** (where does the developer operate the whole system?): [[gsd-2]]
+
+Each layer reduces a specific subset of **five named failure modes** (consistency failures, context loss, specification gaps, review bottlenecks, multi-session conflicts). This is the wiki's first explicit failure-mode taxonomy for agentic coding.
+
+Headline thesis: the **bridge between specification and implementation is still weak**. Aslan calls **spec-to-code traceability** the unbuilt missing link — *"If someone builds that bridge well, they will own the most strategic connective tissue in the agentic coding stack."* Four operational questions the bridge must answer (which symbols implement RQ-12, which tests cover this spec item, what breaks if requirement X changes, who else is touching this).
+
+Key new material:
+
+1. **Cleanest cross-pillar synthesis the wiki has ingested.** Touches all five pillars in one post.
+2. **First explicit failure-mode taxonomy** for agentic coding (5 modes mapped to layers).
+3. **Four genuinely new entities** added to the wiki: [[ctxo|Ctxo]] (semantic codebase MCP server with 6 primitives — `get_blast_radius`, `get_logic_slice`, `get_why_context`, `get_symbol_importance`, `find_dead_code`, `get_pr_impact`), [[rtk|RTK]] (Rust shell-output proxy with command-specific filters), [[context-mode]] (MCP sandbox where agent writes code and only `console.log()` enters context; SQLite+FTS5 cross-session continuity), [[gsd-2]] (autonomous coding platform with worktree isolation, state recovery, multi-provider, cost tracking, milestone execution).
+4. **Sharpens [[superpowers]] positioning** as the sole L2 (Agent Discipline) tool. The cleanest single-sentence framing the wiki has yet recorded: *"If BMAD/spec-kit answers 'what order should work happen in?', superpowers answers 'how do we stop the agent from being sloppy once work begins?'"*
+5. **Closes the L3 wiki gap.** Most existing entities improve *how* an agent operates or *what process* it follows; Ctxo is the first wiki entity dedicated to improving **what the agent understands about the code**. Aslan: *"The scarcest capability in the current ecosystem."*
+6. **Pairs RTK and context-mode as composable L4 stages** — first wiki articulation of multi-layer token-optimization composition. RTK at OS/shell hook (filter after); context-mode at MCP sandbox (prevent before). Aslan: *"RTK reduces noisy shell output, then context-mode keeps the remainder from flooding the conversation."*
+7. **Introduces a third position in the [[code-legibility-debate]]: the Traceability School** — *don't* pre-commit to either "read the code" (School 2) or "treat as black box" (School 1); build infrastructure to navigate spec ↔ code on demand. Reading becomes a query response, not a default discipline.
+8. **Sister piece to [[anatomy-agent-harness]].** Pachaar slices the territory by component (12 components, 7 architectural decisions, 5 frameworks); Aslan slices the same territory by workflow layer (5 layers, 7 tools). Both 2026 syntheses; neither cites the other; the convergence on a layered/component view of agentic coding is itself a wiki-worthy data point.
+9. **Notable absence: [[codespeak]].** CodeSpeak is the wiki's most aggressive spec-driven platform but doesn't appear in Aslan's seven. Possible reasons: post focuses on **agentic** coding (interactive AI agents); CodeSpeak's `codespeak build` is more pipeline than agent. Worth flagging as an analysis question.
+
+Pages created/updated:
+
+- `raw/links/links.md` (updated — added item 17)
+- `raw/agentic-coding-stack-aslan-2026.md` (new — verbatim article body via Playwright; retrieval note included)
+- `wiki/sources/agentic-coding-stack-aslan.md` (new — full source page with Summary, 9 Key Claims, Connections to 14 pages, 7 Questions Raised)
+- `wiki/entities/ctxo.md` (new — L3 Technical Context, 6 semantic-analysis primitives, "scarcest capability" framing)
+- `wiki/entities/rtk.md` (new — L4 Token Optimization, Rust CLI proxy, command-specific filters)
+- `wiki/entities/context-mode.md` (new — L4 Token Optimization, MCP sandbox, SQLite+FTS5 continuity)
+- `wiki/entities/gsd-2.md` (new — L5 Product Surface, autonomous platform, sibling to CodeLayer/ACP)
+- `wiki/entities/bmad-method.md` (updated — new "Position in the Aslan Stack" section, L1 framing, source row)
+- `wiki/entities/spec-kit.md` (updated — workflow chain corrected to `constitution → specify → plan → tasks → implement` per Aslan, new "Position in the Aslan Stack" section)
+- `wiki/entities/superpowers.md` (updated — new "Position in the Aslan Stack" section, L2 framing as the sole "Agent Discipline" tool)
+- `wiki/concepts/agentic-coding-stack-layers.md` (new — formal concept page for the 5-layer model; cross-walks with [[agent-harness]] and Kyle's six harness components; wiki-entity slot triage; lessons; open questions)
+- `wiki/concepts/agent-harness.md` (updated — added [[agentic-coding-stack-layers]] as workflow-oriented complement)
+- `wiki/concepts/context-engineering.md` (updated — added Aslan as L4 source; promotes context engineering from inside-the-loop discipline to outside-the-loop installable infrastructure)
+- `wiki/concepts/spec-driven-development.md` (updated — added Aslan source; new "spec-to-code traceability" open question)
+- `wiki/concepts/code-legibility-debate.md` (updated — added **School 3: Traceability School**; added Aslan as primary School-3 source)
+- `wiki/index.md` (updated — added source row, new concept row, 4 new entity rows, new "to-create" item: Spec-to-code traceability)
+- `wiki/overview.md` (updated — new thesis point #15 on stack-as-composition + missing link; source row #14; two new open questions)
 - `wiki/log.md` (updated)

@@ -3,9 +3,9 @@ title: Superpowers (obra/superpowers)
 type: entity
 pillar: [coding-agents, spec-driven]
 created: 2026-04-13
-updated: 2026-04-13
-sources: [superpowers-intro, superpowers-5]
-tags: [framework, skills, agent-harness, tdd, spec-driven, open-source, claude-code, jesse-vincent]
+updated: 2026-04-16
+sources: [superpowers-intro, superpowers-5, agentic-coding-stack-aslan]
+tags: [framework, skills, agent-harness, tdd, spec-driven, open-source, claude-code, jesse-vincent, l2-agent-discipline]
 ---
 
 # Superpowers
@@ -79,11 +79,29 @@ Superpowers matters to this research because:
 - **Sibling to [[spec-kit]]** — both structure the spec→plan→tasks→implement pipeline. Spec Kit is slash-command based; Superpowers is skills-based with mandatory TDD
 - **Contrast with Ralph Loop ([[everything-is-a-ralph-loop]])** — Superpowers is structured, gated, human-in-the-loop; Ralph is monolithic and autonomous. Superpowers is closer to the "Ralph is not the final answer" position in [[matt-pocock-dex-horthy-chat]]
 
+## Position in the Aslan Stack
+
+[[agentic-coding-stack-aslan]] places Superpowers **alone at Layer 2 (Agent Discipline)** — answering *"how should the AI behave while building?"* This is the cleanest single-sentence positioning the wiki has yet recorded for Superpowers, and it sharpens the entity's relationship to L1 methodology tools:
+
+> *"If BMAD or spec-kit answers 'what order should work happen in?', superpowers answers 'how do we stop the agent from being sloppy once work begins?'"*
+
+Aslan's framing:
+
+- **Core value:** *"It operationalizes engineering habits that humans often claim to value but skip under time pressure: test-driven development, systematic debugging, scoped delegation, and verification before completion."*
+- **Core behaviors reinforced:** TDD before implementation, systematic debugging instead of random trial-and-error, deliberate subagent delegation for bounded tasks, explicit verification gates before claiming completion. These map directly to the seven-stage workflow already documented above.
+- **When to use:** *"You already know what you are trying to build and need the agent to behave like a disciplined engineer instead of an eager autocomplete engine."*
+- **Trade-off:** *"Prompt weight and rigidity. Strong process skills cost tokens, and the TDD-first posture can feel heavy for tiny edits. That is not a bug in the system; it is the price of discipline."*
+
+Superpowers appears in **three of four** recommended Aslan stacks (solo developer, team workflow, spec-first product development) — the most consistently recommended L2 tool, and the only L2 tool in the post.
+
+The L2 ("Agent Discipline") category itself is a new framing for Superpowers in this wiki — previously, the entity page positioned Superpowers as methodology-adjacent (a "sibling" to BMAD and spec-kit). Aslan's clean separation — methodology decides sequence, discipline decides in-flight behavior — gives Superpowers its own architectural slot rather than competing for the L1 slot.
+
 ## Links
 
 - Repository: [github.com/obra/superpowers](https://github.com/obra/superpowers)
 - Source page: [[superpowers-intro]] — October 2025 launch post ("How I'm using coding agents in October 2025")
 - Source page: [[superpowers-5]] — March 2026 post on the matured methodology
+- Source page: [[agentic-coding-stack-aslan]] — places Superpowers at Layer 2 (Agent Discipline) of the agentic coding stack
 - Author: Jesse Vincent — [blog.fsck.com](https://blog.fsck.com/)
 
 ## Open Questions

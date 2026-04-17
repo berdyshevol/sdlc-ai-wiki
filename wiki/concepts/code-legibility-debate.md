@@ -4,8 +4,8 @@ type: concept
 pillar: code-legibility
 created: 2026-04-08
 updated: 2026-04-16
-sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, sdd-course-deeplearning-ai, codespeak-vibe-takeover]
-tags: [code-review, readability, specs-vs-code, two-schools, philosophy, slop, trust, review-level, cognitive-debt, intent]
+sources: [five-levels-shapiro, superpowers-5, 12-factor-agents, dex-rpi-to-crispy, coding-agents-conf-2026, sdd-course-deeplearning-ai, codespeak-vibe-takeover, agentic-coding-stack-aslan]
+tags: [code-review, readability, specs-vs-code, two-schools, three-schools, philosophy, slop, trust, review-level, cognitive-debt, intent, traceability]
 ---
 
 # Code Legibility Debate
@@ -20,6 +20,9 @@ The spec is the source of truth. If the tests pass and the spec is satisfied, th
 **School 2 — "You still have to read the code":**
 Code is still the real artifact that runs in production. Specs can be incomplete, tests can miss edge cases, and AI-generated code can contain subtle bugs, security vulnerabilities, or architectural debt that only code review reveals. Treating code as a black box creates dangerous blind spots.
 
+**School 3 — "Build the bridge so you can navigate spec ↔ code on demand" (emerging, [[agentic-coding-stack-aslan]]):**
+A third position implied by Aslan's "missing link" framing. Don't pre-commit to either reading code or treating it as a black box — invest in **spec-to-code traceability infrastructure** so that for any given question, the reviewer can navigate from a requirement down to the specific symbols that implement it (and back from a code change to the requirements it touches). Reading then becomes a query response, not a default discipline. Closer to the "navigate-don't-read" stance than either pole. Today the *code-side* graph exists in tools like [[ctxo|Ctxo]]; the *spec-side* graph and the *bridge* are unbuilt.
+
 ## Key Sources
 
 - [[five-levels-shapiro]] — Implicitly supports School 1 at Level 4-5. At Level 4, "you leave for 12 hours and check if tests pass" — no mention of reading code
@@ -29,6 +32,7 @@ Code is still the real artifact that runs in production. Specs can be incomplete
 - **[[coding-agents-conf-2026]]** — Scott Breitenother (Kilo Code): "AI shifts the work, it doesn't remove it." Trust is the bottleneck, not capability. Scale AI: leading models score ~30% on codebase understanding. Both suggest code review remains essential because agents aren't reliable enough to go unsupervised.
 - **[[sdd-course-deeplearning-ai]]** — **Mainstream middle-ground articulation.** Paul Everett's course explicitly distinguishes *what* to read. School-1-leaning: "focus your review on high-level concerns like whether the features work and reflect the spec, rather than details like which CSS classes were implemented" (Lesson 7). School-2-leaning: "just make sure it creates code that you can commit under your name" (Lesson 9) — i.e., you're still responsible for what you merge. The synthesis: **review at the spec/behavior level for most changes; reserve line-level reading for security, database, and anything that could compound later.**
 - **[[codespeak-vibe-takeover]]** — **Strongest School-1 statement in the wiki.** Andrey Breslav (CodeSpeak): *"Our goal is to eventually build a world where you don't need to look at the code at all, even to review it."* Hedged as a future goal, but unambiguous in direction. Combined with the empirical 5-10× shrink factor between specs and code, CodeSpeak's position is that reading a 430-line spec is legitimately sufficient review for a 3000-line implementation. This is the polar opposite of [[dex-rpi-to-crispy|Dex's]] "please read the code."
+- **[[agentic-coding-stack-aslan]]** — **First clean articulation of School 3 (the traceability stance).** Aslan doesn't take sides in the black-box-vs-must-read debate; he names the missing infrastructure that would make either side's stance more honest. Four operational questions the bridge must answer (which symbols implement RQ-12, which tests cover this spec item, what breaks if requirement X changes, who else is touching this) give the School-3 position a concrete spec rather than a slogan.
 
 ## Current Understanding
 

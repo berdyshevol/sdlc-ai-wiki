@@ -4,8 +4,8 @@ type: concept
 pillar: coding-agents
 created: 2026-04-08
 updated: 2026-04-16
-sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness, matt-pocock-dex-horthy-chat, sdd-course-deeplearning-ai]
-tags: [context-window, prompting, architecture, dumb-zone, context-rot, quadratic-attention, cup-metaphor, cognitive-debt, ai-fatigue]
+sources: [dex-rpi-to-crispy, coding-agents-conf-2026, 12-factor-agents, anatomy-agent-harness, matt-pocock-dex-horthy-chat, sdd-course-deeplearning-ai, agentic-coding-stack-aslan]
+tags: [context-window, prompting, architecture, dumb-zone, context-rot, quadratic-attention, cup-metaphor, cognitive-debt, ai-fatigue, l4-token-optimization]
 ---
 
 # Context Engineering
@@ -26,6 +26,7 @@ Dex argues the second read is more important and less discussed.
 - **[[12-factor-agents]]** — Principles of owning your context, small focused agents.
 - **[[matt-pocock-dex-horthy-chat]]** — Conversational supplement: explicit quadratic-attention explanation, the "cup" metaphor for task sizing, and the cron-Ralph pattern as a context engineering deployment shape.
 - **[[sdd-course-deeplearning-ai]]** — DeepLearning.AI × JetBrains course. Mainstream-pedagogy version of the same principles: **clear between features** (`/clear` is explicit Lesson 9 discipline); **sub-agents for deep review preserve the main agent's context window, rather than polluting it**; **cognitive debt** (the mental load of tracking fast AI-generated changes) as the human-side complement to context rot — managed by size discipline (smaller task groups) and review level (spec, not CSS class).
+- **[[agentic-coding-stack-aslan]]** — packages context-engineering principles into installable tools at **Layer 4 (Token Optimization)** of the [[agentic-coding-stack-layers|agentic coding stack]]. Two L4 tools: [[rtk|RTK]] (filter command output **after** execution at the OS/shell hook layer) and [[context-mode]] (sandboxed analysis where the agent writes code and only `console.log()` reaches context). Aslan: *"Used together, they form a clean sequence: RTK reduces noisy shell output, then context-mode keeps the remainder from flooding the conversation."* Promotes context engineering from an inside-the-loop discipline to **outside-the-loop installable infrastructure** — first wiki entry of this category.
 
 ## Current Understanding
 
@@ -114,3 +115,4 @@ This reinforces context engineering's status as a distinct discipline, not just 
 - [[agent-memory]] — a context engineering strategy for persistence across sessions
 - [[agent-harness]] — context engineering is one of three levels of harness engineering
 - [[12-factor-agents]] — context engineering principles applied to agent architecture
+- [[agentic-coding-stack-layers]] — context engineering as L4 (Token Optimization) of the agentic coding stack

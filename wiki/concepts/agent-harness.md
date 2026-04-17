@@ -3,9 +3,9 @@ title: "Agent Harness"
 type: concept
 pillar: coding-agents
 created: 2026-04-09
-updated: 2026-04-13
-sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop, skill-issue-harness-engineering]
-tags: [agent-harness, orchestration, infrastructure, architecture]
+updated: 2026-04-16
+sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop, skill-issue-harness-engineering, agentic-coding-stack-aslan]
+tags: [agent-harness, orchestration, infrastructure, architecture, stack-layers]
 ---
 
 # Agent Harness
@@ -145,3 +145,4 @@ But: **co-evolution creates coupling.** Models are post-trained with specific ha
 - [[instruction-budget]] — the constraint that drives tool scoping and context management decisions
 - [[12-factor-agents]] — design principles that inform harness architecture
 - [[everything-is-a-ralph-loop]] — Geoffrey Huntley's Ralph pattern: a monolithic orchestrator loop as harness philosophy. Emphasizes simplicity ("300 lines"), loop-based control, and the engineer as loop programmer
+- [[agentic-coding-stack-layers]] — workflow-oriented complement to this component-oriented model. Aslan's 5-layer stack (methodology / discipline / technical context / token optimization / product surface) slices the same territory by *workflow concern* rather than *agent component*. Both should coexist on the wiki

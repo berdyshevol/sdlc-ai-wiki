@@ -3,10 +3,34 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-25
-last_change: software-factory-practitioners-guide-woolley ingest
+last_change: MSIS research report filed
 ---
 
 # Wiki Log
+
+## [2026-04-25] report | MSIS Research Report on AI in the SDLC
+
+Filed [[msis-research-report-ai-in-sdlc]], a 6–8 page research report aimed at an MSIS audience. Synthesizes the five wiki analyses ([[ai-in-sdlc-current-usage]], [[ai-techniques-tools-approaches]], [[where-ai-beats-traditional-sdlc]], [[risks-and-limitations]], [[ai-sdlc-3-5-year-outlook]]) into an integrated narrative across eight sections: introduction and relevance, the maturity spectrum, the eight problems where AI beats traditional SDLC, current AI applications and techniques (LLMs + tool use, agentic loops, multi-agent orchestration, SDD, persistent memory, harness, dual-track workflows), an applied example (StrongDM Level-5 dark factory paired with Amazon Kiro's L3–L4 SDD result — 18-month/30-dev rearchitecture done in 76 days with 6), seven risk categories (slop, security, legibility, trust ladder, governance, reward-hacking, workforce/copyright), seven future predictions for 2027–2031, and seven IS-practice takeaways. Frames the four-property predicate (verifiable / repetitive-or-parallelizable / language-native / loosely human-coupled) as a portfolio-screening tool. Defensible 2026 posture: 2–3× quality-constrained productivity gains at L2–L3 with mandatory review, scoped credentials, holdout-style evaluation, and explicit spec-change governance — not Level 5 autonomy at scale. Updated wiki/index.md analyses table.
+
+## [2026-04-25] analysis | Where AI Beats Traditional Methods in the SDLC
+
+Filed [[where-ai-beats-traditional-sdlc]] as a problem-centric analysis identifying eight specific SDLC problems where AI demonstrably outperforms traditional methods: time compression on verifiable tasks, routine code generation, test generation/continuous validation, brownfield reverse-engineering into specs, coordinated multi-file refactors, documentation sync, adversarial spec review, parallel exploration. Includes evidence-strength matrix (wiki + April 2026 industry data — DreamzTech, Akraya, MetaCTO, DORA, Anthropic Trends Report) and a "muddier picture" section on contested wins (legibility, architectural judgment, full autonomy, spec rigor). Names the shared predicate across all wins: verifiable / repetitive-or-parallelizable / language-native / loosely human-coupled. Positioned as problem-centric counterpart to [[ai-techniques-tools-approaches]] (mechanism view) and [[ai-in-sdlc-current-usage]] (maturity view). Updated wiki/index.md analyses table.
+
+## [2026-04-25] analysis | How AI Might Change the SDLC Over the Next 3–5 Years (2027–2031)
+
+Filed [[ai-sdlc-3-5-year-outlook]] as a forward-looking analysis. Synthesizes 15 wiki sources with April 2026 industry signals (Gartner 60% AI-generated code by EOY 2026, 40% enterprise-app agent embed, $7.8B → $52B agentic-AI market by 2030, Factory AI $1.5B Series C, junior-hiring -20–35% offset by IBM tripling junior hires, 48% of Q1 2026 tech layoffs AI-attributed). Headline thesis: the 3–5 year story is *organizational, not technical* — trust climbing the ladder, methodology hardening into infrastructure, workforce restructuring around oversight. Seven predictions: (1) L3 as median by 2028–29; (2) vibe→SDD chains via [[codespeak-modular-takeover|takeover]]-style pipelines; (3) **spec-to-code traceability becomes a product category** (highest-leverage prediction); (4) L5 dark factories scale only in oracle-rich domains; (5) workforce inverts via IBM-amplification model with new roles (spec author, evals engineer, harness engineer, governance lead, loop programmer); (6) [[code-legibility-debate]] resolves on Aslan's third position; (7) agent memory becomes the new moat. Six major uncertainties (maximalism vs. caution, SDD enterprise scaling, [[instruction-budget]] persistence, trust-ladder cadence, regulatory shock, memory commoditization timing). Resolution table for 11 wiki open questions. External corroboration via Anthropic 2026 Agentic Coding Trends Report, CIO, The New Stack, Stack Overflow, IEEE Spectrum, CNN, Tom's Hardware. Updated wiki/index.md analyses table.
+
+## [2026-04-25] analysis | Limitations, Risks, and Ethical Concerns of AI in the SDLC
+
+Filed [[risks-and-limitations]] as an analysis synthesizing 14 wiki sources with April 2026 industry evidence. Seven buckets: quality/slop (Dex reversal, ~30% codebase QA, 20% phantom packages, 91.5% vibe-coded apps with hallucination flaws), security (Sherlock 92% / Veracode 45% / CSA 62% / Opsera 15–18% more vulns / 2.7× density / 35 CVEs in March 2026 via Georgia Tech Vibe Security Radar / slopsquatting / Lovable 48-day exposure), code legibility & accountability, trust ladder & 40% context ceiling, governance/compliance gaps, reward-hacking, and workforce/copyright ethics (Anthropic $1.5B settlement; EU/UK training-data provenance). Defensible 2026 posture: 2–3× quality-constrained speedup with mandatory review, scoped credentials, holdout-style evaluation, explicit governance — not Level 5 autonomy. Updated wiki/index.md analyses table.
+
+## [2026-04-25] analysis | AI Techniques, Tools, and Approaches in the SDLC
+
+Filed [[ai-techniques-tools-approaches]] as a sister analysis to [[ai-in-sdlc-current-usage]]. Organized by **technique → tool → approach** with explicit "why appropriate" rationale, rather than by maturity level. Covers eight core techniques (frontier LLMs, tool use, agentic loops, multi-agent, agentic search, external memory, test-time compute, spec→code synthesis), tool stack mapped to [[agentic-coding-stack-layers|Aslan's five layers]] and SDLC stages, and eight architectural approaches (SDD, software factory, harness engineering, CRISPY/RePPIT, Ralph Loop, trust-ladder, spec-to-code traceability, dual-track). External corroboration via web search (VentureBeat Amazon/Kiro 76-day result, DeepLearning.AI×JetBrains course, Augment Code's living-spec vs. static-spec categorization). Reduces "why appropriate" to four SDLC properties: language-native artifacts, cheap iterative feedback, bounded quality oracles, structured context. Updated wiki/index.md analyses table.
+
+## [2026-04-25] analysis | How AI Is Currently Being Used in SDLC
+
+Filed [[ai-in-sdlc-current-usage]] as an analysis page synthesizing across 11 sources. Maps the maturity spectrum (L1 mainstream / L2 trap / L3 production-grade / L4 emerging / L5 only StrongDM), stage-by-stage usage table, vibe↔SDD bifurcation (CodeSpeak takeover as sequential chaining), methodological convergence (CRISPY/RePPIT/BMAD/spec-kit), and working-vs-hype assessment. Positioned as sister to [[five-levels-two-schools]] (current-usage map vs. philosophical divergence). Updated wiki/index.md analyses table.
 
 ## [2026-04-08] init | Wiki Created
 

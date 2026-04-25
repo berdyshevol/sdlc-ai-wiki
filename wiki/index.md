@@ -2,8 +2,8 @@
 title: Wiki Index
 type: index
 created: 2026-04-08
-updated: 2026-04-16
-last_change: agentic-coding-stack-aslan ingest
+updated: 2026-04-25
+last_change: MSIS research report filed
 ---
 
 # Wiki Index
@@ -116,4 +116,12 @@ last_change: agentic-coding-stack-aslan ingest
 
 ## Analyses
 
-_No analysis pages yet. Analyses are created from substantial query answers._
+| Page | Pillar | Summary |
+|------|--------|---------|
+| [[five-levels-two-schools]] | Industry | Philosophical divergence at L4+ — Spec School vs. Loop School. |
+| [[ai-in-sdlc-current-usage]] | Industry | Current state of AI in SDLC (Apr 2026): maturity spectrum, stage-by-stage usage, vibe↔SDD bifurcation, what's working vs. hype. Sister to [[five-levels-two-schools]]. |
+| [[ai-techniques-tools-approaches]] | Industry | Techniques (LLMs, tool use, agentic loops, multi-agent, agentic search, external memory) × tools (mapped to [[agentic-coding-stack-layers|five layers]]) × approaches (SDD, factory, harness eng, CRISPY, Ralph, trust-ladder, dual-track) — with explicit "why appropriate for SDLC" rationale. Sister to [[ai-in-sdlc-current-usage]]. |
+| [[risks-and-limitations]] | Industry | Risks, limitations, and ethical concerns: quality/slop, security (92% baseline / 35 CVEs in March 2026 / slopsquatting), code-legibility & accountability, trust-ladder & 40% context ceiling, governance/compliance gaps, reward-hacking, workforce/copyright ethics. Argues defensible posture is 2–3× quality-constrained, not Level 5 autonomy. |
+| [[ai-sdlc-3-5-year-outlook]] | Industry | 3–5 year forecast (2027–2031): seven predictions (L3 as median, dual-track institutionalization, traceability as product category, narrow L5, workforce inversion, legibility resolution, memory as moat) + uncertainties + likely resolution of wiki open questions. Forward-looking companion to [[ai-in-sdlc-current-usage]] and [[ai-techniques-tools-approaches]]. |
+| [[where-ai-beats-traditional-sdlc]] | Industry | Eight problems where AI clearly outperforms traditional methods (time compression, boilerplate, test gen, brownfield→spec, multi-file refactor, docs, adversarial spec review, parallel exploration) with evidence-strength matrix. Shared predicate: verifiable / repetitive / language-native / loosely human-coupled. Problem-centric counterpart to [[ai-techniques-tools-approaches]]. |
+| [[msis-research-report-ai-in-sdlc]] | Industry | 6–8 page research report for MSIS audience. Synthesizes the five wiki analyses ([[ai-in-sdlc-current-usage]], [[ai-techniques-tools-approaches]], [[where-ai-beats-traditional-sdlc]], [[risks-and-limitations]], [[ai-sdlc-3-5-year-outlook]]) into an integrated narrative: field overview, current applications and techniques, applied example (StrongDM L5 + Amazon Kiro L3–L4), risks/ethics, 3–5 year outlook, and IS-practice implications. |

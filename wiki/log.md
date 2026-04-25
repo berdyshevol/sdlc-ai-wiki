@@ -2,8 +2,8 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-16
-last_change: agentic-coding-stack-aslan ingest
+updated: 2026-04-25
+last_change: software-factory-practitioners-guide-woolley ingest
 ---
 
 # Wiki Log
@@ -558,3 +558,51 @@ Pages created/updated:
 - `wiki/index.md` (updated — added source row, new concept row, 4 new entity rows, new "to-create" item: Spec-to-code traceability)
 - `wiki/overview.md` (updated — new thesis point #15 on stack-as-composition + missing link; source row #14; two new open questions)
 - `wiki/log.md` (updated)
+
+## [2026-04-25] ingest | Chad Woolley — "The Software Factory: A Practitioner's Guide to Specification-Driven Development for Enterprise Services"
+
+Ingested Chad Woolley (GitLab) February 2026 practitioner guide. Most comprehensive reference yet published on factory-pattern software development. Direct URL: https://gitlab.com/cwoolley-gitlab/software-factory-practitioners-guide/-/blob/main/software-factory-practitioners-guide-v01.md (raw markdown fetched via curl).
+
+**Context**: Woolley has hands-on experience with the factory pattern (forked Kilroy, week of experimentation) AND is transparent about what doesn't work ("I have not yet produced usable software with this approach"). Frames guide as "aspirational" — StrongDM demonstrated it at a startup with greenfield codebase; no large enterprise has publicly shared a factory implementation at scale.
+
+**Core insight**: Factory-pattern development introduces a fundamental repository structure divide:
+- `spec/` (intent/contracts/constraints) — human-managed
+- `holdout-scenarios/` — human-authored validation, kept hidden from coding agents
+- `factory/` (Attractor graph, orchestration config) — human-authored
+- `src/` (generated code) — machine-produced, opaque, version-controlled for auditability
+
+**Key innovation**: [[holdout-scenarios|Holdout scenario validation]] — scenarios kept separate from implementation to prevent agents from reward-hacking (optimizing for tests rather than genuine correctness). Borrowed from ML holdout-set practice.
+
+**The shift work pattern** (StrongDM terminology): Separation into interactive shift (humans + spec-refinement agents on specifications/scenarios) and non-interactive shift ([[attractor]] runs autonomously, potentially for hours). Central unsolved question: when is a specification "complete enough" for autonomous execution?
+
+**Three separate agent sets** prevent gaming:
+1. Spec-refinement agents (interactive, see specs/scenarios, never see implementation code)
+2. Factory execution agents / [[attractor]] (non-interactive, see specs, never see holdout scenarios)
+3. Validation agents (see scenarios + running artifact, never see source code)
+
+**The Attractor pattern**: DOT-graph-structured orchestration of coding agents through phases (scaffold → implement → test → refine → converge). Each phase is a node, edges are LLM-evaluable conditions. Different models can run different phases (reasoning-heavy for architecture, fast models for boilerplate).
+
+**Satisfaction metric**: Probabilistic validation — "across all observed trajectories, what fraction likely satisfies the user?" Shift from boolean (pass/fail) to probabilistic (95%, 97%) validation, necessary for agentic software with inherent non-determinism.
+
+**Digital Twin Universe (DTU)**: Behavioral clones of all external dependencies (Okta API, Jira API, Slack API, Google Workspace APIs for StrongDM). Enables deterministic, high-volume validation at factory scale without hitting rate limits. Can itself be built by agents from API documentation.
+
+**NLSpec** (Natural-Language Specification): Markdown documents precise enough for agents to implement against, yet human-readable. Answers three questions: what, under what conditions, why it matters. The rigor bottleneck: "you cannot take shortcuts by relying too heavily on AI to generate the specification... Defining specifications with machine-executable rigor, when you can't rely on a domain-aware human to 'know what you really mean,' is genuinely hard."
+
+**Most honest acknowledgement in the guide**: "I have not yet produced usable software with the Software Factory approach, even of alpha quality. After a week or two of hands-on experimentation, the main lessons have been about what doesn't work."
+
+**Out-of-scope but critical**: Governance, agent security, organizational transformation, cost management ($1,000/day per engineer is aggressive), legal/compliance frameworks, SOA boundary coordination, enterprise adoption.
+
+Pages created/updated:
+
+- `wiki/sources/software-factory-practitioners-guide-woolley.md` (new — comprehensive source page)
+- `wiki/entities/strongdm.md` (new — Company page; primary reference implementation)
+- `wiki/entities/attractor.md` (new — Orchestration pattern; DOT graphs, phase-based, provider-aligned agents)
+- `wiki/concepts/shift-work.md` (new — Interactive/non-interactive separation; central unsolved boundary question)
+- `wiki/concepts/holdout-scenarios.md` (new — Validation mechanism; separate agent sets; prevent reward-hacking)
+- `wiki/concepts/nlspec.md` (new — Natural-language specification; rigor bottleneck; machine-executable prose)
+- `wiki/concepts/digital-twin-universe.md` (new — Behavioral clones of dependencies; deterministic validation infrastructure)
+- `wiki/index.md` (updated — added source row, 4 new concept rows, 2 new entity rows, marked Woolley source as ingested)
+- `wiki/log.md` (this entry)
+
+**Assessment**: This is the most practical and honest guide to factory-pattern development yet published. Woolley's transparency about difficulties and unresolved questions (especially specification completeness and production-signal feedback) increases credibility. He frames the guide as "aspirational" and acknowledges the gap between theoretical possibility and what's been demonstrated at scale. For the wiki's "software factories" pillar, this is comparable in importance to [[five-levels-shapiro]] for automation levels — a primary reference that systematizes emerging practice into concrete, implementable patterns.
+

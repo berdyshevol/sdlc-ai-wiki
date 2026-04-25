@@ -40,6 +40,7 @@ last_change: agentic-coding-stack-aslan ingest
 | [[codespeak-vibe-takeover]] | Andrey Breslav (CodeSpeak) | Spec-Driven / Code Legibility | Mar 17 post (CodeSpeak 0.3.6): takeover reads Claude Code sessions (24 sessions / 150 prompts per subsystem), language-agnostic LCOV coverage, Anthropic-compatible providers. Philosophical core: *"human intent is what matters"* + maximalist goal *"build a world where you don't need to look at the code at all, even to review it."* **Strongest School-1 statement in the wiki.** Chronological predecessor to modular takeover. |
 | [[codespeak-modularity]] | CodeSpeak team | Spec-Driven | Mar 9 post (CodeSpeak 0.3.4): introduces **spec imports** (`import X.cs.md` in frontmatter, transitive, dependency-ordered builds) + **managed files** (per-spec source-file scope with four-way trust model for non-managed writes). The **architectural foundation** for multi-spec CodeSpeak projects — modular takeover (Apr 8) runs on this primitive. Memo-app demo shows one-line spec change rewriting only one module. |
 | [[agentic-coding-stack-aslan]] | Murat Aslan | All five pillars | Apr 2026 Dev Genius post. Stack-map of 7 tools across 5 layers (Delivery Methodology / Agent Discipline / Technical Context / Token Optimization / Product Surface). First explicit failure-mode taxonomy for agentic coding (5 modes). Adds 4 new entities to the wiki ([[ctxo|Ctxo]], [[rtk|RTK]], [[context-mode]], [[gsd-2]]). Sharpens [[superpowers]] positioning at L2. Names **spec-to-code traceability** as the unbuilt missing link — third position in [[code-legibility-debate]]. |
+| [[software-factory-practitioners-guide-woolley]] | Chad Woolley (GitLab) | Software Factories | Feb 2026 practitioner guide: most comprehensive reference yet. Repository structure (spec/holdings/factory/src), NLSpec definition, [[shift-work]] (interactive/non-interactive), [[holdout-scenarios]] (prevent reward-hacking), [[attractor]] orchestration, [[digital-twin-universe]], three agent sets, satisfaction metric. Honest about what doesn't work. **No large enterprise has implemented at scale yet.** |
 
 ### Sources To Ingest
 
@@ -48,6 +49,7 @@ last_change: agentic-coding-stack-aslan ingest
 - ~~Spec-kit documentation/articles~~ ✅ entity page created
 - ~~BMAD method documentation~~ ✅ entity page created, ✅ source page ingested from official docs
 - ~~Kiro (AWS) documentation~~ ✅ entity page created
+- ~~Chad Woolley — "Software Factory: A Practitioner's Guide"~~ ✅ Feb 2026 ingested as [[software-factory-practitioners-guide-woolley]], created [[strongdm]], [[attractor]], [[shift-work]], [[holdout-scenarios]], [[nlspec]], [[digital-twin-universe]]
 - Devin case studies/reviews
 - Industry landscape reports
 
@@ -64,6 +66,10 @@ last_change: agentic-coding-stack-aslan ingest
 | [[agent-memory]] | Coding Agents | Mechanisms for cross-session knowledge retention. Next frontier after commoditized capabilities (Cleric, Pinterest). |
 | [[agent-harness]] | Coding Agents | The complete non-model infrastructure wrapping an LLM. 12 components, Von Neumann analogy, thin vs. thick spectrum, scaffolding metaphor. |
 | [[agentic-coding-stack-layers]] | Coding Agents | Five-layer composition model from [[agentic-coding-stack-aslan|Aslan 2026]]: Delivery Methodology / Agent Discipline / Technical Context / Token Optimization / Product Surface. Workflow-oriented complement to [[agent-harness]]. Names spec-to-code traceability as the unbuilt missing link. |
+| [[shift-work]] | Software Factories | Separation of [[software-factory|software factory]] into interactive (spec refinement) and non-interactive (autonomous execution) phases. Central unsolved question: when is a specification "complete enough"? Three agent sets prevent gaming. |
+| [[holdout-scenarios]] | Software Factories | End-to-end user stories kept separate from implementation codebase to prevent agents from reward-hacking tests. Borrowed from ML holdout validation sets. Stories span happy path, edge cases, failure modes. Validation probabilistic, not boolean. |
+| [[nlspec]] | Spec-Driven | Natural-language specification — markdown precise enough for agents to implement against, yet human-readable. Answers three questions: what, under what conditions, why it matters. Rigor bottleneck: hard to write with machine-executable precision. |
+| [[digital-twin-universe]] | Software Factories | Behavioral clones of all external dependencies (APIs, services). Enables deterministic, high-volume validation at factory scale without hitting rate limits or incurring costs. Can itself be built by agents from API docs. StrongDM's most ambitious infrastructure. |
 
 ### Concepts To Create
 
@@ -95,6 +101,8 @@ last_change: agentic-coding-stack-aslan ingest
 | [[rtk]] | Tool/CLI Proxy | Rust shell-output proxy with command-specific filters. Intercepts before output reaches the agent. **Layer 4 (Token Optimization)** alongside [[context-mode]]. *"The fastest way to improve a noisy shell-based workflow without redesigning how the agent works"* (Aslan). |
 | [[context-mode]] | Tool/MCP Server | MCP sandbox where the agent writes code to compute the answer; only `console.log()` enters context. SQLite + FTS5 for cross-session continuity. **Layer 4 (Token Optimization)** — pairs with [[rtk|RTK]] for at-scale workflows. |
 | [[gsd-2]] | Tool/Platform | Autonomous coding-agent platform: `gsd auto → plan → execute → verify → commit → repeat`. Worktree isolation, state recovery, multi-provider, cost tracking, milestone execution. **Layer 5 (Product Surface)** — sole inhabitant. Sibling to [[humanlayer-codelayer|CodeLayer]] and [[agent-control-plane|ACP]]. |
+| [[strongdm]] | Company | Security infrastructure company with the first public implementation of [[software-factory|software factory]] pattern in production (Feb 2026). Three-person team built access management software: no human writes code, no human reviews code. Pioneered [[shift-work]], [[holdout-scenarios]], [[attractor]], [[digital-twin-universe]], satisfaction metric, three agent sets. Reference implementation for factory pattern. **No large enterprise has implemented at scale yet.** |
+| [[attractor]] | Pattern/Framework | Non-interactive coding agent structured as a directed graph of phases (DOT format). Each node is a dev task, edges are LLM-evaluable conditions. Orchestrates implementation/test/refine/converge cycles. [[strongdm]]'s orchestration engine. Implementations: StrongDM (ref), Kilroy (Go), and the open [[attractor]] NLSpec. |
 
 ### Entities To Create
 

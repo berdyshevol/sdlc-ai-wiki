@@ -3,7 +3,7 @@ title: Wiki Index
 type: index
 created: 2026-04-08
 updated: 2026-04-25
-last_change: MSIS research report variant filed under analyses/research-report/
+last_change: Polished MSIS research report (formal-academic, single applied example) filed under analyses/research-report/
 ---
 
 # Wiki Index
@@ -126,3 +126,4 @@ last_change: MSIS research report variant filed under analyses/research-report/
 | [[where-ai-beats-traditional-sdlc]] | Industry | Eight problems where AI clearly outperforms traditional methods (time compression, boilerplate, test gen, brownfield→spec, multi-file refactor, docs, adversarial spec review, parallel exploration) with evidence-strength matrix. Shared predicate: verifiable / repetitive / language-native / loosely human-coupled. Problem-centric counterpart to [[ai-techniques-tools-approaches]]. |
 | [[msis-research-report-ai-in-sdlc]] | Industry | 6–8 page research report for MSIS audience. Synthesizes the five wiki analyses ([[ai-in-sdlc-current-usage]], [[ai-techniques-tools-approaches]], [[where-ai-beats-traditional-sdlc]], [[risks-and-limitations]], [[ai-sdlc-3-5-year-outlook]]) into an integrated narrative: field overview, current applications and techniques, applied example (StrongDM L5 + Amazon Kiro L3–L4), risks/ethics, 3–5 year outlook, and IS-practice implications. |
 | [[research-report/ai-in-the-sdlc-msis-report]] | Industry | Tightened ~7-page MSIS research report variant filed in `analyses/research-report/`. Synthesizes the same five analyses but reorganized around the assignment template (intro / current applications / applied example / challenges / outlook / conclusions). Applied example focuses on Amazon Kiro (L3–L4 SDD, 76-day rearchitecture). |
+| [[research-report/ai-in-sdlc-research-report]] | Industry | Polished ~7-page formal-academic MSIS research report. Same five-analysis synthesis with strict adherence to the assignment template: abstract, field overview, six-block techniques section (LLMs+tool use, agentic loops, multi-agent orchestration, SDD, persistent memory, harness), single applied example (Amazon Kiro), seven categories of risks/ethics, six-prediction 2027–2031 outlook, six MSIS-practice takeaways. Restates the four-property predicate as a portfolio-screening tool. |

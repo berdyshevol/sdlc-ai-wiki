@@ -3,10 +3,14 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-25
-last_change: MSIS research report variant filed under analyses/research-report/ folder
+last_change: Polished MSIS research report (formal-academic, single applied example) filed under analyses/research-report/
 ---
 
 # Wiki Log
+
+## [2026-04-25] report | MSIS Research Report — polished formal-academic version
+
+Filed [[research-report/ai-in-sdlc-research-report]] as a polished formal-academic MSIS research report (~3,900 words / ~7 pages). Synthesizes the five wiki analyses ([[ai-in-sdlc-current-usage]], [[ai-techniques-tools-approaches]], [[where-ai-beats-traditional-sdlc]], [[risks-and-limitations]], [[ai-sdlc-3-5-year-outlook]]) into a single integrated narrative with strict adherence to the assignment template: abstract, introduction (field overview and why AI matters now), the maturity spectrum and four-property predicate, six-block techniques section (frontier LLMs with tool use, agentic loops, multi-agent orchestration, SDD, persistent memory and context engineering, the harness), one applied example (Amazon Kiro — 18-month / 30-developer rearchitecture in 76 days with 6 people, ~10× headcount-equivalent reduction; StrongDM cited only briefly to bracket the L5 ceiling), seven categories of risks/ethics (slop and hallucination, security uplift with 35 CVEs/month and accelerating, code legibility and accountability, the Level-2 trap and trust brittleness, governance/compliance gaps, reward-hacking, and economic/workforce/copyright ethics), six predictions for 2027–2031, and six MSIS-practice takeaways. Restates the four-property predicate (verifiable / repetitive-or-parallelizable / language-native / loosely human-coupled) as a portfolio-screening tool. Defensible 2026 posture: 2–3× quality-constrained productivity at L2–L3 with mandatory review, scoped credentials, holdout-style evaluation, and explicit spec-change governance — not Level 5 autonomy. Updated wiki/index.md analyses table.
 
 ## [2026-04-25] report | MSIS Research Report — `analyses/research-report/` variant
 

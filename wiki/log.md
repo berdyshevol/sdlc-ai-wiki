@@ -3,10 +3,14 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-25
-last_change: MSIS research report filed
+last_change: MSIS research report variant filed under analyses/research-report/ folder
 ---
 
 # Wiki Log
+
+## [2026-04-25] report | MSIS Research Report — `analyses/research-report/` variant
+
+Filed [[research-report/ai-in-the-sdlc-msis-report]] in the `wiki/analyses/research-report/` folder per assignment request. Reorganized the existing [[msis-research-report-ai-in-sdlc]] content around the assignment template — abstract, introduction and relevance, the maturity spectrum and four-property predicate, current applications and techniques (frontier LLMs with tool use, agentic loops, multi-agent orchestration, SDD, persistent memory, the harness), one applied example (Amazon Kiro: 18-month / 30-developer rearchitecture completed in 76 days with 6 people, ~10× headcount-equivalent reduction; StrongDM referenced as bracketing L5 ceiling), seven categories of risks/ethics (slop and hallucination, security uplift with 35 CVEs/month and accelerating, code legibility and accountability, the Level-2 trap and trust brittleness, governance/compliance gaps, reward-hacking, and economic/workforce/copyright ethics), six 2027–2031 predictions, and six MSIS-practice takeaways. Tightened to ~3,900 words (~7 pages). Defensible 2026 posture restated: 2–3× quality-constrained productivity at L2–L3 with mandatory review, scoped credentials, holdout-style evaluation, and explicit spec-change governance — not Level 5 autonomy. Updated wiki/index.md analyses table.
 
 ## [2026-04-25] report | MSIS Research Report on AI in the SDLC
 

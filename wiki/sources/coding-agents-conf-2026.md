@@ -3,8 +3,8 @@ title: "Coding Agents Conference 2026 — Multi-Speaker Slides"
 type: source
 pillar: industry
 created: 2026-04-08
-updated: 2026-04-08
-sources: [extracted_text.txt]
+updated: 2026-04-27
+sources: [extracted_text.txt, breitenother-kilo-25t-tokens.md]
 tags: [conference, industry, adoption, evals, benchmarks, security, memory, enterprise, trust]
 ---
 
@@ -16,7 +16,11 @@ tags: [conference, industry, adoption, evals, benchmarks, security, memory, ente
 - **Date:** March 3, 2026
 - **Location:** Computer History Museum, Mountain View
 - **Organizer:** MLOps Community
-- **Raw file:** `raw/slides/extracted_text.txt`
+- **Event page:** https://luma.com/codingagents
+- **YouTube playlist (all talks):** https://www.youtube.com/playlist?list=PL3vkEKxWd-uuMAa8LDmcFEh7iMyKDJlyW
+- **Raw files:**
+  - Slides: `raw/slides/extracted_text.txt` (all speakers)
+  - Brightenother talk transcript: `raw/youtube-transcripts/breitenother-kilo-25t-tokens.md` (full talk + Q&A)
 - **Speakers:** Sid Bidasaria (Anthropic), Scott Breitenother (Kilo Code), Jessica Wang (Braintrust), Niels Bantilan (Union AI), Faye Zhang (Pinterest), Yanis He (Scale AI), Erin Ahmed (Cleric), Milan Williams (Semgrep), Ash Lewis (Fastino), Ankit Mathur (Databricks), Zach Lloyd (Warp), Mihail Eric (Monaco), Dexter Horthy (HumanLayer), Harrison Chase (LangChain), Sam Partee (Arcade)
 
 ## Summary
@@ -28,16 +32,43 @@ The most data-rich talk is Scott Breitenother's (Kilo Code), drawing on **25 tri
 ## Key Claims by Speaker
 
 ### Scott Breitenother — Kilo Code (25T Tokens)
-- **AI adoption is a trust ladder:** Autocomplete → Chat → Single Agents → Orchestration. Each rung requires more trust. "If autocomplete fails, agents never get a chance."
+
+> **Talk title:** "Lessons from 25 Trillion Tokens — Scaling AI-Assisted Development at Kilo"
+> **YouTube:** https://www.youtube.com/watch?v=tG1CSRaJhKQ
+> **Full transcript + Q&A:** `raw/youtube-transcripts/breitenother-kilo-25t-tokens.md`
+
+**Headline data and framework**
+- **AI adoption is a trust ladder:** Autocomplete → Chat → Single Agents → Orchestration. Each rung requires more trust. *"You have to climb and you have to earn it."*
 - **Three breakpoints in adoption:** Context construction, model routing, and feedback loops consistently cause adoption to stall.
-- **Developer role shift:** From "code monkey" to "orchestrator." Each dev manages 3-5 specialized agents (Architect, Code, Ask, Debug, Orchestrator).
-- **No single best model:** Different tasks need different models (e.g., Minimax M2.5 for architecture, Claude Opus 4.6 for building, GPT 5.3 Codex for debugging).
-- **Trust is measurable:** Autocomplete (200ms, clean signal) → Chat (seconds, noisier) → Agents (minutes, sparse) → Orchestration (hours, delayed). "The higher the rung, the lower the signal."
-- **"AI shifts the work, it doesn't remove it."** Cognitive load moves from doing to orchestrating. Cites HBR 2026: "AI Doesn't Reduce Work — It Intensifies It."
-- **10x productivity on implementation work** when developers set direction and agents handle boilerplate, error recovery, docs lookup, syntax debugging.
-- **49% of pro devs don't use AI daily.** 76% won't use AI for deployment/monitoring. 16% don't plan to use AI at all. (Source: Stack Overflow)
-- **Typical team evolution:** March 2025: 1 feature every 2-3 weeks → Today: 1-2 features per week. Same team size.
-- **"Build for trust, not capability."** "Benchmarks tell you what models can do. 25 trillion tokens tell you what developers actually do."
+- **Trust is measurable but signal degrades up the ladder:** Autocomplete (sub-200ms, clean signal — accept-or-reject) → Chat (seconds, noisier — copy/ignore) → Agents (minutes, sparse — diff accept/revert) → Orchestration (hours, delayed — workflow outcome).
+- **Quantitative trust threshold:** *"When our latency peaked at 200 ms, usage went down."* Speed is itself a trust signal — slow autocomplete causes users to disable the feature, and they may never re-engage.
+- **"Build for trust, not capability."** *"Benchmarks tell you what models can do. 25 trillion tokens tell you what developers actually do."*
+
+**Developer role transformation**
+- **Code monkey → orchestrator → conductor of an orchestra.** Developer becomes "the tastemaker, the architect," deciding quality gates while agents handle execution, boilerplate, syntax-error hunting, documentation lookup, and writing.
+- **Cognitive ratio inverts.** Old: ~20 % thinking, ~80 % coding. New: **~80 % thinking, ~20 % coding.** *"It's quite taxing... someone joins the kilo engineering team [and] they kind of have to like warm up their muscle to the brain."*
+- **Each dev manages 3–5 specialized agents** out-of-the-box (Architect, Code, Ask, Debug, Orchestrator) plus custom modes (e.g., engineer-named "Brian mode").
+- **No single best model.** Slides reference Minimax M2.5 / Claude Opus 4.6 / GPT 5.3 Codex; in the talk Brightenother names the cost-effective tier as *"Kimi or MiniMax or GLM"* and warns that defaulting to the most expensive frontier model means *"you're essentially heating your home with inference."*
+
+**Adoption snapshot (data)**
+- **49 % of pro devs don't use AI daily.** 76 % won't use AI for deployment/monitoring. 16 % don't plan to use AI at all. (Source: Stack Overflow)
+- **Typical team evolution:** March 2025: 1 feature every 2–3 weeks → March 2026: 1–2 features/week. *Same team size.* Kilo had ~15 engineers at the time of the talk.
+
+**Kilo's organizational model (newly surfaced from the talk's narrative)**
+- **One feature, one engineer.** Not "one team owns a feature" — *"There's only one engineer per feature."* Single owner runs conception → coding → deployment → end-user feedback → iteration. Cited example: an engineer "Sesh" owns code reviews end-to-end.
+- **Anti-collaboration as a stated value.** *"We try to avoid collaboration at all costs. We are very anti-collaboration."* Citing PostHog's blog on collaboration's downsides; engineers talk only when collaboration *adds value*. Frames most habitual collaboration as a *"safety blanket."*
+- **No PMs (almost).** *"We don't really believe in PMs at Kilo... every engineer is their own PM."* The entire company has one PM, scoped to the *horizontal* platform layer beneath the engineer-owned vertical features.
+- **Vacation policy is honest:** when a single owner is out, *"that product might not move for a week. And we're cool with it because the gains we have when that person is on are so much more."* On-call rotation handles production issues.
+- **Production Slackbot:** *"I don't go into Kilo anymore. I just say `kilo extend this promotion one more week`"* — production ops and content edits routed through the agent in Slack, not the IDE.
+
+**Synthesis quotes from the talk**
+- *"Coding is the easy part and the bottleneck is no longer the coding, it's kind of all the process."*
+- *"You give AI the steering wheel but you also have a secret steering wheel and a secret brake"* — Brightenother's metaphor for single-agent (Level 3-equivalent) work.
+- *"AI's got the wheel, you better pray"* — for orchestration (Level 4-equivalent).
+- *"You've got to give trust to get trust."* The trust loop also requires the user to feed the agent more context as they ascend the ladder — autocomplete needs only the current file; orchestration needs the entire repo graph.
+
+**Note on framework cross-reference**
+- Brightenother does **not** cite Shapiro or the five-level model in the talk or slides. The 4-rung Kilo ladder is his own framing. The mapping to Shapiro's L1–L4 is the wiki's own synthesis (see [[automation-levels]]) — Brightenother's data should be treated as an independent observational signal that *coheres with* Shapiro's progression, not a direct empirical test of it.
 
 ### Jessica Wang — Braintrust (Agentic Search vs RAG)
 - **Evals framework:** Dataset → Task → Scoring → Experiment → Compare. "Evals are a team sport" — involves AI engineers, PMs, SMEs, data analysts.

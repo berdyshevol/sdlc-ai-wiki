@@ -2,11 +2,16 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-25
-last_change: Polished MSIS research report (formal-academic, single applied example) filed under analyses/research-report/
+updated: 2026-04-27
+last_change: Ingested full transcript of Brightenother's Kilo Code talk (YouTube) and enriched [[coding-agents-conf-2026]]
 ---
 
 # Wiki Log
+
+## [2026-04-27] ingest | Brightenother (Kilo Code) — full talk transcript + Q&A
+
+Ingested the full transcript of Scott Brightenother's keynote *"Lessons from 25 Trillion Tokens — Scaling AI-Assisted Development at Kilo"* (Coding Agents Conference, March 3, 2026; Computer History Museum). Saved as `raw/youtube-transcripts/breitenother-kilo-25t-tokens.md` with metadata header (YouTube URL https://www.youtube.com/watch?v=tG1CSRaJhKQ, MLOps Community as publisher), full transcript with timecodes, four Q&A questions, and a "Transcript Notes" section flagging caption errors and slide-vs-talk discrepancies (notably the "10 % vs 10×" wording for shipping-velocity gains). Updated [[coding-agents-conf-2026]] source page: added YouTube URL and event-page URL to metadata, added the transcript file to the `Raw files` and `sources:` frontmatter list, and substantially expanded the Brightenother subsection with material newly surfaced from the talk that was not in the slides — anti-collaboration philosophy (PostHog citation), the *"one feature, one engineer"* organizational model, near-zero PM ratio (*"we have one PM in the entire company"*), the explicit vacation/on-call posture, the Kilo Slackbot for production ops, the 200 ms latency-as-trust-loss datapoint, the cognitive 20/80 → 80/20 inversion, and the *"heating your home with inference"* / *"AI's got the wheel, you better pray"* quotes. Added an explicit note that Brightenother does **not** cite Shapiro and that the L1–L4 mapping is the wiki's own synthesis, not an empirical test by either author. No new entity or concept pages created — all material consolidated under the existing source page.
+
 
 ## [2026-04-25] report | MSIS Research Report — polished formal-academic version
 

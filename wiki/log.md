@@ -3,10 +3,14 @@ title: Wiki Log
 type: log
 created: 2026-04-08
 updated: 2026-04-27
-last_change: Ingested full transcript of Brightenother's Kilo Code talk (YouTube) and enriched [[coding-agents-conf-2026]]
+last_change: Ingested full transcript of Wang's Brain Trust talk ("Stop Shipping on Vibes") and enriched [[coding-agents-conf-2026]]
 ---
 
 # Wiki Log
+
+## [2026-04-27] ingest | Wang (Brain Trust) — "Stop Shipping on Vibes" full talk transcript + Q&A
+
+Ingested the full transcript of Jessica Wang's keynote *"Stop Shipping on Vibes — How to Build Real Evals for Coding Agents?"* (Coding Agents Conference, March 3, 2026; same event as Brightenother). Saved as `raw/youtube-transcripts/wang-brain-trust-evals.md` with metadata header (YouTube URL https://www.youtube.com/watch?v=VbX24V_JFQI), full transcript with timecodes, three Q&A questions, and a "Transcript Notes" section flagging terminology choices (Wang uses *agentic* and *semantic* interchangeably — opposite of the wider field convention), the OpenAI April 2025 sycophancy rollback as motivation, and the explicitly disclaimed dollar figures. Substantially expanded the Wang subsection in [[coding-agents-conf-2026]]: corrected the talk title (was "Agentic Search vs RAG" — the slide-deck topic; actual title is "Stop Shipping on Vibes"), added the production loop diagram (live logs → 10–20 % sample → dataset → tweak prompt/score/data → ship → repeat), Brain Trust's Loop natural-language query feature, the four-component evals framework, and the full case-study mechanics — `--disallow-tools` flag fight, subprocess trace orphaning fix via parent-span env vars, the SWE-Bench `fail-to-pass` scoring nuance, and Wang's own four caveats (multiple trials needed, vector impl basic, hybrid realistic, dataset too small). Also surfaced and noted that Wang's *"connective tissue"* metaphor for what vector search lacks **independently pre-echoes Aslan's later use of the same metaphor** for spec-to-code traceability ([[agentic-coding-stack-aslan]]) — same conference month, different scope, suggesting a shared concept emerging across the 2026 discourse. Cross-reference also captured: Wang teases Brightenother's "no PMs" claim live in the talk. No new entity or concept pages created.
 
 ## [2026-04-27] ingest | Brightenother (Kilo Code) — full talk transcript + Q&A
 

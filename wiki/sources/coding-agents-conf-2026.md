@@ -4,7 +4,7 @@ type: source
 pillar: industry
 created: 2026-04-08
 updated: 2026-04-27
-sources: [extracted_text.txt, breitenother-kilo-25t-tokens.md]
+sources: [extracted_text.txt, breitenother-kilo-25t-tokens.md, wang-brain-trust-evals.md]
 tags: [conference, industry, adoption, evals, benchmarks, security, memory, enterprise, trust]
 ---
 
@@ -21,6 +21,7 @@ tags: [conference, industry, adoption, evals, benchmarks, security, memory, ente
 - **Raw files:**
   - Slides: `raw/slides/extracted_text.txt` (all speakers)
   - Brightenother talk transcript: `raw/youtube-transcripts/breitenother-kilo-25t-tokens.md` (full talk + Q&A)
+  - Wang talk transcript: `raw/youtube-transcripts/wang-brain-trust-evals.md` (full talk + Q&A)
 - **Speakers:** Sid Bidasaria (Anthropic), Scott Breitenother (Kilo Code), Jessica Wang (Braintrust), Niels Bantilan (Union AI), Faye Zhang (Pinterest), Yanis He (Scale AI), Erin Ahmed (Cleric), Milan Williams (Semgrep), Ash Lewis (Fastino), Ankit Mathur (Databricks), Zach Lloyd (Warp), Mihail Eric (Monaco), Dexter Horthy (HumanLayer), Harrison Chase (LangChain), Sam Partee (Arcade)
 
 ## Summary
@@ -70,12 +71,61 @@ The most data-rich talk is Scott Breitenother's (Kilo Code), drawing on **25 tri
 **Note on framework cross-reference**
 - Brightenother does **not** cite Shapiro or the five-level model in the talk or slides. The 4-rung Kilo ladder is his own framing. The mapping to Shapiro's L1–L4 is the wiki's own synthesis (see [[automation-levels]]) — Brightenother's data should be treated as an independent observational signal that *coheres with* Shapiro's progression, not a direct empirical test of it.
 
-### Jessica Wang — Braintrust (Agentic Search vs RAG)
-- **Evals framework:** Dataset → Task → Scoring → Experiment → Compare. "Evals are a team sport" — involves AI engineers, PMs, SMEs, data analysts.
-- **Agentic search vs vector search results:** On SWE-Bench (25 rows): vector 60%, agentic 68%. On ts-go (10 rows): both 70% accuracy, but agentic used 3.1x fewer tokens and cost 2.8x less.
-- **"Vector search returns chunks, not files."** Agents get fragments without context. Agentic search enables chain-of-thought exploration — "worked like a developer."
-- **"More searches ≠ better results."** Vector used 2.8x more LLM calls while performing the same or worse.
-- **Braintrust reached $10M ARR** with 100% quarterly NDR.
+### Jessica Wang — Brain Trust ("Stop Shipping on Vibes")
+
+> **Talk title:** "Stop Shipping on Vibes — How to Build Real Evals for Coding Agents?"
+> **YouTube:** https://www.youtube.com/watch?v=VbX24V_JFQI
+> **Full transcript + Q&A:** `raw/youtube-transcripts/wang-brain-trust-evals.md`
+
+**Headline framing**
+- **"Shipping on vibes" is the failure mode.** Wang reports being on calls where teams shipped AI features because *"the engineering team told them it was ready"* or *"a PM tried a couple of prompts and they said it looked good."* The eval-driven alternative is to be able to say *"we ran 200 different test cases and 94 % of them passed and so therefore we're shipping it"* — or to articulate trade-offs like *"we shipped this change and it improved the tone but decreased accuracy by 5 %."*
+- **Real-world cautionary tale:** OpenAI's April 2025 sycophancy rollback (the entire GPT-4o update reverted because making the model more helpful made it too agreeable to be useful). *"This is an example of when it's very easy to overtrain models. You want to be able to catch these nuances early on."*
+
+**The evals framework (four components)**
+- **Dataset → Task → Scoring → Experiment → Compare.**
+- **Dataset:** golden cases + edge cases + failure modes.
+- **Task:** the prompt + model picked to handle each input.
+- **Scoring:** deterministic, LLM-as-a-judge, or human-in-review — but *"you who are writing the scorer is defining the criteria of what comprises good and bad."*
+- **Experiment:** one run of one configuration. Multiple experiments make regressions and improvements visible at the row level.
+
+**The production loop** — *live logs → sample 10–20 % → dataset → tweak prompt/score/data → ship → repeat*. Brain Trust's **Loop** feature lets engineers query experiments in natural language (*"highlight problems"*, *"which experiment performed best"*) — Wang reports she was skeptical at first but uses it heavily because long agentic traces are hard to read manually.
+
+**"Evals are a team sport"** — AI engineer (data + bug/feature changes), product manager (hypotheses + success criteria; *"if you work at Kilo Code it might just be the same as engineer"* — live tease of [Brightenother's earlier talk](#scott-breitenother--kilo-code-25t-tokens)), subject-matter experts (label data; especially in medicine / law / insurance), data analysts (define and analyze scores).
+
+**Case study: agentic vs vector search (the eval that produced the headline numbers)**
+- **Origin:** prompt from CEO Ankur Goyal pointing at a Cursor blog post claiming semantic (= agentic) search significantly improved their coding agent. Wang independently evaluated.
+- **Vector search defined:** text/code → embeddings → vector DB (Pinecone) → return nearest-neighbour chunks.
+- **Agentic search defined:** LLM-driven CLI exploration via grep/find/ls/cat — *"more like how a real human would act."* (Note Wang uses *"semantic"* and *"agentic"* interchangeably; this differs from the more common usage where *semantic search* = embedding-based.)
+- **Two datasets:**
+  - **TypeScript-Go (custom):** merged "fix" PRs from Microsoft's TypeScript-Go repo, parent commit checked out, Claude-synthesized bug ticket as the input. Pass criterion: Go test suite passes after the agent's fix.
+  - **SWE-Bench Verified subset:** 25 rows from the Django-related slice of the industry-standard benchmark.
+- **Implementation gotcha 1:** Claude Code defaults to agentic search and *"really wanted to fall back."* Wang used `--disallow-tools` to block grep/find/ls and added explicit prompt instructions to force vector-search-only behavior. Tuning this took several days.
+- **Implementation gotcha 2:** Claude Code runs as a subprocess — traces were orphaned from the parent. Fix: pass parent span IDs as environment variables so subprocess traces attach to the correct trace tree.
+- **Scoring nuance:** SWE-Bench provides a `fail-to-pass` test list (tests failing on the buggy commit, expected to pass after the canonical fix). Wang's scorer accepts a fix if it greens all `fail-to-pass` tests, *even if it incidentally regresses unrelated tests* — a deliberate eval-design choice.
+
+**Results**
+- **SWE-Bench Verified (25 Django rows):** vector search **60 %**, agentic search **68 %**.
+- **TypeScript-Go (10 rows):** vector and agentic both **70 %** — but vector used substantially more tokens and cost (slide-deck records ~3.1× more tokens / ~2.8× more cost; Wang explicitly disclaims the absolute dollar figures as miscalibrated and asks the audience to read the *ratio*, not the dollar amount).
+- **Three takeaways:**
+  1. *"Vector search returns chunks, not connective tissue."* Vector retrieved 26 chunks across one SWE-Bench run without ever isolating the bug — proximity to relevant code without import chains, type definitions, or call graphs.
+  2. *Agentic search enables chain-of-thought exploration.* The agent reads a function, sees what calls it, follows references across files.
+  3. *More searches = more cost.* Vector's "guess and check" loop is expensive precisely because the chunks lack the signal needed to terminate it.
+
+**Honest caveats Wang names herself**
+- *"I would not publish a blog post about this yet."* The eval reads as *"agentic is 100 % better than vector,"* which she does not believe.
+- Need multiple trials per task — LLM non-determinism alone can swing scores 10–15 %.
+- Vector implementation was deliberately basic; chunk overlap, text splitting, and retrieval-model improvements were not attempted.
+- Hybrid (vector + agentic) is what most companies actually run.
+- Dataset is too small — 10 rows means a single failure swings the score 10 %.
+
+**Q&A highlights**
+- **Token-cost confound from `--disallow-tools`** (audience): could the cost gap be inflated because Claude tries agentic, fails, retries via vector? Wang acknowledges yes, this is on her to-fix list.
+- **Human control group:** SWE-Bench provides golden answers (human-coded). For the TypeScript-Go set, she could compare against the actual merged PR diff via LLM-as-a-judge.
+- **Evals for short-attention-span / non-linear conversations** (audience: chat product where users hop topic-to-topic with no golden answer): Wang's answer — *"turn your actual user journey into just something in your data set."* Log the real journeys, sample them into evals, optionally synthesize additional rows.
+
+**Cross-source notes**
+- Wang's *"connective tissue"* framing for what vector search lacks **independently echoes Murat Aslan's** later use of the same phrase for spec-to-code traceability ([[agentic-coding-stack-aslan]]: *"the most strategic connective tissue in the agentic coding stack"*). The two uses are scoped differently (Wang: code-to-code traversal; Aslan: spec-to-code linkage) but the shared metaphor is striking — the wiki's [[code-legibility-debate]] and Aslan-stack discussion may benefit from this earlier pre-citation.
+- **Brain Trust commercial datapoint** (from slides, not the talk transcript): Brain Trust reached $10M ARR with 100 % quarterly NDR.
 
 ### Faye Zhang — Pinterest (Production Sub-Agents)
 - **Before Claude Code: 4-6 week cycle. After: 1 week cycle** — via concurrent sub-agent processes.

@@ -647,3 +647,43 @@ Pages created/updated:
 
 **Assessment**: This is the most practical and honest guide to factory-pattern development yet published. Woolley's transparency about difficulties and unresolved questions (especially specification completeness and production-signal feedback) increases credibility. He frames the guide as "aspirational" and acknowledges the gap between theoretical possibility and what's been demonstrated at scale. For the wiki's "software factories" pillar, this is comparable in importance to [[five-levels-shapiro]] for automation levels — a primary reference that systematizes emerging practice into concrete, implementable patterns.
 
+
+## [2026-05-05] ingest | Chris Parsons (Cherrypick) — "Ralph Loops: Build Dumb AI Loops That Ship" (AI Engineer workshop)
+
+Ingested Chris Parsons' 2-hour AI Engineer workshop on Ralph Loops. Source: https://www.youtube.com/watch?v=2TLXsxkz0zI. Full transcript fetched via `youtube_transcript_api` and saved to `raw/youtube-transcripts/parsons-ralph-loops-workshop.md`.
+
+**Why it matters**: Practical, hands-on companion to [[everything-is-a-ralph-loop|Huntley's January manifesto]]. Where Huntley is provocative ("software development is dead"), Parsons is operational — live demo, exact prompts, the actual skill file, sandboxing recipes, and an extended Q&A that surfaces Theory of Constraints, lethal-trifecta sandboxing, anti-spec-driven philosophy, and the existential question of what humans should still do when AI handles everything reversible.
+
+**Core operational claims**:
+
+- **The Ralph prompt that works**: *"implement the next most important ticket using TDD principles from doc/tickets — commit when done."* Let the model pick dependencies on the fly; up-front dependency graphs *are waterfall* and fail.
+- **Three loop substrates**: manual re-prompt → `while true; do claude -p ...; done` shell loop → Claude Code's new **`/loop`** slash command (cron-backed, e.g., `/loop every minute build the next ticket`).
+- **The relay-engineer skill prompt**: *"you are one engineer in a relay team — do exactly one change, then drop the context and stop, start again."* Encodes ticket format, status values, git-state checks, recovery semantics (dirty tree + tests passing = probably done; tests failing = mid-flight, throw away).
+- **Latest models obsolete the original Ralph re-prompt**: Opus 4.6 / Sonnet 4.6 / GPT-5.12+ rarely miss the "are you really done?" step; the simple loop variant is the one that pays off now.
+- **Everything is a loop**: Parsons runs ~50 skills powering loops for newsletters, calendar, morning briefings, project Kanban, an experimental `startup` skill, and a 15-minute heartbeat checking his entire life.
+
+**Q&A highlights**:
+
+- **Theory of Constraints (Goldratt 1984)**: AI exposes the actual bottleneck (often release process or review, not coding speed). Teams that don't fix the actual constraint go *slower* with AI.
+- **Anti-[[kiro]] / anti-codified-SDD**: Wary of tools that hard-code one workflow into the product itself, fossilizing a 2025-era process. Prefers **just-in-time specs** built iteratively in chat.
+- **Lethal trifecta (citing Simon Willison)**: untrusted tokens + internet access + access to secrets ⇒ guaranteed data loss. Mitigations: VPS isolation, separate keys, draft-only email, Docker sandbox, his "lockbox" project for untrusted-input file-system blocks.
+- **Sub-agents debiasing confirmation bias**: agents pat themselves on the back; sub-agents start with empty context and find what the main run missed. The bundled `simplify` skill is his go-to.
+- **Anti-parallelism (cautiously)**: skeptical of Gas Town / MCP agent-mail / multi-agent orchestration — "they're solving a problem most people don't have yet." The bottleneck is reviewing/specifying, not tokens-per-second.
+- **"Era of free tokens"**: don't optimize loops, burn them. He's at 80% of Max-20 weekly; GLM 4.6 mentioned as a hedge.
+- **Reversible-without-embarrassment rule**: his autonomous worker loop can do anything reversible (drafts, decks, research) but never sends email or posts to LinkedIn.
+- **Cognitive debt**: agents must stop short of "closing" a project so a human stays current with the codebase.
+- **Skill-distribution friction**: versioning skills with git works; *sharing across teams* is unsolved (one repo per skill is too heavy; submodules don't scale; plugin marketplaces version the plugin, not the skill). His AirSkills product is one attempted answer.
+
+**Lineage acknowledged in the talk**: Parsons publicly thanks **Matt Pocock** for showing him the next-level Ralph technique in September 2025 (cf. [[matt-pocock-dex-horthy-chat]]) and **Ash Maru** for startup-loop ideas. He explicitly leans on bundled Anthropic skills (`simplify`) and ideas from [[superpowers|Superpowers]].
+
+**Existential thread (second hour)**: when AI handles all the rubbish work, the developer becomes a reviewer of work they didn't want to do. Parsons' answer: redesign feedback so AI evaluates its own output (sub-agent adversarial review, audience-simulation skills, screenshot loops), and consciously decide which work to keep — strategy, thinking — versus offload entirely. *"It's not just about what AI can do or can't do anymore."*
+
+Pages created/updated:
+
+- `raw/youtube-transcripts/parsons-ralph-loops-workshop.md` (new — full transcript, ~3,000 lines reformatted into speaker-paragraphs)
+- `wiki/sources/parsons-ralph-loops-workshop.md` (new — full source page with summary, key claims, connections, open questions)
+- `wiki/sources/everything-is-a-ralph-loop.md` (updated — added Parsons workshop to Connections as the practical/operational counterpart)
+- `wiki/index.md` (updated — added source row, fixed pre-existing duplicate Huntley row, refreshed `last_change` and `updated`)
+- `wiki/log.md` (this entry)
+
+**Assessment**: For the [[software-factory]] / [[agent-harness]] pillar, this is the **most concretely instructional source on the Ralph Loop pattern** in the wiki to date. Huntley provided the manifesto; Mishra-Sharma showed it works at multi-day scientific scale; Parsons shows you the exact prompt, the exact skill file, and the exact failure modes from teaching this to live audiences. His anti-Kiro / anti-up-front-dependency-graph stance is a useful counterweight to the structured-SDD pillar of the wiki and sharpens the [[code-legibility-debate]] (he's pragmatic — read diffs only when it matters; design feedback so AI evaluates AI when it doesn't).

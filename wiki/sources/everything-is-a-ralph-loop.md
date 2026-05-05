@@ -41,6 +41,7 @@ The article is provocative in its central claim: "software development is dead �
 
 - **[[claude-agent-sdk]]** — Ralph Loop is referenced in Anthropic's own research on long-running Claude. The "dumb loop, smart model" philosophy of Claude Agent SDK directly aligns with Huntley's Ralph orchestrator pattern.
 - **[[long-running-claude]]** — Anthropic's Siddharth Mishra-Sharma explicitly references the Ralph Loop pattern for combating agentic laziness in multi-day scientific computing sessions.
+- **[[parsons-ralph-loops-workshop]]** — Chris Parsons' AI Engineer workshop. Practical, hands-on extension: shows the Pomodoro-timer demo, the "pick the next most important ticket" prompt structure (rejecting up-front dependency graphs), Claude Code's `/loop` slash command, and the "you are one engineer in a relay team" skill prompt. Where Huntley is provocative, Parsons is operational.
 - **[[software-factory]]** — Huntley's "level 9" vision is the most extreme articulation of the software factory concept in this wiki — fully autonomous, self-evolving, revenue-optimizing.
 - **[[automation-levels]]** — Extends Shapiro's five-level model with levels 8 and 9, going beyond dark factory into evolutionary/self-optimizing systems.
 - **[[agent-harness]]** — Ralph is an orchestrator pattern — a specific philosophy of harness design emphasizing monolithic simplicity and loop-based control flow.

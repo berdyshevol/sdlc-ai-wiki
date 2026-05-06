@@ -687,3 +687,48 @@ Pages created/updated:
 - `wiki/log.md` (this entry)
 
 **Assessment**: For the [[software-factory]] / [[agent-harness]] pillar, this is the **most concretely instructional source on the Ralph Loop pattern** in the wiki to date. Huntley provided the manifesto; Mishra-Sharma showed it works at multi-day scientific scale; Parsons shows you the exact prompt, the exact skill file, and the exact failure modes from teaching this to live audiences. His anti-Kiro / anti-up-front-dependency-graph stance is a useful counterweight to the structured-SDD pillar of the wiki and sharpens the [[code-legibility-debate]] (he's pragmatic — read diffs only when it matters; design feedback so AI evaluates AI when it doesn't).
+
+## [2026-05-05] ingest | Eric Zakariasson (Cursor) — "Building Your Own Software Factory" (AI Engineer)
+
+Ingested Eric Zakariasson's AI Engineer talk on building a software factory inside Cursor. Source: https://www.youtube.com/watch?v=rnDm57Py54A. Full transcript fetched via `youtube_transcript_api` and saved to `raw/youtube-transcripts/zakariasson-cursor-software-factory.md` (2,019 lines, MD5 verified vs. the `/tmp` fetch).
+
+**Why it matters**: First IDE-vendor data point on production [[software-factory]] operation. Cursor self-positions as "between L3 and L4 with sub-parts at L5" on the [[five-levels-shapiro|Shapiro framework]], runs "multiple thousands of cloud agents per day" internally, and has shipped concrete factory automations (agentic code owner, continual-learning plugin, Linear-ticket → cloud-agent pipelines) that don't appear elsewhere in the wiki corpus. Complements [[strongdm]] (3-person team, [[software-factory-practitioners-guide-woolley|Woolley's guide]]) as a second large-scale practitioner data point — same factory frame, very different scale (IDE vendor with thousands of agents vs. small focused team).
+
+**Core operational claims**:
+
+- **Three-part build decomposition: primitives & patterns / guardrails / enablers.** Maps onto [[skill-issue-harness-engineering|Kyle's six harness levers]] reorganized around what the agent *needs* / what *bounds* it / what *empowers* it.
+- **Checklist: runnable, accessible, verifiable.** Verifiable is the under-invested one — backend invariants are easy, UI verification motivates computer-use tooling.
+- **Rules should emerge dynamically** — *contra* the "install every rule from cursor.directory" approach. Capture corrections of observed failures, not pre-emptive scaffolding. Specific example: Cursor doesn't use foreign keys for performance reasons, models always add them, **Bugbot** has a rule that flags this. The rule isn't pre-emptive; it's the captured human↔model gap.
+- **Cursor 3** — complete rewrite, no VS Code base, agent-first UI. Designed because Cursor needed a "control panel" for many agents, not a file editor.
+- **Cloud agents with computer-use** — each agent gets its own VM, ~$1/turn, can record video of itself clicking through the app to verify UI work. "Multiple thousands a day" internally.
+- **Isolated VMs > shared-workspace worktrees** — shared workspaces force you to branch DB/cache/users anyway; full VM isolation scales to thousands of parallel agents.
+- **Cursor's internal automation library**: daily review (Slack + GitHub summary), read-merge-PR-comments (stores human review feedback as agent-learnable signal), **agentic code owner** (auto-approves low-risk PRs, pulls in original author for high-risk ones), **continual-learning plugin** (extracts rules from chat-history transcripts so users don't have to remember to write them).
+- **Cursor Workers** (announced "yesterday" relative to the talk, May 2026) — `agent worker start` CLI runs the same orchestration on any machine (Mac mini, VM, dev container), surfacing in cursor cloud as a self-hosted worker. Closes the loop for users who don't want managed cloud agents.
+- **Linear-driven autonomous loops** — every Linear ticket spawns a cloud agent; stale feature flags auto-create issues that auto-remove the flag. Closed-loop signal → ticket → PR.
+- **Daily workflow: 5–10 cloud agents in parallel.** Sync planning → async execution → review/merge. Context switching across 4+ repos/areas is "the sad reality."
+- **No shortcut to agent fluency** — "just spawn a shitload of agents." Frontload context, then go async; alignment with model strengths/weaknesses comes from running the experiment.
+
+**Q&A highlights**:
+
+- **Architectural drift**: humans have the same problem, just slower. Answer: more *human* architectural review and system-design ownership; pointing the agent at existing references partially mitigates.
+- **Enterprise/security**: spend tokens up front. Manually written tests for critical systems + automations like the security team's "Security Sentinel" (10 invariant checks on certain PRs). Audience reframe: **use AI for quality, not just velocity.** Eric strongly agrees: *"if you trust the tests, you trust the output even though you don't have to look at the code."*
+- **Brownouts/blackouts**: humans remain accountable; observability and monitoring matter; some critical lines may need to be human-written or always human-reviewed.
+- **Prototype migration**: don't migrate vibe-coded prototypes to production — rewrite. PMs hand off as cloud-agent links ("interactive Figma") or HTML mega-prototypes.
+- **Multi-agent orchestration UI is "somewhat unsolved."** Cursor 3 is "the first stab" — nested sub-agents, project views, aggregated status. Spec stored as markdown folders checked into the codebase.
+- **Team archetypes at Cursor**: PMs, **designers (50/50 Figma/code, push to production)**, engineers, data scientists/analysts. Teams are **domain-modular** (extensibility, cloud).
+- **Future of rules**: weight-level continual learning per team. Current rule plugins are "hacky"; eventual goal is per-team fine-tuning that bakes preferences into the model.
+- **Lovable's "vent tool" anecdote**: a colleague gave the agent a Slack-posting complaint tool as a joke; it became signal for capability gaps when the agent complained it couldn't read images. Argues for **letting agents be free** — instrument them to surface what they're missing.
+
+**Lineage and self-positioning**: Eric explicitly cites [[five-levels-shapiro|Shapiro's January–February 2026 framework]] as his mental model and places himself at Level 4 / Cursor at "between L3 and L4 with sub-parts at L5." Notes Karpathy has used Cursor as the "tab to agent" example for the same progression. No direct citation of [[everything-is-a-ralph-loop|Huntley's Ralph Loop]] or [[parsons-ralph-loops-workshop|Parsons]] but the Linear-ticket → cloud-agent pipeline is functionally a Ralph loop with a richer trigger surface.
+
+**Pages created/updated**:
+
+- `raw/youtube-transcripts/zakariasson-cursor-software-factory.md` (new — full transcript, 2,019 lines, MD5 verified)
+- `wiki/sources/zakariasson-cursor-software-factory.md` (new — full source page)
+- `wiki/entities/cursor.md` (new — first dedicated Cursor entity page; closes a longstanding gap given Cursor's role across the corpus)
+- `wiki/concepts/software-factory.md` (updated — added Zakariasson + Woolley + Cole + Parsons to Key Sources; added "Cursor (May 2026)" to Where We Are Today; added new section **The Three-Part Build Decomposition (Zakariasson)** with the primitives/guardrails/enablers table and runnable/accessible/verifiable checklist)
+- `wiki/concepts/automation-levels.md` (updated — added Zakariasson as first IDE-vendor self-placement on the Shapiro framework)
+- `wiki/index.md` (updated — added source row, added [[cursor]] entity row, refreshed `last_change` and `updated`)
+- `wiki/log.md` (this entry)
+
+**Assessment**: This is the **strongest IDE-vendor practitioner source** in the wiki and a concrete second-data-point on factory operation alongside [[strongdm]]. The three-part build decomposition (primitives/guardrails/enablers + runnable/accessible/verifiable) is a genuinely useful framing that complements rather than competes with the existing [[agent-harness|harness anatomy]], [[agentic-coding-stack-layers|five-layer stack]], and [[skill-issue-harness-engineering|six-lever]] frameworks. Eric's anti-cursor.directory "rules emerge dynamically" stance sharpens the [[code-legibility-debate]] toward a quality-via-tests pragmatism: *"if you trust the tests, you trust the output."* The Cursor Workers self-hosted launch (May 2026) is also a notable shift in the build-vs-buy calculus that follow-up sources should track.

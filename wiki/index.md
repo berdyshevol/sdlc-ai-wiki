@@ -3,7 +3,7 @@ title: Wiki Index
 type: index
 created: 2026-04-08
 updated: 2026-05-05
-last_change: Ingested Chris Parsons (Cherrypick) "Ralph Loops: Build Dumb AI Loops That Ship" workshop (AI Engineer)
+last_change: Ingested Eric Zakariasson (Cursor) "Building Your Own Software Factory" talk (AI Engineer); created [[cursor]] entity
 ---
 
 # Wiki Index
@@ -41,6 +41,7 @@ last_change: Ingested Chris Parsons (Cherrypick) "Ralph Loops: Build Dumb AI Loo
 | [[codespeak-modularity]] | CodeSpeak team | Spec-Driven | Mar 9 post (CodeSpeak 0.3.4): introduces **spec imports** (`import X.cs.md` in frontmatter, transitive, dependency-ordered builds) + **managed files** (per-spec source-file scope with four-way trust model for non-managed writes). The **architectural foundation** for multi-spec CodeSpeak projects — modular takeover (Apr 8) runs on this primitive. Memo-app demo shows one-line spec change rewriting only one module. |
 | [[agentic-coding-stack-aslan]] | Murat Aslan | All five pillars | Apr 2026 Dev Genius post. Stack-map of 7 tools across 5 layers (Delivery Methodology / Agent Discipline / Technical Context / Token Optimization / Product Surface). First explicit failure-mode taxonomy for agentic coding (5 modes). Adds 4 new entities to the wiki ([[ctxo|Ctxo]], [[rtk|RTK]], [[context-mode]], [[gsd-2]]). Sharpens [[superpowers]] positioning at L2. Names **spec-to-code traceability** as the unbuilt missing link — third position in [[code-legibility-debate]]. |
 | [[software-factory-practitioners-guide-woolley]] | Chad Woolley (GitLab) | Software Factories | Feb 2026 practitioner guide: most comprehensive reference yet. Repository structure (spec/holdings/factory/src), NLSpec definition, [[shift-work]] (interactive/non-interactive), [[holdout-scenarios]] (prevent reward-hacking), [[attractor]] orchestration, [[digital-twin-universe]], three agent sets, satisfaction metric. Honest about what doesn't work. **No large enterprise has implemented at scale yet.** |
+| [[zakariasson-cursor-software-factory]] | Eric Zakariasson (Cursor) | Software Factories / Coding Agents | May 2026 AI Engineer talk. First IDE-vendor data point on production [[software-factory]] operation. Three-part build decomposition (**primitives & patterns / guardrails / enablers**) + checklist (**runnable, accessible, verifiable**). Cursor 3 complete VS-Code-less rewrite. Cloud agents in isolated VMs (~$1/turn) with computer-use video verification. **Agentic code owner** auto-approves low-risk PRs; **continual-learning** plugin extracts rules from chat history; Linear-ticket → cloud-agent automations; **Cursor Workers** brings the harness to self-hosted infrastructure. *"Multiple thousands of cloud agents per day"* internally. Anti-cursor.directory: rules should emerge dynamically. |
 
 ### Sources To Ingest
 
@@ -103,6 +104,7 @@ last_change: Ingested Chris Parsons (Cherrypick) "Ralph Loops: Build Dumb AI Loo
 | [[gsd-2]] | Tool/Platform | Autonomous coding-agent platform: `gsd auto → plan → execute → verify → commit → repeat`. Worktree isolation, state recovery, multi-provider, cost tracking, milestone execution. **Layer 5 (Product Surface)** — sole inhabitant. Sibling to [[humanlayer-codelayer|CodeLayer]] and [[agent-control-plane|ACP]]. |
 | [[strongdm]] | Company | Security infrastructure company with the first public implementation of [[software-factory|software factory]] pattern in production (Feb 2026). Three-person team built access management software: no human writes code, no human reviews code. Pioneered [[shift-work]], [[holdout-scenarios]], [[attractor]], [[digital-twin-universe]], satisfaction metric, three agent sets. Reference implementation for factory pattern. **No large enterprise has implemented at scale yet.** |
 | [[attractor]] | Pattern/Framework | Non-interactive coding agent structured as a directed graph of phases (DOT format). Each node is a dev task, edges are LLM-evaluable conditions. Orchestrates implementation/test/refine/converge cycles. [[strongdm]]'s orchestration engine. Implementations: StrongDM (ref), Kilroy (Go), and the open [[attractor]] NLSpec. |
+| [[cursor]] | Tool/IDE/Company | AI-first code editor by Anysphere. **Cursor 3 (Apr–May 2026)** is a complete rewrite, no VS Code base, agent-first UI for managing many agents. Cloud agents with isolated VMs and computer-use; **Bugbot** for PR review, **agentic code owner**, **continual-learning** plugin. **Cursor Workers (May 2026)** brings the same harness to self-hosted infra. First IDE-vendor data point on factory-scale agent ops; "multiple thousands of cloud agents per day" internally. |
 
 ### Entities To Create
 

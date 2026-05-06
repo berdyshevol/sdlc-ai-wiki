@@ -3,8 +3,8 @@ title: Software Factory
 type: concept
 pillar: software-factories
 created: 2026-04-08
-updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, everything-is-a-ralph-loop]
+updated: 2026-05-05
+sources: [five-levels-shapiro, superpowers-5, everything-is-a-ralph-loop, zakariasson-cursor-software-factory, software-factory-practitioners-guide-woolley, cole-medin-ai-dark-factory, parsons-ralph-loops-workshop]
 tags: [automation, autonomous, dark-factory, production-pipeline]
 ---
 
@@ -21,6 +21,10 @@ The term "Dark Factory" (from [[five-levels-shapiro]]) references Fanuc's lights
 - [[five-levels-shapiro]] — Level 5 ("Dark Factory") is the software factory vision
 - [[superpowers-5]] — The cascade pattern (spec → implement → review) is a proto-factory pipeline
 - [[everything-is-a-ralph-loop]] — Geoffrey Huntley's "level 9" vision: autonomous loops that evolve products and optimize for revenue. The most extreme articulation of the software factory concept. Introduces The Weaving Loom as infrastructure for evolutionary software.
+- [[software-factory-practitioners-guide-woolley]] — most comprehensive practitioner-level reference; introduces [[shift-work]], [[holdout-scenarios]], [[attractor]], [[digital-twin-universe]], satisfaction metric.
+- [[zakariasson-cursor-software-factory]] — Cursor's production data point (May 2026). Three-part build decomposition (**primitives & patterns / guardrails / enablers**) and a checklist (**runnable, accessible, verifiable**); thousands of cloud agents/day with computer-use verification; **agentic code owner** and **continual-learning** as concrete factory automations.
+- [[cole-medin-ai-dark-factory]] — independent factory framing for individual developers.
+- [[parsons-ralph-loops-workshop]] — Ralph-Loop pattern as the dumb-but-effective factory substrate.
 - The Software Factory (lukepm.com) — dedicated article on this concept (to be fully ingested)
 
 ## Current Understanding
@@ -39,6 +43,22 @@ The software factory vision sits at the **far end of the automation spectrum**. 
 - The [[superpowers-5]] cascade pattern represents a middle ground — structured but still human-supervised
 - Products like [[devin]] aim for autonomous coding but reviews suggest they still need significant oversight
 - Geoffrey Huntley ([[everything-is-a-ralph-loop]]) claims to have achieved "evolutionary software auto-heal" — self-repairing systems under autonomous Ralph loops — and extends the automation levels to 8-9, with level 9 being fully autonomous revenue-optimizing software factories
+- [[strongdm]] (Feb 2026, [[software-factory-practitioners-guide-woolley|Woolley's guide]]) — three-person team, no humans write or review code, uses [[shift-work]] / [[holdout-scenarios]] / [[attractor]] / [[digital-twin-universe]]
+- **[[cursor]] (May 2026, [[zakariasson-cursor-software-factory|Zakariasson]])** — *internal* factory running thousands of cloud agents/day; sub-parts at L5, company self-positions as "between L3 and L4 with sub-parts at L5." First IDE-vendor data point. Concrete factory automations: **agentic code owner** (auto-approves low-risk PRs), **continual-learning plugin** (extracts rules from chat history), Linear-ticket → cloud-agent pipelines, **Cursor Workers** for self-hosted agent infrastructure.
+
+## The Three-Part Build Decomposition (Zakariasson)
+
+Adding to the cascade and pipeline models, [[zakariasson-cursor-software-factory|Zakariasson]] proposes a practical decomposition for what an *agent* needs to operate inside a factory:
+
+| Part | What it covers | Examples |
+|------|----------------|----------|
+| **Primitives & patterns** | Codebase structure agents can navigate | Modular folders, co-located code, discoverable layouts; existing usage patterns (auth methods, startup scripts, test patterns) the agent can copy |
+| **Guardrails** | What bounds the agent | [[skill-issue-harness-engineering\|hooks]] that block sensitive paths (auth/encryption); rules that emerge from observed failures (not pre-emptive scaffolding); tests as self-verification |
+| **Enablers** | What empowers the agent | Skills, MCPs, environment access (start dev server, run tests, computer-use for UI), allowed external tools |
+
+Summary checklist: **runnable, accessible, verifiable.** Verifiable is the under-invested one — backend invariants are easy; UI verification is genuinely hard and motivates computer-use tooling.
+
+This frame aligns with [[skill-issue-harness-engineering|Kyle's six harness levers]] but reorganized around what the agent *needs* / what *bounds* it / what *empowers* it.
 
 **The pipeline model:**
 ```

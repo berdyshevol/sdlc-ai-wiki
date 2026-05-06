@@ -3,8 +3,8 @@ title: Automation Levels in Software Development
 type: concept
 pillar: industry
 created: 2026-04-08
-updated: 2026-04-08
-sources: [five-levels-shapiro, superpowers-5, coding-agents-conf-2026, dex-rpi-to-crispy]
+updated: 2026-05-05
+sources: [five-levels-shapiro, superpowers-5, coding-agents-conf-2026, dex-rpi-to-crispy, zakariasson-cursor-software-factory]
 tags: [maturity-model, levels, progression, role-transformation, trust-ladder, adoption]
 ---
 
@@ -32,6 +32,7 @@ A maturity model describing the **progression from fully manual coding to fully 
 - [[12-factor-agents]] — Principles that enable Level 3-4 agent architectures
 - **[[coding-agents-conf-2026]]** — Kilo Code's **empirical trust ladder** from 25T tokens / 1.5M developers: Autocomplete → Chat → Single Agents → Orchestration. First large-scale data validating a progression model.
 - **[[dex-rpi-to-crispy]]** — Argues Level 3 (managed, 2-3x speedup) is the sweet spot for production code. Explicitly skeptical of Level 4-5 for production SaaS: "10x speed doesn't matter if it's slop."
+- **[[zakariasson-cursor-software-factory]]** — First IDE-vendor self-placement on the framework: Zakariasson (Cursor) is personally at **Level 4** for most work; Cursor as a company is "between L3 and L4 with sub-parts at L5." Practical confirmation that Shapiro's framework is operational vocabulary inside a frontier shop.
 
 ## Kilo Code Trust Ladder (Empirical)
 

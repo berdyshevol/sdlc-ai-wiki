@@ -3,9 +3,9 @@ title: "Agent Harness"
 type: concept
 pillar: coding-agents
 created: 2026-04-09
-updated: 2026-04-16
-sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop, skill-issue-harness-engineering, agentic-coding-stack-aslan]
-tags: [agent-harness, orchestration, infrastructure, architecture, stack-layers]
+updated: 2026-05-07
+sources: [anatomy-agent-harness, 12-factor-agents, coding-agents-conf-2026, everything-is-a-ralph-loop, skill-issue-harness-engineering, agentic-coding-stack-aslan, lopopolo-openai-extreme-harness-engineering]
+tags: [agent-harness, orchestration, infrastructure, architecture, stack-layers, harness-engineering, on-policy]
 ---
 
 # Agent Harness
@@ -50,6 +50,7 @@ The harness is not a wrapper around a prompt. It is the complete system that mak
 - **[[anatomy-agent-harness]]** — Primary source. Comprehensive synthesis across 5 frameworks, identifies 12 components and 7 architectural decisions.
 - **[[12-factor-agents]]** — Principles for production agents; shares the "own your infrastructure" ethos but focuses on design principles rather than components.
 - **[[coding-agents-conf-2026]]** — Multiple speakers discuss harness-adjacent topics (verification, memory, tool scoping).
+- **[[lopopolo-openai-extreme-harness-engineering]]** — The defining 2026 articulation of *harness engineering as a discipline*. 1M-LOC production case study; introduces the **on-policy harness** principle (build native to model output, not as a separate scaffold around it) and the operational stance that *every non-functional requirement becomes text the harness injects*.
 
 ## Current Understanding
 
@@ -115,6 +116,32 @@ But: **co-evolution creates coupling.** Models are post-trained with specific ha
 
 **Future-proofing test**: Does performance scale with better models without adding harness complexity?
 
+### On-Policy vs. Off-Policy Harness ([[lopopolo-openai-extreme-harness-engineering|Lopopolo, May 2026]])
+
+A sharper formulation of the future-proofing question. Borrowing from RL terminology:
+
+- **On-policy harness** — built native to what the model already produces (code, tests, lints). Each guardrail emerges as code or text the model writes against itself. *"None of the things we have built actively degrade agent performance, because really all they're doing is running tests."* Robust to model upgrades because nothing in the harness restricts the model's own output distribution.
+- **Off-policy harness** — wraps the model in a separate scaffold (e.g., ROS-style control loop, hand-coded routing logic) that operates outside the model's natural behavior. Tends to be scrapped at the next model version because it constrains capability the new model has internalized.
+
+Lopopolo's bet is that on-policy harnesses compound — they get better as the model gets better — while off-policy harnesses depreciate. Empirically validated by Anthropic's pattern of deleting planning steps from Claude Code's harness as new model versions internalize the capability.
+
+### Harness Engineering as Text-Injection Discipline ([[lopopolo-openai-extreme-harness-engineering|Lopopolo]])
+
+A complementary operational thesis: at sufficient scale, harness engineering reduces to *finding ways to put the right text in front of the agent at the right time*.
+
+> *"Models fundamentally crave text. My job is to figure out ways to funnel text from one agent to the other."*
+
+Pathways for injecting text into the harness:
+
+- **Skill files** (a.k.a. AGENTS.md sub-files) — short, model-callable units of "what good looks like."
+- **Lint error messages** — phrased as instructions to the model, not just diagnostics.
+- **Observability stack** — local Vector + VictoriaMetrics + Grafana dashboards the *agent* reads (not the human).
+- **PR-comment slurping** — every human review comment is a signal that the agent was missing context; that context becomes text in the repo.
+- **Session-log distillation** — daily-cron agent loops over the entire team's Codex session logs to extract team-wide improvements and reflect them back into the repo.
+- **Failed builds** — same pathway: each failure is an unwritten non-functional requirement.
+
+This reframes harness engineering as a **knowledge-extraction problem**: tease out of the heads of the team what they think good looks like, and put it in a space that prompt-injects the agent.
+
 ### Evidence: Harness > Model
 
 - **TerminalBench 2.0**: LangChain changed only harness infrastructure (same model) → jumped from outside top 30 to rank 5
@@ -146,3 +173,4 @@ But: **co-evolution creates coupling.** Models are post-trained with specific ha
 - [[12-factor-agents]] — design principles that inform harness architecture
 - [[everything-is-a-ralph-loop]] — Geoffrey Huntley's Ralph pattern: a monolithic orchestrator loop as harness philosophy. Emphasizes simplicity ("300 lines"), loop-based control, and the engineer as loop programmer
 - [[agentic-coding-stack-layers]] — workflow-oriented complement to this component-oriented model. Aslan's 5-layer stack (methodology / discipline / technical context / token optimization / product surface) slices the same territory by *workflow concern* rather than *agent component*. Both should coexist on the wiki
+- [[symphony]] — Symphony sits *above* the harness: each agent has its own harness (Codex), Symphony orchestrates the population of harnesses across many parallel tasks. Six-layer model (policy / config / coordination / execution / integration / observability) is the orchestration-tier counterpart to the harness components on this page.

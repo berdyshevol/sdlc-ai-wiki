@@ -3,8 +3,8 @@ title: Software Factory
 type: concept
 pillar: software-factories
 created: 2026-04-08
-updated: 2026-05-05
-sources: [five-levels-shapiro, superpowers-5, everything-is-a-ralph-loop, zakariasson-cursor-software-factory, software-factory-practitioners-guide-woolley, cole-medin-ai-dark-factory, parsons-ralph-loops-workshop]
+updated: 2026-05-07
+sources: [five-levels-shapiro, superpowers-5, everything-is-a-ralph-loop, zakariasson-cursor-software-factory, software-factory-practitioners-guide-woolley, cole-medin-ai-dark-factory, parsons-ralph-loops-workshop, lopopolo-openai-extreme-harness-engineering]
 tags: [automation, autonomous, dark-factory, production-pipeline]
 ---
 
@@ -23,6 +23,7 @@ The term "Dark Factory" (from [[five-levels-shapiro]]) references Fanuc's lights
 - [[everything-is-a-ralph-loop]] — Geoffrey Huntley's "level 9" vision: autonomous loops that evolve products and optimize for revenue. The most extreme articulation of the software factory concept. Introduces The Weaving Loom as infrastructure for evolutionary software.
 - [[software-factory-practitioners-guide-woolley]] — most comprehensive practitioner-level reference; introduces [[shift-work]], [[holdout-scenarios]], [[attractor]], [[digital-twin-universe]], satisfaction metric.
 - [[zakariasson-cursor-software-factory]] — Cursor's production data point (May 2026). Three-part build decomposition (**primitives & patterns / guardrails / enablers**) and a checklist (**runnable, accessible, verifiable**); thousands of cloud agents/day with computer-use verification; **agentic code owner** and **continual-learning** as concrete factory automations.
+- [[lopopolo-openai-extreme-harness-engineering]] — OpenAI Frontier's production data point (May 2026). Three-engineer team, 1M LOC, ~1,500 PRs, 5 months, **0% human-authored code** with **post-merge review only**. Introduces [[symphony]] (six-layer Elixir orchestration substrate as a "ghost library"), the on-policy-harness principle, and harness-engineering-as-text-injection-discipline. The most extreme School-1 production datapoint in the wiki.
 - [[cole-medin-ai-dark-factory]] — independent factory framing for individual developers.
 - [[parsons-ralph-loops-workshop]] — Ralph-Loop pattern as the dumb-but-effective factory substrate.
 - The Software Factory (lukepm.com) — dedicated article on this concept (to be fully ingested)
@@ -45,6 +46,7 @@ The software factory vision sits at the **far end of the automation spectrum**. 
 - Geoffrey Huntley ([[everything-is-a-ralph-loop]]) claims to have achieved "evolutionary software auto-heal" — self-repairing systems under autonomous Ralph loops — and extends the automation levels to 8-9, with level 9 being fully autonomous revenue-optimizing software factories
 - [[strongdm]] (Feb 2026, [[software-factory-practitioners-guide-woolley|Woolley's guide]]) — three-person team, no humans write or review code, uses [[shift-work]] / [[holdout-scenarios]] / [[attractor]] / [[digital-twin-universe]]
 - **[[cursor]] (May 2026, [[zakariasson-cursor-software-factory|Zakariasson]])** — *internal* factory running thousands of cloud agents/day; sub-parts at L5, company self-positions as "between L3 and L4 with sub-parts at L5." First IDE-vendor data point. Concrete factory automations: **agentic code owner** (auto-approves low-risk PRs), **continual-learning plugin** (extracts rules from chat history), Linear-ticket → cloud-agent pipelines, **Cursor Workers** for self-hosted agent infrastructure.
+- **OpenAI Frontier (May 2026, [[lopopolo-openai-extreme-harness-engineering|Lopopolo]])** — three-engineer team, 5 months, ~1M LOC, ~1,500 PRs, **zero human-authored code**, **post-merge review only**. Self-positioned as "between L4 and L5." Operating substrate: short `AGENTS.md` + six skills + lint-as-prompt + the `dollar-land` merge skill + Symphony's six-layer orchestration. Caveat: greenfield Electron app (not continuous-deployment infrastructure); release branches still cut by humans.
 
 ## The Three-Part Build Decomposition (Zakariasson)
 
@@ -68,6 +70,18 @@ Spec → Plan → Implement → Test → Review → Deploy
 ```
 
 Each stage could be handled by specialized agents ([[12-factor-agents]] Factor #10: Small, Focused Agents).
+
+## Orchestration Substrate Patterns (the tier *above* the harness)
+
+As factories scale, the orchestration tier (the system spawning, supervising, and rework-ing many agent runs in parallel) becomes a distinct concern from the per-agent harness. Three named substrates are now in the wiki:
+
+| Substrate | Source | Runtime | Key primitive |
+|-----------|--------|---------|---------------|
+| **[[attractor]]** | [[strongdm]] / [[software-factory-practitioners-guide-woolley|Woolley]] | Directed graph (DOT) | LLM-evaluable phase transitions |
+| **[[agent-control-plane]]** | [[humanlayer]] | Kubernetes-native | Long-lived agents, async-first, MCP |
+| **[[symphony]]** | OpenAI Frontier ([[lopopolo-openai-extreme-harness-engineering|Lopopolo]]) | Elixir / BEAM | Per-task gen-server daemon, rework state, ghost-library distribution |
+
+All three solve the same problem (running many agents in parallel against a single codebase or product) at different points in the runtime/distribution-model design space. Convergent insight: **rework should be cheap** — Symphony's rework-state explicitly trashes the entire worktree+PR rather than incrementally fixing it; StrongDM's holdout scenarios prevent agents from incrementally hacking their way to a passing test.
 
 ## Open Questions
 

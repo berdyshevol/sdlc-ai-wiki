@@ -2,11 +2,39 @@
 title: Wiki Log
 type: log
 created: 2026-04-08
-updated: 2026-04-27
-last_change: Ingested full transcript of Wang's Brain Trust talk ("Stop Shipping on Vibes") and enriched [[coding-agents-conf-2026]]
+updated: 2026-05-07
+last_change: Ingested Ryan Lopopolo (OpenAI) "Extreme Harness Engineering" Latent Space podcast; created [[openai-codex]] and [[symphony]] entities; updated [[agent-harness]], [[software-factory]], [[code-legibility-debate]]
 ---
 
 # Wiki Log
+
+## [2026-05-07] ingest | Ryan Lopopolo (OpenAI Frontier) — "Extreme Harness Engineering: 1M LOC, 1B toks/day, 0% human code or review" (Latent Space podcast)
+
+Ingested the full transcript of Ryan Lopopolo's first-ever podcast appearance on Latent Space (https://www.youtube.com/watch?v=CeOXx-XTYek), recorded at OpenAI's Bellevue office grand opening (May 2026). Lopopolo is the engineer behind the widely-shared "harness engineering" article describing a 5-month, 3-engineer build inside OpenAI Frontier of a ~1M-LOC native Electron app with **0% human-authored code, ~1,500 PRs, post-merge review only**. The transcript is `raw/youtube-transcripts/lopopolo-openai-extreme-harness-engineering.md` (full speaker-attributed paragraph format, ~36K tokens of raw caption joined into reading prose).
+
+Created [[lopopolo-openai-extreme-harness-engineering]] as the source page. Sets out: (1) the founding constraint *"I can't write a line of code"* and the 1.5-month "10× slower" cost paid to build the assembly station before throughput climbed to 5–10 PRs/engineer/day; (2) **harness engineering as a discipline above context engineering and prompt engineering**, operationalized as *"every non-functional requirement becomes text the harness injects"* (skills, lint error messages, observability for the agent, daily-cron loops over team session logs, PR-comment slurping); (3) the **sub-1-minute build invariant** enforced by 5.3's background-shells changing the agent's patience profile, motivating a one-week migration from makefile → Bazel → Turbo → NX; (4) ~500 npm packages for a 7-person team because each engineer is effectively 10–50×; (5) the autonomous-merge dance via the `dollar-land` skill plus the author-Codex ↔ reviewer-Codex P0/P1/P2 negotiation pattern (with prompt-side optionality so the author isn't bullied into scope-creeping); (6) **Symphony** as a six-layer Elixir orchestration substrate (policy/config/coordination/execution/integration/observability + zero-layer self-modification) distributed as a "ghost library" — a spec a coding agent can reassemble locally — built itself by Ralph-looping Codex against the proprietary upstream repo; (7) a **rework state** that trashes the entire worktree+PR rather than incrementally fix; (8) anti-MCP / pro-CLI tool philosophy with `gh` as exemplar and *"patch `--silent` to Prettier so the agent doesn't read formatting confirmations"*; (9) in-housing dependencies as the new norm at low-medium complexity (~thousand-line dep in an afternoon), validating Bret Taylor's claim; (10) the **on-policy harness** principle borrowed from RL — build native to model output (code, tests, lints) rather than as an off-policy ROS-style scaffold around it, because on-policy harnesses compound with model improvement while off-policy ones get scrapped each release.
+
+Created [[openai-codex]] as a new entity page distinct from [[openai-agents-sdk]]. Codex is the *coding-agent product line* (Codex models within GPT-5/5.x, CLI, App at 2M WAU + 25% WoW growth, VS Code extension, Slack app) running on a shared harness — not the SDK for building custom agents. Captures the 5.3 background-shells / 5.4 computer-use feature timeline as harness-defining additions of early 2026, the Codex-extension-over-Agents-SDK three-layer architecture, the AGENTS.md + skills primitive system (Lopopolo's team has six skills total in 1M LOC), and the `gh`-CLI canonical tool shape. Cross-references [[claude-agent-sdk]] as the convergent counterpart on Anthropic's side.
+
+Created [[symphony]] as an orchestration-substrate entity sister to [[attractor]] (StrongDM, DOT graph) and [[agent-control-plane]] (HumanLayer, K8s) at the tier *above* the per-agent harness. Documents the six layers, the zero-layer self-modification, the "ghost library" distribution model (and its implications for the end-of-libraries thesis), the BEAM/Elixir choice as model-driven (gen-servers map to per-task daemons, supervision trees handle failure), and the Ralph-loop-on-the-spec-itself construction pattern.
+
+Updated [[agent-harness]]: added **on-policy vs. off-policy harness** as a sharper formulation of the future-proofing question, and **harness engineering as text-injection discipline** as the operational thesis (six pathways for injecting text — skills, lint messages, observability, PR-comment slurping, session-log distillation, failed builds). Linked [[symphony]] as the orchestration tier above the harness. Bumped tags to include `harness-engineering` and `on-policy`.
+
+Updated [[software-factory]]: added Lopopolo/Frontier as the **fourth large-scale factory data point** alongside [[strongdm]], [[cursor]], and Anthropic's [[long-running-claude]]. Self-positioned "between L4 and L5" with explicit greenfield-Electron caveat and human-cuts-release-branch caveat. Added a new **Orchestration Substrate Patterns** section with a comparison table of [[attractor]] / [[agent-control-plane]] / [[symphony]] — three named orchestration substrates at the tier above the harness, all converging on rework-should-be-cheap as a design principle (Symphony's rework-state, StrongDM's holdout scenarios both embody this).
+
+Updated [[code-legibility-debate]]: this is the most consequential update. Lopopolo's case **resets the trend** that had been tilting toward School 2 since [[dex-rpi-to-crispy|Dex's reversal]]. Rewrote the "Current Understanding" lede from *"the debate is tilting toward School 2"* to *"the debate is now actively contested by competing 2026 production data points."* Added Lopopolo as the strongest School-1 production datapoint (1M LOC, 5 months, post-merge review only, working) — direct counter-evidence to Dex's "6 months → had to rip out and replace large parts." Both 2026, both production, but Lopopolo's is greenfield Electron (not deployed infrastructure) and Dex's was production SaaS — caveat noted. New synthesis line: **the practitioner's harness sophistication may matter more than the abstract school they belong to.** Bumped sources/tags accordingly.
+
+Updated [[index|wiki/index.md]]: added [[lopopolo-openai-extreme-harness-engineering]] to the sources table, [[openai-codex]] and [[symphony]] to the entities table, and updated `last_change` and `updated` frontmatter. No new concept pages created — the [[agent-harness]] update already covers harness-engineering-as-discipline.
+
+Pages created/updated:
+- `raw/youtube-transcripts/lopopolo-openai-extreme-harness-engineering.md` (raw transcript)
+- `wiki/sources/lopopolo-openai-extreme-harness-engineering.md` (new)
+- `wiki/entities/openai-codex.md` (new)
+- `wiki/entities/symphony.md` (new)
+- `wiki/concepts/agent-harness.md` (updated — on-policy section, text-injection discipline section)
+- `wiki/concepts/software-factory.md` (updated — fourth factory data point + orchestration substrate patterns table)
+- `wiki/concepts/code-legibility-debate.md` (updated — School-1 reset, contested-debate synthesis)
+- `wiki/index.md` (updated)
 
 ## [2026-04-27] ingest | Wang (Brain Trust) — "Stop Shipping on Vibes" full talk transcript + Q&A
 
